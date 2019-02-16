@@ -1,0 +1,21 @@
+{
+  "name": "@polpware/bs-components",
+  "version": "7.0.0",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "main": "bundles/polpware-bs-components.umd.js",
+  "module": "fesm5/polpware-bs-components.js",
+  "es2015": "fesm2015/polpware-bs-components.js",
+  "esm5": "esm5/polpware-bs-components.js",
+  "esm2015": "esm2015/polpware-bs-components.js",
+  "fesm5": "fesm5/polpware-bs-components.js",
+  "fesm2015": "fesm2015/polpware-bs-components.js",
+  "typings": "polpware-bs-components.d.ts",
+  "metadata": "polpware-bs-components.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
