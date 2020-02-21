@@ -78,6 +78,8 @@ var BreadcrumbComponent = /** @class */ (function () {
                 e.kind = ActionKind.NO_ACTION;
             }
         });
+        this.interItems = [];
+        this.activeItem = null;
         // Set up interItems and activeItem, and items are
         // fixed this moment and thus interItems and activeItem
         if (this.items.length > 0) {
