@@ -1,10 +1,11 @@
-import { Component, Input, NgModule } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Component, Input, Injectable, NgModule, defineInjectable } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @enum {number} */
 const ActionKind = {
@@ -17,12 +18,21 @@ ActionKind[ActionKind.NO_ACTION] = 'NO_ACTION';
 ActionKind[ActionKind.URL_LINK] = 'URL_LINK';
 ActionKind[ActionKind.ROUTER_LINK] = 'ROUTER_LINK';
 ActionKind[ActionKind.CUSTOM_ACTION] = 'CUSTOM_ACTION';
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 /*
  Presumptions:
  1. items are fixed at the moment of page init
 */
 class BreadcrumbComponent {
     constructor() {
+        this.items = [];
+        this.listClasses = 'breadcrumb';
+        this.inactiveItemClasses = 'breadcrumb-item';
+        this.activeItemClasses = 'breadcrumb-item active';
         this.interItems = [];
         this.activeItem = null;
     }
@@ -30,12 +40,21 @@ class BreadcrumbComponent {
      * @return {?}
      */
     ngOnInit() {
+        this.update();
+    }
+    /**
+     * @return {?}
+     */
+    ngOnChanges() {
+        this.update();
+    }
+    /**
+     * @private
+     * @return {?}
+     */
+    update() {
         // Pre-process data
-        this.items.forEach((/**
-         * @param {?} e
-         * @return {?}
-         */
-        e => {
+        this.items.forEach(e => {
             if (e.routerLink) {
                 e.kind = ActionKind.ROUTER_LINK;
             }
@@ -48,7 +67,7 @@ class BreadcrumbComponent {
             else {
                 e.kind = ActionKind.NO_ACTION;
             }
-        }));
+        });
         // Set up interItems and activeItem, and items are
         // fixed this moment and thus interItems and activeItem
         if (this.items.length > 0) {
@@ -63,19 +82,45 @@ class BreadcrumbComponent {
 BreadcrumbComponent.decorators = [
     { type: Component, args: [{
                 selector: 'polp-bs-breadcrumb',
-                template: "<nav aria-label=\"breadcrumb\">\n    <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\" *ngFor=\"let item of interItems\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n        <li class=\"breadcrumb-item active\" aria-current=\"page\" *ngIf=\"activeItem as item\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n    </ol>\n</nav>\n",
+                template: "    <ol [ngClass]=\"listClasses\">\n        <li [ngClass]=\"inactiveItemClasses\" *ngFor=\"let item of interItems\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n        <li [ngClass]=\"activeItemClasses\" aria-current=\"page\" *ngIf=\"activeItem as item\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n    </ol>\n",
                 styles: [""]
             }] }
 ];
-/** @nocollapse */
-BreadcrumbComponent.ctorParameters = () => [];
 BreadcrumbComponent.propDecorators = {
-    items: [{ type: Input, args: ['items',] }]
+    items: [{ type: Input }],
+    listClasses: [{ type: Input }],
+    inactiveItemClasses: [{ type: Input }],
+    activeItemClasses: [{ type: Input }]
 };
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+class BreadcrumbClipboardService {
+    constructor() {
+        this.clipboard = new BehaviorSubject([]);
+    }
+    /**
+     * @param {?} items
+     * @return {?}
+     */
+    paste(items) {
+        this.clipboard.next(items);
+    }
+}
+BreadcrumbClipboardService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+/** @nocollapse */
+BreadcrumbClipboardService.ctorParameters = () => [];
+/** @nocollapse */ BreadcrumbClipboardService.ngInjectableDef = defineInjectable({ factory: function BreadcrumbClipboardService_Factory() { return new BreadcrumbClipboardService(); }, token: BreadcrumbClipboardService, providedIn: "root" });
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class PolpBsComponentsModule {
 }
@@ -96,14 +141,14 @@ PolpBsComponentsModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { ActionKind, BreadcrumbComponent, PolpBsComponentsModule };
+export { ActionKind, BreadcrumbComponent, BreadcrumbClipboardService, PolpBsComponentsModule };
 
 //# sourceMappingURL=polpware-bs-components.js.map
