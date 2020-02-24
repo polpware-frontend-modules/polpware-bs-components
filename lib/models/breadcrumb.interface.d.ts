@@ -7,6 +7,9 @@ export declare enum ActionKind {
 export interface IBreadcrumbItem {
     title: string;
     routerLink?: string;
+    queryParams?: {
+        [key: string]: any;
+    };
     url?: string;
     action?: () => void;
     kind?: ActionKind;
