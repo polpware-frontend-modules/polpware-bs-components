@@ -3,7 +3,9 @@
   "version": "9.0.0",
   "peerDependencies": {
     "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0"
+    "@angular/core": "^9.0.0",
+    "ngx-bootstrap": "6.x",
+    "uuid": "8.x"
   },
   "main": "bundles/polpware-bs-components.umd.js",
   "module": "fesm5/polpware-bs-components.js",
