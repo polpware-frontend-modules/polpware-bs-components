@@ -261,10 +261,12 @@ class AlertBoxComponent {
     }
     close() {
         this.result.next(false);
+        this.result.complete();
         this._bsModalRef.hide();
     }
     confirm() {
         this.result.next(true);
+        this.result.complete();
         this._bsModalRef.hide();
     }
 }
@@ -541,11 +543,13 @@ class PromptFormComponent {
         this.form = this._builder.group(a);
     }
     close() {
-        this._bsModalRef.hide();
         this.result.next(null);
+        this.result.complete();
+        this._bsModalRef.hide();
     }
     confirm() {
         this.result.next(this.form.value);
+        this.result.complete();
         this._bsModalRef.hide();
     }
 }

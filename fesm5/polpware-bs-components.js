@@ -264,10 +264,12 @@ var AlertBoxComponent = /** @class */ (function () {
     };
     AlertBoxComponent.prototype.close = function () {
         this.result.next(false);
+        this.result.complete();
         this._bsModalRef.hide();
     };
     AlertBoxComponent.prototype.confirm = function () {
         this.result.next(true);
+        this.result.complete();
         this._bsModalRef.hide();
     };
     AlertBoxComponent.ɵfac = function AlertBoxComponent_Factory(t) { return new (t || AlertBoxComponent)(ɵɵdirectiveInject(BsModalRef)); };
@@ -546,11 +548,13 @@ var PromptFormComponent = /** @class */ (function () {
         this.form = this._builder.group(a);
     };
     PromptFormComponent.prototype.close = function () {
-        this._bsModalRef.hide();
         this.result.next(null);
+        this.result.complete();
+        this._bsModalRef.hide();
     };
     PromptFormComponent.prototype.confirm = function () {
         this.result.next(this.form.value);
+        this.result.complete();
         this._bsModalRef.hide();
     };
     PromptFormComponent.ɵfac = function PromptFormComponent_Factory(t) { return new (t || PromptFormComponent)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(BsModalRef)); };
