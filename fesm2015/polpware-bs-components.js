@@ -5,6 +5,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { v4 } from 'uuid';
+import { AutofocusDirective, FtAutofocusModule } from '@40three/ngx-autofocus-directive';
 
 var ActionKind;
 (function (ActionKind) {
@@ -592,7 +593,7 @@ PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, sel
         ɵɵproperty("ngClass", ctx.confirmBtnClasses)("disabled", !ctx.form.valid);
         ɵɵadvance(1);
         ɵɵtextInterpolate1(" ", ctx.confirmBtnLabel, " ");
-    } }, directives: [NgIf, NgClass, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, NgForOf, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [""] });
+    } }, directives: [NgIf, NgClass, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, NgForOf, DefaultValueAccessor, NgControlStatus, FormControlName, AutofocusDirective], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PromptFormComponent, [{
         type: Component,
         args: [{
@@ -627,14 +628,16 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
             CommonModule,
             RouterModule,
             FormsModule,
-            ReactiveFormsModule
+            ReactiveFormsModule,
+            FtAutofocusModule
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PolpBsComponentsModule, { declarations: [BreadcrumbComponent,
         AlertBoxComponent,
         PromptFormComponent], imports: [CommonModule,
         RouterModule,
         FormsModule,
-        ReactiveFormsModule], exports: [BreadcrumbComponent,
+        ReactiveFormsModule,
+        FtAutofocusModule], exports: [BreadcrumbComponent,
         AlertBoxComponent,
         PromptFormComponent] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
@@ -649,7 +652,8 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
                     CommonModule,
                     RouterModule,
                     FormsModule,
-                    ReactiveFormsModule
+                    ReactiveFormsModule,
+                    FtAutofocusModule
                 ],
                 exports: [
                     BreadcrumbComponent,

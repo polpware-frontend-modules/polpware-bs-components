@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('uuid')) :
-    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', 'uuid'], factory) :
-    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.uuid));
-}(this, (function (exports, core, common, router, rxjs, modal, forms, uuid) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('uuid'), require('@40three/ngx-autofocus-directive')) :
+    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', 'uuid', '@40three/ngx-autofocus-directive'], factory) :
+    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.uuid, global.ngxAutofocusDirective));
+}(this, (function (exports, core, common, router, rxjs, modal, forms, uuid, ngxAutofocusDirective) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -806,7 +806,7 @@
                 core.ɵɵproperty("ngClass", ctx.confirmBtnClasses)("disabled", !ctx.form.valid);
                 core.ɵɵadvance(1);
                 core.ɵɵtextInterpolate1(" ", ctx.confirmBtnLabel, " ");
-            } }, directives: [common.NgIf, common.NgClass, forms.ɵangular_packages_forms_forms_y, forms.NgControlStatusGroup, forms.FormGroupDirective, common.NgForOf, forms.DefaultValueAccessor, forms.NgControlStatus, forms.FormControlName], styles: [""] });
+            } }, directives: [common.NgIf, common.NgClass, forms.ɵangular_packages_forms_forms_y, forms.NgControlStatusGroup, forms.FormGroupDirective, common.NgForOf, forms.DefaultValueAccessor, forms.NgControlStatus, forms.FormControlName, ngxAutofocusDirective.AutofocusDirective], styles: [""] });
         return PromptFormComponent;
     }());
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PromptFormComponent, [{
@@ -844,7 +844,8 @@
                     common.CommonModule,
                     router.RouterModule,
                     forms.FormsModule,
-                    forms.ReactiveFormsModule
+                    forms.ReactiveFormsModule,
+                    ngxAutofocusDirective.FtAutofocusModule
                 ]] });
         return PolpBsComponentsModule;
     }());
@@ -853,7 +854,8 @@
             PromptFormComponent], imports: [common.CommonModule,
             router.RouterModule,
             forms.FormsModule,
-            forms.ReactiveFormsModule], exports: [BreadcrumbComponent,
+            forms.ReactiveFormsModule,
+            ngxAutofocusDirective.FtAutofocusModule], exports: [BreadcrumbComponent,
             AlertBoxComponent,
             PromptFormComponent] }); })();
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PolpBsComponentsModule, [{
@@ -868,7 +870,8 @@
                         common.CommonModule,
                         router.RouterModule,
                         forms.FormsModule,
-                        forms.ReactiveFormsModule
+                        forms.ReactiveFormsModule,
+                        ngxAutofocusDirective.FtAutofocusModule
                     ],
                     exports: [
                         BreadcrumbComponent,

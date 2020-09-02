@@ -6,6 +6,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { __assign } from 'tslib';
 import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { v4 } from 'uuid';
+import { AutofocusDirective, FtAutofocusModule } from '@40three/ngx-autofocus-directive';
 
 var ActionKind;
 (function (ActionKind) {
@@ -596,7 +597,7 @@ var PromptFormComponent = /** @class */ (function () {
             ɵɵproperty("ngClass", ctx.confirmBtnClasses)("disabled", !ctx.form.valid);
             ɵɵadvance(1);
             ɵɵtextInterpolate1(" ", ctx.confirmBtnLabel, " ");
-        } }, directives: [NgIf, NgClass, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, NgForOf, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [""] });
+        } }, directives: [NgIf, NgClass, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, NgForOf, DefaultValueAccessor, NgControlStatus, FormControlName, AutofocusDirective], styles: [""] });
     return PromptFormComponent;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PromptFormComponent, [{
@@ -634,7 +635,8 @@ var PolpBsComponentsModule = /** @class */ (function () {
                 CommonModule,
                 RouterModule,
                 FormsModule,
-                ReactiveFormsModule
+                ReactiveFormsModule,
+                FtAutofocusModule
             ]] });
     return PolpBsComponentsModule;
 }());
@@ -643,7 +645,8 @@ var PolpBsComponentsModule = /** @class */ (function () {
         PromptFormComponent], imports: [CommonModule,
         RouterModule,
         FormsModule,
-        ReactiveFormsModule], exports: [BreadcrumbComponent,
+        ReactiveFormsModule,
+        FtAutofocusModule], exports: [BreadcrumbComponent,
         AlertBoxComponent,
         PromptFormComponent] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
@@ -658,7 +661,8 @@ var PolpBsComponentsModule = /** @class */ (function () {
                     CommonModule,
                     RouterModule,
                     FormsModule,
-                    ReactiveFormsModule
+                    ReactiveFormsModule,
+                    FtAutofocusModule
                 ],
                 exports: [
                     BreadcrumbComponent,
