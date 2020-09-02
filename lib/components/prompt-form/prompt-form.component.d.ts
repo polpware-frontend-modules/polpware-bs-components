@@ -1,6 +1,7 @@
-import { EventEmitter, OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { BsModalRef } from 'ngx-bootstrap/modal';
+import { Subject } from 'rxjs';
 import { IInputFieldSpec } from '../../utils/form-helper';
 import * as i0 from "@angular/core";
 interface IInputFieldSpecExt extends IInputFieldSpec {
@@ -18,7 +19,7 @@ export declare class PromptFormComponent implements OnInit {
     title: string;
     innerBody: string;
     fields: Array<IInputFieldSpec>;
-    result: EventEmitter<{
+    result: Subject<{
         [key: string]: any;
     }>;
     extFields: IInputFieldSpecExt[];

@@ -729,7 +729,7 @@
         function PromptFormComponent(_builder, _bsModalRef) {
             this._builder = _builder;
             this._bsModalRef = _bsModalRef;
-            this.result = new core.EventEmitter();
+            this.result = new rxjs.Subject();
         }
         PromptFormComponent.prototype.ngOnInit = function () {
             var _this = this;
@@ -756,9 +756,10 @@
         };
         PromptFormComponent.prototype.close = function () {
             this._bsModalRef.hide();
+            this.result.next(null);
         };
         PromptFormComponent.prototype.confirm = function () {
-            this.result.emit(this.form.value);
+            this.result.next(this.form.value);
             this._bsModalRef.hide();
         };
         PromptFormComponent.ɵfac = function PromptFormComponent_Factory(t) { return new (t || PromptFormComponent)(core.ɵɵdirectiveInject(forms.FormBuilder), core.ɵɵdirectiveInject(modal.BsModalRef)); };
