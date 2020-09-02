@@ -336,11 +336,15 @@ function makeValidations(data) {
             case 'required':
                 return Validators.required;
             case 'min':
-                return Validators.min;
+                return Validators.min(data.min.value);
             case 'max':
-                return Validators.max;
+                return Validators.max(data.max.value);
             case 'pattern':
-                return Validators.pattern;
+                return Validators.pattern(data.pattern.value);
+            case 'minLength':
+                return Validators.minLength(data.minLength.value);
+            case 'maxLength':
+                return Validators.maxLength(data.maxLength.value);
             default:
                 return null;
         }
@@ -356,7 +360,7 @@ function PromptFormComponent_ng_container_8_div_2_small_4_Template(rf, ctx) { if
 } if (rf & 2) {
     var elem_r4 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r4.validators.required, " ");
+    ɵɵtextInterpolate1(" ", elem_r4.validators.required.message, " ");
 } }
 function PromptFormComponent_ng_container_8_div_2_small_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "small", 17);
@@ -365,7 +369,7 @@ function PromptFormComponent_ng_container_8_div_2_small_5_Template(rf, ctx) { if
 } if (rf & 2) {
     var elem_r4 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r4.validators.min, " ");
+    ɵɵtextInterpolate1(" ", elem_r4.validators.min.message, " ");
 } }
 function PromptFormComponent_ng_container_8_div_2_small_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "small", 17);
@@ -374,7 +378,7 @@ function PromptFormComponent_ng_container_8_div_2_small_6_Template(rf, ctx) { if
 } if (rf & 2) {
     var elem_r4 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r4.validators.max, " ");
+    ɵɵtextInterpolate1(" ", elem_r4.validators.max.message, " ");
 } }
 function PromptFormComponent_ng_container_8_div_2_small_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "small", 17);
@@ -383,7 +387,7 @@ function PromptFormComponent_ng_container_8_div_2_small_7_Template(rf, ctx) { if
 } if (rf & 2) {
     var elem_r4 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r4.validators.pattern, " ");
+    ɵɵtextInterpolate1(" ", elem_r4.validators.pattern.message, " ");
 } }
 function PromptFormComponent_ng_container_8_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 13);
@@ -439,7 +443,7 @@ function PromptFormComponent_ng_template_9_div_1_small_4_Template(rf, ctx) { if 
 } if (rf & 2) {
     var elem_r15 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r15.validators.required, " ");
+    ɵɵtextInterpolate1(" ", elem_r15.validators.required.message, " ");
 } }
 function PromptFormComponent_ng_template_9_div_1_small_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "small", 17);
@@ -448,7 +452,7 @@ function PromptFormComponent_ng_template_9_div_1_small_5_Template(rf, ctx) { if 
 } if (rf & 2) {
     var elem_r15 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r15.validators.min, " ");
+    ɵɵtextInterpolate1(" ", elem_r15.validators.min.message, " ");
 } }
 function PromptFormComponent_ng_template_9_div_1_small_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "small", 17);
@@ -457,7 +461,7 @@ function PromptFormComponent_ng_template_9_div_1_small_6_Template(rf, ctx) { if 
 } if (rf & 2) {
     var elem_r15 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r15.validators.max, " ");
+    ɵɵtextInterpolate1(" ", elem_r15.validators.max.message, " ");
 } }
 function PromptFormComponent_ng_template_9_div_1_small_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "small", 17);
@@ -466,7 +470,7 @@ function PromptFormComponent_ng_template_9_div_1_small_7_Template(rf, ctx) { if 
 } if (rf & 2) {
     var elem_r15 = ɵɵnextContext().$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r15.validators.pattern, " ");
+    ɵɵtextInterpolate1(" ", elem_r15.validators.pattern.message, " ");
 } }
 function PromptFormComponent_ng_template_9_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 13);
