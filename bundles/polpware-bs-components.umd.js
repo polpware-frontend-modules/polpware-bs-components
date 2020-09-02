@@ -601,6 +601,24 @@
         core.ɵɵadvance(1);
         core.ɵɵtextInterpolate1(" ", elem_r4.validators.pattern.message, " ");
     } }
+    function PromptFormComponent_ng_container_8_div_2_small_8_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelementStart(0, "small", 17);
+        core.ɵɵtext(1);
+        core.ɵɵelementEnd();
+    } if (rf & 2) {
+        var elem_r4 = core.ɵɵnextContext().$implicit;
+        core.ɵɵadvance(1);
+        core.ɵɵtextInterpolate1(" ", elem_r4.validators.minLength.message, " ");
+    } }
+    function PromptFormComponent_ng_container_8_div_2_small_9_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelementStart(0, "small", 17);
+        core.ɵɵtext(1);
+        core.ɵɵelementEnd();
+    } if (rf & 2) {
+        var elem_r4 = core.ɵɵnextContext().$implicit;
+        core.ɵɵadvance(1);
+        core.ɵɵtextInterpolate1(" ", elem_r4.validators.maxLength.message, " ");
+    } }
     function PromptFormComponent_ng_container_8_div_2_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "div", 13);
         core.ɵɵelementStart(1, "label", 14);
@@ -611,6 +629,8 @@
         core.ɵɵtemplate(5, PromptFormComponent_ng_container_8_div_2_small_5_Template, 2, 1, "small", 16);
         core.ɵɵtemplate(6, PromptFormComponent_ng_container_8_div_2_small_6_Template, 2, 1, "small", 16);
         core.ɵɵtemplate(7, PromptFormComponent_ng_container_8_div_2_small_7_Template, 2, 1, "small", 16);
+        core.ɵɵtemplate(8, PromptFormComponent_ng_container_8_div_2_small_8_Template, 2, 1, "small", 16);
+        core.ɵɵtemplate(9, PromptFormComponent_ng_container_8_div_2_small_9_Template, 2, 1, "small", 16);
         core.ɵɵelementEnd();
     } if (rf & 2) {
         var elem_r4 = ctx.$implicit;
@@ -634,11 +654,15 @@
         core.ɵɵproperty("ngIf", (ctx_r3.form.controls[elem_r4.name].errors == null ? null : ctx_r3.form.controls[elem_r4.name].errors.max) && (ctx_r3.form.touched || ctx_r3.form.dirty));
         core.ɵɵadvance(1);
         core.ɵɵproperty("ngIf", (ctx_r3.form.controls[elem_r4.name].errors == null ? null : ctx_r3.form.controls[elem_r4.name].errors.pattern) && (ctx_r3.form.touched || ctx_r3.form.dirty));
+        core.ɵɵadvance(1);
+        core.ɵɵproperty("ngIf", (ctx_r3.form.controls[elem_r4.name].errors == null ? null : ctx_r3.form.controls[elem_r4.name].errors.minlength) && (ctx_r3.form.touched || ctx_r3.form.dirty));
+        core.ɵɵadvance(1);
+        core.ɵɵproperty("ngIf", (ctx_r3.form.controls[elem_r4.name].errors == null ? null : ctx_r3.form.controls[elem_r4.name].errors.maxlength) && (ctx_r3.form.touched || ctx_r3.form.dirty));
     } }
     function PromptFormComponent_ng_container_8_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementContainerStart(0);
         core.ɵɵelementStart(1, "form", 11);
-        core.ɵɵtemplate(2, PromptFormComponent_ng_container_8_div_2_Template, 8, 11, "div", 12);
+        core.ɵɵtemplate(2, PromptFormComponent_ng_container_8_div_2_Template, 10, 13, "div", 12);
         core.ɵɵelementEnd();
         core.ɵɵelementContainerEnd();
     } if (rf & 2) {
@@ -653,36 +677,54 @@
         core.ɵɵtext(1);
         core.ɵɵelementEnd();
     } if (rf & 2) {
-        var elem_r15 = core.ɵɵnextContext().$implicit;
+        var elem_r19 = core.ɵɵnextContext().$implicit;
         core.ɵɵadvance(1);
-        core.ɵɵtextInterpolate1(" ", elem_r15.validators.required.message, " ");
+        core.ɵɵtextInterpolate1(" ", elem_r19.validators.required.message, " ");
     } }
     function PromptFormComponent_ng_template_9_div_1_small_5_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "small", 17);
         core.ɵɵtext(1);
         core.ɵɵelementEnd();
     } if (rf & 2) {
-        var elem_r15 = core.ɵɵnextContext().$implicit;
+        var elem_r19 = core.ɵɵnextContext().$implicit;
         core.ɵɵadvance(1);
-        core.ɵɵtextInterpolate1(" ", elem_r15.validators.min.message, " ");
+        core.ɵɵtextInterpolate1(" ", elem_r19.validators.min.message, " ");
     } }
     function PromptFormComponent_ng_template_9_div_1_small_6_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "small", 17);
         core.ɵɵtext(1);
         core.ɵɵelementEnd();
     } if (rf & 2) {
-        var elem_r15 = core.ɵɵnextContext().$implicit;
+        var elem_r19 = core.ɵɵnextContext().$implicit;
         core.ɵɵadvance(1);
-        core.ɵɵtextInterpolate1(" ", elem_r15.validators.max.message, " ");
+        core.ɵɵtextInterpolate1(" ", elem_r19.validators.max.message, " ");
     } }
     function PromptFormComponent_ng_template_9_div_1_small_7_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "small", 17);
         core.ɵɵtext(1);
         core.ɵɵelementEnd();
     } if (rf & 2) {
-        var elem_r15 = core.ɵɵnextContext().$implicit;
+        var elem_r19 = core.ɵɵnextContext().$implicit;
         core.ɵɵadvance(1);
-        core.ɵɵtextInterpolate1(" ", elem_r15.validators.pattern.message, " ");
+        core.ɵɵtextInterpolate1(" ", elem_r19.validators.pattern.message, " ");
+    } }
+    function PromptFormComponent_ng_template_9_div_1_small_8_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelementStart(0, "small", 17);
+        core.ɵɵtext(1);
+        core.ɵɵelementEnd();
+    } if (rf & 2) {
+        var elem_r19 = core.ɵɵnextContext().$implicit;
+        core.ɵɵadvance(1);
+        core.ɵɵtextInterpolate1(" ", elem_r19.validators.minLength.message, " ");
+    } }
+    function PromptFormComponent_ng_template_9_div_1_small_9_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelementStart(0, "small", 17);
+        core.ɵɵtext(1);
+        core.ɵɵelementEnd();
+    } if (rf & 2) {
+        var elem_r19 = core.ɵɵnextContext().$implicit;
+        core.ɵɵadvance(1);
+        core.ɵɵtextInterpolate1(" ", elem_r19.validators.maxLength.message, " ");
     } }
     function PromptFormComponent_ng_template_9_div_1_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "div", 13);
@@ -694,32 +736,38 @@
         core.ɵɵtemplate(5, PromptFormComponent_ng_template_9_div_1_small_5_Template, 2, 1, "small", 16);
         core.ɵɵtemplate(6, PromptFormComponent_ng_template_9_div_1_small_6_Template, 2, 1, "small", 16);
         core.ɵɵtemplate(7, PromptFormComponent_ng_template_9_div_1_small_7_Template, 2, 1, "small", 16);
+        core.ɵɵtemplate(8, PromptFormComponent_ng_template_9_div_1_small_8_Template, 2, 1, "small", 16);
+        core.ɵɵtemplate(9, PromptFormComponent_ng_template_9_div_1_small_9_Template, 2, 1, "small", 16);
         core.ɵɵelementEnd();
     } if (rf & 2) {
-        var elem_r15 = ctx.$implicit;
-        var isFirst_r16 = ctx.first;
-        var ctx_r14 = core.ɵɵnextContext(2);
+        var elem_r19 = ctx.$implicit;
+        var isFirst_r20 = ctx.first;
+        var ctx_r18 = core.ɵɵnextContext(2);
         core.ɵɵadvance(1);
-        core.ɵɵpropertyInterpolate("for", elem_r15.fieldId);
+        core.ɵɵpropertyInterpolate("for", elem_r19.fieldId);
         core.ɵɵadvance(1);
-        core.ɵɵtextInterpolate1(" ", elem_r15.label, " ");
+        core.ɵɵtextInterpolate1(" ", elem_r19.label, " ");
         core.ɵɵadvance(1);
-        core.ɵɵpropertyInterpolate("formControlName", elem_r15.name);
-        core.ɵɵpropertyInterpolate("id", elem_r15.fieldId);
-        core.ɵɵpropertyInterpolate("type", elem_r15.category);
-        core.ɵɵproperty("autofocus", isFirst_r16);
+        core.ɵɵpropertyInterpolate("formControlName", elem_r19.name);
+        core.ɵɵpropertyInterpolate("id", elem_r19.fieldId);
+        core.ɵɵpropertyInterpolate("type", elem_r19.category);
+        core.ɵɵproperty("autofocus", isFirst_r20);
         core.ɵɵadvance(1);
-        core.ɵɵproperty("ngIf", (ctx_r14.form.controls[elem_r15.name].errors == null ? null : ctx_r14.form.controls[elem_r15.name].errors.required) && (ctx_r14.form.touched || ctx_r14.form.dirty));
+        core.ɵɵproperty("ngIf", (ctx_r18.form.controls[elem_r19.name].errors == null ? null : ctx_r18.form.controls[elem_r19.name].errors.required) && (ctx_r18.form.touched || ctx_r18.form.dirty));
         core.ɵɵadvance(1);
-        core.ɵɵproperty("ngIf", (ctx_r14.form.controls[elem_r15.name].errors == null ? null : ctx_r14.form.controls[elem_r15.name].errors.min) && (ctx_r14.form.touched || ctx_r14.form.dirty));
+        core.ɵɵproperty("ngIf", (ctx_r18.form.controls[elem_r19.name].errors == null ? null : ctx_r18.form.controls[elem_r19.name].errors.min) && (ctx_r18.form.touched || ctx_r18.form.dirty));
         core.ɵɵadvance(1);
-        core.ɵɵproperty("ngIf", (ctx_r14.form.controls[elem_r15.name].errors == null ? null : ctx_r14.form.controls[elem_r15.name].errors.max) && (ctx_r14.form.touched || ctx_r14.form.dirty));
+        core.ɵɵproperty("ngIf", (ctx_r18.form.controls[elem_r19.name].errors == null ? null : ctx_r18.form.controls[elem_r19.name].errors.max) && (ctx_r18.form.touched || ctx_r18.form.dirty));
         core.ɵɵadvance(1);
-        core.ɵɵproperty("ngIf", (ctx_r14.form.controls[elem_r15.name].errors == null ? null : ctx_r14.form.controls[elem_r15.name].errors.pattern) && (ctx_r14.form.touched || ctx_r14.form.dirty));
+        core.ɵɵproperty("ngIf", (ctx_r18.form.controls[elem_r19.name].errors == null ? null : ctx_r18.form.controls[elem_r19.name].errors.pattern) && (ctx_r18.form.touched || ctx_r18.form.dirty));
+        core.ɵɵadvance(1);
+        core.ɵɵproperty("ngIf", (ctx_r18.form.controls[elem_r19.name].errors == null ? null : ctx_r18.form.controls[elem_r19.name].errors.minlength) && (ctx_r18.form.touched || ctx_r18.form.dirty));
+        core.ɵɵadvance(1);
+        core.ɵɵproperty("ngIf", (ctx_r18.form.controls[elem_r19.name].errors == null ? null : ctx_r18.form.controls[elem_r19.name].errors.maxlength) && (ctx_r18.form.touched || ctx_r18.form.dirty));
     } }
     function PromptFormComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "form", 18);
-        core.ɵɵtemplate(1, PromptFormComponent_ng_template_9_div_1_Template, 8, 10, "div", 12);
+        core.ɵɵtemplate(1, PromptFormComponent_ng_template_9_div_1_Template, 10, 12, "div", 12);
         core.ɵɵelementEnd();
     } if (rf & 2) {
         var ctx_r2 = core.ɵɵnextContext();
