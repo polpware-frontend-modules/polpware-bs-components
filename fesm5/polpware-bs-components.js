@@ -258,8 +258,8 @@ var AlertBoxComponent = /** @class */ (function () {
         this.hideNoBtn = this.hideNoBtn || false;
         this.yesBtnLabel = this.yesBtnLabel || 'Yes';
         this.noBtnLabel = this.noBtnLabel || 'No';
-        this.yesBtnClasses = this.yesBtnClasses || 'btn-primary btn-lg';
-        this.noBtnClasses = this.noBtnClasses || 'btn-secondary btn-lg';
+        this.yesBtnClasses = this.yesBtnClasses || 'btn-primary';
+        this.noBtnClasses = this.noBtnClasses || 'btn-secondary';
     };
     AlertBoxComponent.prototype.close = function () {
         this.result.next(false);
@@ -525,8 +525,8 @@ var PromptFormComponent = /** @class */ (function () {
         var _this = this;
         this.confirmBtnLabel = this.confirmBtnLabel || 'Confirm';
         this.closeBtnLabel = this.closeBtnLabel || 'Cancel';
-        this.confirmBtnClasses = this.confirmBtnClasses || 'btn-primary btn-lg';
-        this.closeBtnClasses = this.closeBtnClasses || 'btn-secondary btn-lg';
+        this.confirmBtnClasses = this.confirmBtnClasses || 'btn-primary';
+        this.closeBtnClasses = this.closeBtnClasses || 'btn-secondary';
         if (this.autocomplete) {
             this.extFields = this.fields.map(function (a) {
                 var k = "section-polp-bs-prompt-form-" + _this.autocomplete + " " + a.name;
@@ -540,7 +540,7 @@ var PromptFormComponent = /** @class */ (function () {
         }
         var a = {};
         this.extFields.forEach(function (x) {
-            a[x.name] = new FormControl(x.value, makeValidations(x.validations));
+            a[x.name] = new FormControl(x.value, makeValidations(x.validators));
         });
         this.form = this._builder.group(a);
     };

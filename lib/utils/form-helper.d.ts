@@ -10,6 +10,6 @@ export interface IInputFieldSpec {
     label: string;
     value: any;
     category: string;
-    validations: IValidationsSpec;
+    validators: IValidationsSpec;
 }
 export declare function makeValidations(data: IValidationsSpec): ValidatorFn;
