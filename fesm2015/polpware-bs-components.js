@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵelement, ɵɵsanitizeHtml, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -247,9 +247,14 @@ function AlertBoxComponent_button_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", ctx_r0.noBtnLabel, " ");
 } }
+var KEY_CODE;
+(function (KEY_CODE) {
+    KEY_CODE[KEY_CODE["ENTER"] = 13] = "ENTER";
+})(KEY_CODE || (KEY_CODE = {}));
 class AlertBoxComponent {
     constructor(_bsModalRef) {
         this._bsModalRef = _bsModalRef;
+        this.enableEnter = false;
         this.result = new Subject();
     }
     ngOnInit() {
@@ -258,6 +263,11 @@ class AlertBoxComponent {
         this.noBtnLabel = this.noBtnLabel || 'No';
         this.yesBtnClasses = this.yesBtnClasses || 'btn-primary';
         this.noBtnClasses = this.noBtnClasses || 'btn-secondary';
+    }
+    keyEvent(event) {
+        if (this.enableEnter && event.keyCode === KEY_CODE.ENTER) {
+            this.confirm();
+        }
     }
     close() {
         this.result.next(false);
@@ -271,7 +281,9 @@ class AlertBoxComponent {
     }
 }
 AlertBoxComponent.ɵfac = function AlertBoxComponent_Factory(t) { return new (t || AlertBoxComponent)(ɵɵdirectiveInject(BsModalRef)); };
-AlertBoxComponent.ɵcmp = ɵɵdefineComponent({ type: AlertBoxComponent, selectors: [["polp-bs-alert-box"]], inputs: { hideNoBtn: "hideNoBtn", yesBtnLabel: "yesBtnLabel", noBtnLabel: "noBtnLabel", noBtnClasses: "noBtnClasses", yesBtnClasses: "yesBtnClasses", title: "title", innerBody: "innerBody" }, decls: 12, vars: 5, consts: [[1, "modal-header"], [1, "modal-title", "pull-left"], ["type", "button", "aria-label", "Close", 1, "close", "pull-right", 3, "click"], ["aria-hidden", "true"], [1, "modal-body"], [3, "innerHtml"], [1, "modal-footer"], ["type", "button", "class", "btn mr-2", 3, "ngClass", "click", 4, "ngIf"], ["type", "button", 1, "btn", 3, "ngClass", "click"], ["type", "button", 1, "btn", "mr-2", 3, "ngClass", "click"]], template: function AlertBoxComponent_Template(rf, ctx) { if (rf & 1) {
+AlertBoxComponent.ɵcmp = ɵɵdefineComponent({ type: AlertBoxComponent, selectors: [["polp-bs-alert-box"]], hostBindings: function AlertBoxComponent_HostBindings(rf, ctx) { if (rf & 1) {
+        ɵɵlistener("keyup", function AlertBoxComponent_keyup_HostBindingHandler($event) { return ctx.keyEvent($event); }, false, ɵɵresolveWindow);
+    } }, inputs: { hideNoBtn: "hideNoBtn", yesBtnLabel: "yesBtnLabel", noBtnLabel: "noBtnLabel", noBtnClasses: "noBtnClasses", yesBtnClasses: "yesBtnClasses", enableEnter: "enableEnter", title: "title", innerBody: "innerBody" }, decls: 12, vars: 5, consts: [[1, "modal-header"], [1, "modal-title", "pull-left"], ["type", "button", "aria-label", "Close", 1, "close", "pull-right", 3, "click"], ["aria-hidden", "true"], [1, "modal-body"], [3, "innerHtml"], [1, "modal-footer"], ["type", "button", "class", "btn mr-2", 3, "ngClass", "click", 4, "ngIf"], ["type", "button", 1, "btn", 3, "ngClass", "click"], ["type", "button", 1, "btn", "mr-2", 3, "ngClass", "click"]], template: function AlertBoxComponent_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "h4", 1);
         ɵɵtext(2);
@@ -322,10 +334,15 @@ AlertBoxComponent.ɵcmp = ɵɵdefineComponent({ type: AlertBoxComponent, selecto
             type: Input
         }], yesBtnClasses: [{
             type: Input
+        }], enableEnter: [{
+            type: Input
         }], title: [{
             type: Input
         }], innerBody: [{
             type: Input
+        }], keyEvent: [{
+            type: HostListener,
+            args: ['window:keyup', ['$event']]
         }] }); })();
 
 function makeValidations(data) {
@@ -562,10 +579,18 @@ function PromptFormComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵproperty("ngForOf", ctx_r2.extFields);
 } }
+var KEY_CODE$1;
+(function (KEY_CODE) {
+    KEY_CODE[KEY_CODE["ENTER"] = 13] = "ENTER";
+})(KEY_CODE$1 || (KEY_CODE$1 = {}));
+function uuidv4() {
+    return 'alpha-' + v4();
+}
 class PromptFormComponent {
     constructor(_builder, _bsModalRef) {
         this._builder = _builder;
         this._bsModalRef = _bsModalRef;
+        this.enableEnter = false;
         this.result = new Subject();
     }
     ngOnInit() {
@@ -576,12 +601,12 @@ class PromptFormComponent {
         if (this.autocomplete) {
             this.extFields = this.fields.map(a => {
                 const k = `section-polp-bs-prompt-form-${this.autocomplete} ${a.name}`;
-                return Object.assign(Object.assign({}, a), { fieldId: v4(), autocompleteKey: k });
+                return Object.assign(Object.assign({}, a), { fieldId: uuidv4(), autocompleteKey: k });
             });
         }
         else {
             this.extFields = this.fields.map(a => {
-                return Object.assign(Object.assign({}, a), { fieldId: v4() });
+                return Object.assign(Object.assign({}, a), { fieldId: uuidv4() });
             });
         }
         const a = {};
@@ -589,6 +614,13 @@ class PromptFormComponent {
             a[x.name] = new FormControl(x.value, makeValidations(x.validators));
         });
         this.form = this._builder.group(a);
+    }
+    keyEvent(event) {
+        if (this.enableEnter && event.keyCode === KEY_CODE$1.ENTER) {
+            if (this.form.valid) {
+                this.confirm();
+            }
+        }
     }
     close() {
         this.result.next(null);
@@ -602,7 +634,9 @@ class PromptFormComponent {
     }
 }
 PromptFormComponent.ɵfac = function PromptFormComponent_Factory(t) { return new (t || PromptFormComponent)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(BsModalRef)); };
-PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, selectors: [["polp-bs-prompt-form"]], inputs: { autocomplete: "autocomplete", closeBtnLabel: "closeBtnLabel", confirmBtnLabel: "confirmBtnLabel", closeBtnClasses: "closeBtnClasses", confirmBtnClasses: "confirmBtnClasses", title: "title", innerBody: "innerBody", fields: "fields" }, outputs: { result: "result" }, decls: 16, vars: 9, consts: [[1, "modal-header"], [1, "modal-title", "pull-left"], ["type", "button", "aria-label", "Close", 1, "close", "pull-right", 3, "click"], ["aria-hidden", "true"], [1, "modal-body"], [3, "innerHtml"], [4, "ngIf", "ngIfElse"], ["disableTmpl", ""], [1, "modal-footer"], ["type", "button", 1, "btn", "mr-2", 3, "ngClass", "click"], ["type", "button", 1, "btn", 3, "ngClass", "disabled", "click"], ["name", "promptForm", "autocomplete", "on", 3, "formGroup"], ["class", "from-group mb-4", 4, "ngFor", "ngForOf"], [1, "from-group", "mb-4"], [3, "for"], [1, "form-control", "form-control-lg", 3, "formControlName", "autocomplete", "id", "type", "autofocus"], ["class", "text-danger", 4, "ngIf"], [1, "text-danger"], ["name", "promptForm", 3, "formGroup"], [1, "form-control", "form-control-lg", 3, "formControlName", "id", "type", "autofocus"]], template: function PromptFormComponent_Template(rf, ctx) { if (rf & 1) {
+PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, selectors: [["polp-bs-prompt-form"]], hostBindings: function PromptFormComponent_HostBindings(rf, ctx) { if (rf & 1) {
+        ɵɵlistener("keyup", function PromptFormComponent_keyup_HostBindingHandler($event) { return ctx.keyEvent($event); }, false, ɵɵresolveWindow);
+    } }, inputs: { autocomplete: "autocomplete", enableEnter: "enableEnter", closeBtnLabel: "closeBtnLabel", confirmBtnLabel: "confirmBtnLabel", closeBtnClasses: "closeBtnClasses", confirmBtnClasses: "confirmBtnClasses", title: "title", innerBody: "innerBody", fields: "fields" }, outputs: { result: "result" }, decls: 16, vars: 9, consts: [[1, "modal-header"], [1, "modal-title", "pull-left"], ["type", "button", "aria-label", "Close", 1, "close", "pull-right", 3, "click"], ["aria-hidden", "true"], [1, "modal-body"], [3, "innerHtml"], [4, "ngIf", "ngIfElse"], ["disableTmpl", ""], [1, "modal-footer"], ["type", "button", 1, "btn", "mr-2", 3, "ngClass", "click"], ["type", "button", 1, "btn", 3, "ngClass", "disabled", "click"], ["name", "promptForm", "autocomplete", "on", 3, "formGroup"], ["class", "from-group mb-4", 4, "ngFor", "ngForOf"], [1, "from-group", "mb-4"], [3, "for"], [1, "form-control", "form-control-lg", 3, "formControlName", "autocomplete", "id", "type", "autofocus"], ["class", "text-danger", 4, "ngIf"], [1, "text-danger"], ["name", "promptForm", 3, "formGroup"], [1, "form-control", "form-control-lg", 3, "formControlName", "id", "type", "autofocus"]], template: function PromptFormComponent_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "h4", 1);
         ɵɵtext(2);
@@ -655,6 +689,8 @@ PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, sel
             }]
     }], function () { return [{ type: FormBuilder }, { type: BsModalRef }]; }, { autocomplete: [{
             type: Input
+        }], enableEnter: [{
+            type: Input
         }], closeBtnLabel: [{
             type: Input
         }], confirmBtnLabel: [{
@@ -671,6 +707,9 @@ PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, sel
             type: Input
         }], result: [{
             type: Output
+        }], keyEvent: [{
+            type: HostListener,
+            args: ['window:keyup', ['$event']]
         }] }); })();
 
 class PolpBsComponentsModule {

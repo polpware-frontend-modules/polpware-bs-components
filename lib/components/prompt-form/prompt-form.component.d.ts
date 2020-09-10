@@ -12,6 +12,7 @@ export declare class PromptFormComponent implements OnInit {
     private readonly _builder;
     private readonly _bsModalRef;
     autocomplete: string;
+    enableEnter: boolean;
     closeBtnLabel: string;
     confirmBtnLabel: string;
     closeBtnClasses: string;
@@ -26,9 +27,10 @@ export declare class PromptFormComponent implements OnInit {
     form: FormGroup;
     constructor(_builder: FormBuilder, _bsModalRef: BsModalRef);
     ngOnInit(): void;
+    keyEvent(event: KeyboardEvent): void;
     close(): void;
     confirm(): void;
     static ɵfac: i0.ɵɵFactoryDef<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "closeBtnLabel": "closeBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "closeBtnClasses": "closeBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "closeBtnLabel": "closeBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "closeBtnClasses": "closeBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
 }
 export {};
