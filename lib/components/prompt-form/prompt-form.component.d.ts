@@ -8,14 +8,29 @@ interface IInputFieldSpecExt extends IInputFieldSpec {
     fieldId: string;
     autocompleteKey?: string;
 }
+export interface IPrompFormInputs {
+    autocomplete?: 'on' | 'off';
+    enableEnter?: boolean;
+    hideCancelBtn?: boolean;
+    hideCloseBtn?: boolean;
+    cancelBtnLabel?: string;
+    confirmBtnLabel?: string;
+    cancelBtnClasses?: string;
+    confirmBtnClasses?: string;
+    title: string;
+    innerBody: string;
+    fields: Array<IInputFieldSpec>;
+}
 export declare class PromptFormComponent implements OnInit {
     private readonly _builder;
     private readonly _bsModalRef;
     autocomplete: string;
     enableEnter: boolean;
-    closeBtnLabel: string;
+    hideCancelBtn: boolean;
+    hideCloseBtn: boolean;
+    cancelBtnLabel: string;
     confirmBtnLabel: string;
-    closeBtnClasses: string;
+    cancelBtnClasses: string;
     confirmBtnClasses: string;
     title: string;
     innerBody: string;
@@ -31,6 +46,6 @@ export declare class PromptFormComponent implements OnInit {
     close(): void;
     confirm(): void;
     static ɵfac: i0.ɵɵFactoryDef<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "closeBtnLabel": "closeBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "closeBtnClasses": "closeBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "hideCancelBtn": "hideCancelBtn"; "hideCloseBtn": "hideCloseBtn"; "cancelBtnLabel": "cancelBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "cancelBtnClasses": "cancelBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
 }
 export {};
