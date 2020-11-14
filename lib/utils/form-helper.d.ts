@@ -1,7 +1,8 @@
 import { ValidatorFn } from '@angular/forms';
 export declare type IValidationsSpec = {
     [key: string]: {
-        value: any;
+        value?: any;
+        options?: any;
         message: string;
     };
 };

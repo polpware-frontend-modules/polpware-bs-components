@@ -1,13 +1,14 @@
 {
   "name": "@polpware/bs-components",
-  "version": "9.0.9",
+  "version": "9.0.10",
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",
     "ngx-bootstrap": "6.x",
     "uuid": "8.x",
-    "@40three/ngx-autofocus-directive": "9.x",
-    "ngx-autosize": "^1.8.0"
+    "@40three/ngx-autofocus-directive": "^9.0.0",
+    "ngx-autosize": "^1.8.0",
+    "polpware/ngx-input-validators": "^9.0.0"
   },
   "main": "bundles/polpware-bs-components.umd.js",
   "module": "fesm5/polpware-bs-components.js",
