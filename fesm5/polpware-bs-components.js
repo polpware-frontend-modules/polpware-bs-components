@@ -1,14 +1,16 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, CommonModule } from '@angular/common';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, ɵɵpipe, ɵɵpipeBind1, ɵɵInheritDefinitionFeature, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { __assign } from 'tslib';
-import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { __assign, __extends } from 'tslib';
+import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, NgForm, NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { v4 } from 'uuid';
 import { buildUrlValidator } from '@polpware/ngx-input-validators';
 import { AutosizeDirective, AutosizeModule } from 'ngx-autosize';
 import { AutofocusDirective, FtAutofocusModule } from '@40three/ngx-autofocus-directive';
+import { EmailFormAbstractComponent } from '@polpware/ngx-email-composer';
+import { TagInputComponent, TagInputDropdown, TagInputModule } from 'ngx-chips';
 
 var ActionKind;
 (function (ActionKind) {
@@ -807,6 +809,62 @@ var PromptFormComponent = /** @class */ (function () {
             args: ['window:keyup', ['$event']]
         }] }); })();
 
+function EmailComposerComponent_tag_input_dropdown_4_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0);
+} if (rf & 2) {
+    var item_r4 = ctx.item;
+    ɵɵtextInterpolate1(" ", item_r4.display, " ");
+} }
+function EmailComposerComponent_tag_input_dropdown_4_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "tag-input-dropdown", 7);
+    ɵɵpipe(1, "async");
+    ɵɵtemplate(2, EmailComposerComponent_tag_input_dropdown_4_ng_template_2_Template, 1, 1, "ng-template");
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r1 = ɵɵnextContext();
+    ɵɵproperty("autocompleteItems", ɵɵpipeBind1(1, 1, ctx_r1.autocompleteItemsAsync));
+} }
+var _c0$1 = function () { return [32, 44, 58, 59]; };
+var EmailComposerComponent = /** @class */ (function (_super) {
+    __extends(EmailComposerComponent, _super);
+    function EmailComposerComponent() {
+        return _super.call(this) || this;
+    }
+    EmailComposerComponent.ɵfac = function EmailComposerComponent_Factory(t) { return new (t || EmailComposerComponent)(); };
+    EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [ɵɵInheritDefinitionFeature], decls: 9, vars: 17, consts: [["name", "emailForm", "autocomplete", "off"], [1, "form-group"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems", 4, "ngIf"], ["name", "messageBodyInput", "autosize", "", "placeholder", "Type your personal message here", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", ""], [3, "autocompleteItems"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "form", 0);
+            ɵɵelementStart(1, "div", 1);
+            ɵɵelementStart(2, "tag-input", 2, 3);
+            ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_tag_input_ngModelChange_2_listener($event) { return ctx.emails = $event; })("focusout", function EmailComposerComponent_Template_tag_input_focusout_2_listener($event) { return ctx.onOutOfTagInput($event); })("onTextChange", function EmailComposerComponent_Template_tag_input_onTextChange_2_listener($event) { return ctx.textChanged($event); });
+            ɵɵtemplate(4, EmailComposerComponent_tag_input_dropdown_4_Template, 3, 3, "tag-input-dropdown", 4);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(5, "div", 1);
+            ɵɵelementStart(6, "textarea", 5, 6);
+            ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_textarea_ngModelChange_6_listener($event) { return ctx.messageBody = $event; });
+            ɵɵtext(8, "        ");
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵadvance(2);
+            ɵɵproperty("ngModel", ctx.emails)("addOnPaste", true)("modelAsStrings", true)("trimTags", true)("editable", true)("errorMessages", ctx.errorMessages)("validators", ctx.validators)("secondaryPlaceholder", "Emails")("separatorKeyCodes", ɵɵpureFunction0(16, _c0$1))("displayBy", "display")("identifyBy", "value")("placeholder", "Emails");
+            ɵɵadvance(2);
+            ɵɵproperty("ngIf", ctx.autocompleteItemsAsync);
+            ɵɵadvance(2);
+            ɵɵproperty("minRows", 5)("maxRows", 10)("ngModel", ctx.messageBody);
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, TagInputComponent, NgControlStatus, NgModel, NgIf, DefaultValueAccessor, AutosizeDirective, TagInputDropdown], pipes: [AsyncPipe], styles: [""] });
+    return EmailComposerComponent;
+}(EmailFormAbstractComponent));
+/*@__PURE__*/ (function () { ɵsetClassMetadata(EmailComposerComponent, [{
+        type: Component,
+        args: [{
+                selector: 'polp-email-composer',
+                templateUrl: './email-composer.component.html',
+                styleUrls: ['./email-composer.component.css']
+            }]
+    }], function () { return []; }, null); })();
+
 var PolpBsComponentsModule = /** @class */ (function () {
     function PolpBsComponentsModule() {
     }
@@ -817,27 +875,32 @@ var PolpBsComponentsModule = /** @class */ (function () {
                 FormsModule,
                 ReactiveFormsModule,
                 FtAutofocusModule,
-                AutosizeModule
+                AutosizeModule,
+                TagInputModule
             ]] });
     return PolpBsComponentsModule;
 }());
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PolpBsComponentsModule, { declarations: [BreadcrumbComponent,
         AlertBoxComponent,
-        PromptFormComponent], imports: [CommonModule,
+        PromptFormComponent,
+        EmailComposerComponent], imports: [CommonModule,
         RouterModule,
         FormsModule,
         ReactiveFormsModule,
         FtAutofocusModule,
-        AutosizeModule], exports: [BreadcrumbComponent,
+        AutosizeModule,
+        TagInputModule], exports: [BreadcrumbComponent,
         AlertBoxComponent,
-        PromptFormComponent] }); })();
+        PromptFormComponent,
+        EmailComposerComponent] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
         type: NgModule,
         args: [{
                 declarations: [
                     BreadcrumbComponent,
                     AlertBoxComponent,
-                    PromptFormComponent
+                    PromptFormComponent,
+                    EmailComposerComponent
                 ],
                 imports: [
                     CommonModule,
@@ -845,17 +908,16 @@ var PolpBsComponentsModule = /** @class */ (function () {
                     FormsModule,
                     ReactiveFormsModule,
                     FtAutofocusModule,
-                    AutosizeModule
+                    AutosizeModule,
+                    TagInputModule
                 ],
                 exports: [
                     BreadcrumbComponent,
                     AlertBoxComponent,
-                    PromptFormComponent
+                    PromptFormComponent,
+                    EmailComposerComponent
                 ],
-                entryComponents: [
-                    AlertBoxComponent,
-                    PromptFormComponent
-                ]
+                entryComponents: []
             }]
     }], null, null); })();
 
@@ -867,5 +929,5 @@ var PolpBsComponentsModule = /** @class */ (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, PolpBsComponentsModule, PromptFormComponent, makeValidations };
+export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, EmailComposerComponent, PolpBsComponentsModule, PromptFormComponent, makeValidations };
 //# sourceMappingURL=polpware-bs-components.js.map
