@@ -1050,6 +1050,12 @@
             _this.messageBody = '';
             return _this;
         }
+        EmailComposerComponent.prototype.ngAfterViewInit = function () {
+            var _this = this;
+            setTimeout(function () {
+                _this.emailInputBox.focus();
+            }, 200);
+        };
         // Override
         EmailComposerComponent.prototype.submit = function () {
             // Sanity check
@@ -1057,7 +1063,7 @@
                 !this.messageBody ||
                 !this.emails.length) {
                 this.alertType = ngxEmailComposer.AlertTypeEnum.error;
-                this.alertMessage = 'Please provide necessary values and try again!';
+                this.alertMessage = 'Please provide required values and try again!';
                 this.alertSubMessage = '';
                 this.alertDismissible = true;
                 return;
@@ -1077,7 +1083,7 @@
                 core.ɵɵlistener("ngSubmit", function EmailComposerComponent_Template_form_ngSubmit_1_listener() { return ctx.submit(); });
                 core.ɵɵelementStart(2, "div", 2);
                 core.ɵɵelementStart(3, "label");
-                core.ɵɵtext(4, "Receiver(s)");
+                core.ɵɵtext(4, "Recipients");
                 core.ɵɵelementEnd();
                 core.ɵɵelementStart(5, "tag-input", 3, 4);
                 core.ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_tag_input_ngModelChange_5_listener($event) { return ctx.emails = $event; })("focusout", function EmailComposerComponent_Template_tag_input_focusout_5_listener($event) { return ctx.onOutOfTagInput($event); })("onTextChange", function EmailComposerComponent_Template_tag_input_onTextChange_5_listener($event) { return ctx.textChanged($event); });

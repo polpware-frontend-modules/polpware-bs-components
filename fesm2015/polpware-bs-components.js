@@ -837,6 +837,11 @@ class EmailComposerComponent extends EmailFormAbstractComponent {
         this.messageTitle = '';
         this.messageBody = '';
     }
+    ngAfterViewInit() {
+        setTimeout(() => {
+            this.emailInputBox.focus();
+        }, 200);
+    }
     // Override
     submit() {
         // Sanity check
@@ -844,7 +849,7 @@ class EmailComposerComponent extends EmailFormAbstractComponent {
             !this.messageBody ||
             !this.emails.length) {
             this.alertType = AlertTypeEnum.error;
-            this.alertMessage = 'Please provide necessary values and try again!';
+            this.alertMessage = 'Please provide required values and try again!';
             this.alertSubMessage = '';
             this.alertDismissible = true;
             return;
@@ -865,7 +870,7 @@ EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponen
         ɵɵlistener("ngSubmit", function EmailComposerComponent_Template_form_ngSubmit_1_listener() { return ctx.submit(); });
         ɵɵelementStart(2, "div", 2);
         ɵɵelementStart(3, "label");
-        ɵɵtext(4, "Receiver(s)");
+        ɵɵtext(4, "Recipients");
         ɵɵelementEnd();
         ɵɵelementStart(5, "tag-input", 3, 4);
         ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_tag_input_ngModelChange_5_listener($event) { return ctx.emails = $event; })("focusout", function EmailComposerComponent_Template_tag_input_focusout_5_listener($event) { return ctx.onOutOfTagInput($event); })("onTextChange", function EmailComposerComponent_Template_tag_input_onTextChange_5_listener($event) { return ctx.textChanged($event); });
