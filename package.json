@@ -1,6 +1,6 @@
 {
   "name": "@polpware/bs-components",
-  "version": "9.1.3",
+  "version": "9.1.4",
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",
@@ -10,7 +10,11 @@
     "ngx-autosize": "^1.8.0",
     "@polpware/ngx-input-validators": "^9.0.0",
     "@polpware/ngx-email-composer": "^9.0.0",
-    "ngx-chips": "2.2.0"
+    "ngx-chips": "2.2.0",
+    "@fortawesome/angular-fontawesome": "0.6.x",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0"
   },
   "main": "bundles/polpware-bs-components.umd.js",
   "module": "fesm5/polpware-bs-components.js",

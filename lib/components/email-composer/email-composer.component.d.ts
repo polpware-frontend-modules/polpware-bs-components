@@ -2,6 +2,7 @@ import { AfterViewInit } from '@angular/core';
 import { EmailFormAbstractComponent } from '@polpware/ngx-email-composer';
 import * as i0 from "@angular/core";
 export declare class EmailComposerComponent extends EmailFormAbstractComponent implements AfterViewInit {
+    faSpinner: import("@fortawesome/fontawesome-common-types").IconDefinition;
     constructor();
     ngAfterViewInit(): void;
     submit(): void;

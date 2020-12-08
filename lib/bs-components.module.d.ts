@@ -6,10 +6,11 @@ import * as i4 from "./components/email-composer/email-composer.component";
 import * as i5 from "@angular/common";
 import * as i6 from "@angular/router";
 import * as i7 from "@angular/forms";
-import * as i8 from "@40three/ngx-autofocus-directive";
-import * as i9 from "ngx-autosize";
-import * as i10 from "ngx-chips";
+import * as i8 from "@fortawesome/angular-fontawesome";
+import * as i9 from "@40three/ngx-autofocus-directive";
+import * as i10 from "ngx-autosize";
+import * as i11 from "ngx-chips";
 export declare class PolpBsComponentsModule {
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent], [typeof i5.CommonModule, typeof i6.RouterModule, typeof i7.FormsModule, typeof i7.ReactiveFormsModule, typeof i8.FtAutofocusModule, typeof i9.AutosizeModule, typeof i10.TagInputModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent]>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent], [typeof i5.CommonModule, typeof i6.RouterModule, typeof i7.FormsModule, typeof i7.ReactiveFormsModule, typeof i8.FontAwesomeModule, typeof i9.FtAutofocusModule, typeof i10.AutosizeModule, typeof i11.TagInputModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent]>;
     static ɵinj: i0.ɵɵInjectorDef<PolpBsComponentsModule>;
 }

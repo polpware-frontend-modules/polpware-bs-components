@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@polpware/ngx-email-composer'), require('ngx-chips')) :
-    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@polpware/ngx-email-composer', 'ngx-chips'], factory) :
-    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.ngxEmailComposer, global.ngxChips));
-}(this, (function (exports, core, common, router, rxjs, modal, forms, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, ngxEmailComposer, ngxChips) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@polpware/ngx-email-composer'), require('@fortawesome/free-solid-svg-icons'), require('ngx-chips'), require('@fortawesome/angular-fontawesome')) :
+    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@polpware/ngx-email-composer', '@fortawesome/free-solid-svg-icons', 'ngx-chips', '@fortawesome/angular-fontawesome'], factory) :
+    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.ngxEmailComposer, global.freeSolidSvgIcons, global.ngxChips, global.angularFontawesome));
+}(this, (function (exports, core, common, router, rxjs, modal, forms, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, ngxEmailComposer, freeSolidSvgIcons, ngxChips, angularFontawesome) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1015,7 +1015,7 @@
             }] }); })();
 
     function EmailComposerComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelementStart(0, "div", 14);
+        core.ɵɵelementStart(0, "div", 15);
         core.ɵɵelementStart(1, "p");
         core.ɵɵtext(2);
         core.ɵɵelementEnd();
@@ -1028,24 +1028,31 @@
     function EmailComposerComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵtext(0);
     } if (rf & 2) {
-        var item_r8 = ctx.item;
-        core.ɵɵtextInterpolate1(" ", item_r8.display, " ");
+        var item_r9 = ctx.item;
+        core.ɵɵtextInterpolate1(" ", item_r9.display, " ");
     } }
     function EmailComposerComponent_span_15_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelementStart(0, "span", 15);
+        core.ɵɵelementStart(0, "span", 16);
         core.ɵɵtext(1, " Subject is required. ");
         core.ɵɵelementEnd();
     } }
     function EmailComposerComponent_span_23_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelementStart(0, "span", 15);
+        core.ɵɵelementStart(0, "span", 16);
         core.ɵɵtext(1, " Body message is required. ");
         core.ɵɵelementEnd();
+    } }
+    function EmailComposerComponent_fa_icon_27_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelement(0, "fa-icon", 17);
+    } if (rf & 2) {
+        var ctx_r8 = core.ɵɵnextContext();
+        core.ɵɵproperty("icon", ctx_r8.faSpinner)("spin", true);
     } }
     var _c0$1 = function () { return [32, 44, 58, 59]; };
     var EmailComposerComponent = /** @class */ (function (_super) {
         __extends(EmailComposerComponent, _super);
         function EmailComposerComponent() {
             var _this = _super.call(this) || this;
+            _this.faSpinner = freeSolidSvgIcons.faSpinner;
             _this.messageTitle = '';
             _this.messageBody = '';
             return _this;
@@ -1077,7 +1084,7 @@
             _super.prototype.submit.call(this);
         };
         EmailComposerComponent.ɵfac = function EmailComposerComponent_Factory(t) { return new (t || EmailComposerComponent)(); };
-        EmailComposerComponent.ɵcmp = core.ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [core.ɵɵInheritDefinitionFeature], decls: 27, vars: 23, consts: [["class", "alert alert-danger show", "role", "alert", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["role", "alert", 1, "alert", "alert-danger", "show"], [1, "d-block", "small", "text-danger"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
+        EmailComposerComponent.ɵcmp = core.ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [core.ɵɵInheritDefinitionFeature], decls: 28, vars: 25, consts: [["class", "alert alert-danger show", "role", "alert", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", 1, "btn", "btn-primary", 3, "disabled", "click"], ["class", "ml-2", 3, "icon", "spin", 4, "ngIf"], ["role", "alert", 1, "alert", "alert-danger", "show"], [1, "d-block", "small", "text-danger"], [1, "ml-2", 3, "icon", "spin"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
                 core.ɵɵtemplate(0, EmailComposerComponent_div_0_Template, 3, 1, "div", 0);
                 core.ɵɵelementStart(1, "div");
                 core.ɵɵelementStart(2, "div", 1);
@@ -1114,7 +1121,8 @@
                 core.ɵɵelementStart(24, "div", 12);
                 core.ɵɵelementStart(25, "button", 13);
                 core.ɵɵlistener("click", function EmailComposerComponent_Template_button_click_25_listener() { return ctx.submit(); });
-                core.ɵɵtext(26, "Submit");
+                core.ɵɵtext(26, " Submit ");
+                core.ɵɵtemplate(27, EmailComposerComponent_fa_icon_27_Template, 1, 2, "fa-icon", 14);
                 core.ɵɵelementEnd();
                 core.ɵɵelementEnd();
                 core.ɵɵelementEnd();
@@ -1123,9 +1131,9 @@
                 var _r6 = core.ɵɵreference(21);
                 core.ɵɵproperty("ngIf", ctx.alertType > 0);
                 core.ɵɵadvance(5);
-                core.ɵɵproperty("ngModel", ctx.emails)("addOnPaste", true)("modelAsStrings", true)("trimTags", true)("editable", true)("errorMessages", ctx.errorMessages)("validators", ctx.validators)("secondaryPlaceholder", "Emails")("separatorKeyCodes", core.ɵɵpureFunction0(22, _c0$1))("displayBy", "display")("identifyBy", "value")("placeholder", "+ Email");
+                core.ɵɵproperty("ngModel", ctx.emails)("addOnPaste", true)("modelAsStrings", true)("trimTags", true)("editable", true)("errorMessages", ctx.errorMessages)("validators", ctx.validators)("secondaryPlaceholder", "Emails")("separatorKeyCodes", core.ɵɵpureFunction0(24, _c0$1))("displayBy", "display")("identifyBy", "value")("placeholder", "+ Email");
                 core.ɵɵadvance(2);
-                core.ɵɵproperty("autocompleteItems", core.ɵɵpipeBind1(8, 20, ctx.autocompleteItemsAsync));
+                core.ɵɵproperty("autocompleteItems", core.ɵɵpipeBind1(8, 22, ctx.autocompleteItemsAsync));
                 core.ɵɵadvance(6);
                 core.ɵɵproperty("ngModel", ctx.messageTitle);
                 core.ɵɵadvance(2);
@@ -1134,7 +1142,11 @@
                 core.ɵɵproperty("minRows", 5)("maxRows", 10)("ngModel", ctx.messageBody);
                 core.ɵɵadvance(4);
                 core.ɵɵproperty("ngIf", !_r6.valid && _r6.touched);
-            } }, directives: [common.NgIf, ngxChips.TagInputComponent, forms.NgControlStatus, forms.NgModel, ngxChips.TagInputDropdown, forms.DefaultValueAccessor, forms.RequiredValidator, ngxAutosize.AutosizeDirective], pipes: [common.AsyncPipe], styles: [""] });
+                core.ɵɵadvance(2);
+                core.ɵɵproperty("disabled", ctx.alertType == 3);
+                core.ɵɵadvance(2);
+                core.ɵɵproperty("ngIf", ctx.alertType == 3);
+            } }, directives: [common.NgIf, ngxChips.TagInputComponent, forms.NgControlStatus, forms.NgModel, ngxChips.TagInputDropdown, forms.DefaultValueAccessor, forms.RequiredValidator, ngxAutosize.AutosizeDirective, angularFontawesome.FaIconComponent], pipes: [common.AsyncPipe], styles: [""] });
         return EmailComposerComponent;
     }(ngxEmailComposer.EmailFormAbstractComponent));
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(EmailComposerComponent, [{
@@ -1155,6 +1167,7 @@
                     router.RouterModule,
                     forms.FormsModule,
                     forms.ReactiveFormsModule,
+                    angularFontawesome.FontAwesomeModule,
                     ngxAutofocusDirective.FtAutofocusModule,
                     ngxAutosize.AutosizeModule,
                     ngxChips.TagInputModule
@@ -1168,6 +1181,7 @@
             router.RouterModule,
             forms.FormsModule,
             forms.ReactiveFormsModule,
+            angularFontawesome.FontAwesomeModule,
             ngxAutofocusDirective.FtAutofocusModule,
             ngxAutosize.AutosizeModule,
             ngxChips.TagInputModule], exports: [BreadcrumbComponent,
@@ -1188,6 +1202,7 @@
                         router.RouterModule,
                         forms.FormsModule,
                         forms.ReactiveFormsModule,
+                        angularFontawesome.FontAwesomeModule,
                         ngxAutofocusDirective.FtAutofocusModule,
                         ngxAutosize.AutosizeModule,
                         ngxChips.TagInputModule
