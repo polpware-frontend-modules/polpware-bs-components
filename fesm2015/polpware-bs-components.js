@@ -3,7 +3,7 @@ import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncP
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, NgForm, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { v4 } from 'uuid';
 import { buildUrlValidator } from '@polpware/ngx-input-validators';
 import { AutosizeDirective, AutosizeModule } from 'ngx-autosize';
@@ -804,7 +804,7 @@ PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, sel
         }] }); })();
 
 function EmailComposerComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 15);
+    ɵɵelementStart(0, "div", 14);
     ɵɵelementStart(1, "p");
     ɵɵtext(2);
     ɵɵelementEnd();
@@ -821,12 +821,12 @@ function EmailComposerComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", item_r8.display, " ");
 } }
 function EmailComposerComponent_span_15_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 15);
     ɵɵtext(1, " Subject is required. ");
     ɵɵelementEnd();
 } }
 function EmailComposerComponent_span_23_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 15);
     ɵɵtext(1, " Body message is required. ");
     ɵɵelementEnd();
 } }
@@ -839,7 +839,7 @@ class EmailComposerComponent extends EmailFormAbstractComponent {
     }
     ngAfterViewInit() {
         setTimeout(() => {
-            this.emailInputBox.focus();
+            this.emailInputBox.focus(true);
         }, 200);
     }
     // Override
@@ -864,43 +864,43 @@ class EmailComposerComponent extends EmailFormAbstractComponent {
     }
 }
 EmailComposerComponent.ɵfac = function EmailComposerComponent_Factory(t) { return new (t || EmailComposerComponent)(); };
-EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [ɵɵInheritDefinitionFeature], decls: 27, vars: 23, consts: [["class", "alert alert-danger show", "role", "alert", 4, "ngIf"], ["name", "emailForm", "autocomplete", "off", 3, "ngSubmit"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "submit", 1, "btn", "btn-primary"], ["role", "alert", 1, "alert", "alert-danger", "show"], [1, "d-block", "small", "text-danger"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
+EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [ɵɵInheritDefinitionFeature], decls: 27, vars: 23, consts: [["class", "alert alert-danger show", "role", "alert", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["role", "alert", 1, "alert", "alert-danger", "show"], [1, "d-block", "small", "text-danger"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, EmailComposerComponent_div_0_Template, 3, 1, "div", 0);
-        ɵɵelementStart(1, "form", 1);
-        ɵɵlistener("ngSubmit", function EmailComposerComponent_Template_form_ngSubmit_1_listener() { return ctx.submit(); });
-        ɵɵelementStart(2, "div", 2);
+        ɵɵelementStart(1, "div");
+        ɵɵelementStart(2, "div", 1);
         ɵɵelementStart(3, "label");
         ɵɵtext(4, "Recipients");
         ɵɵelementEnd();
-        ɵɵelementStart(5, "tag-input", 3, 4);
+        ɵɵelementStart(5, "tag-input", 2, 3);
         ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_tag_input_ngModelChange_5_listener($event) { return ctx.emails = $event; })("focusout", function EmailComposerComponent_Template_tag_input_focusout_5_listener($event) { return ctx.onOutOfTagInput($event); })("onTextChange", function EmailComposerComponent_Template_tag_input_onTextChange_5_listener($event) { return ctx.textChanged($event); });
-        ɵɵelementStart(7, "tag-input-dropdown", 5);
+        ɵɵelementStart(7, "tag-input-dropdown", 4);
         ɵɵpipe(8, "async");
         ɵɵtemplate(9, EmailComposerComponent_ng_template_9_Template, 1, 1, "ng-template");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(10, "div", 2);
-        ɵɵelementStart(11, "label", 6);
+        ɵɵelementStart(10, "div", 1);
+        ɵɵelementStart(11, "label", 5);
         ɵɵtext(12, "Subject");
         ɵɵelementEnd();
-        ɵɵelementStart(13, "input", 7, 8);
+        ɵɵelementStart(13, "input", 6, 7);
         ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_input_ngModelChange_13_listener($event) { return ctx.messageTitle = $event; });
         ɵɵelementEnd();
-        ɵɵtemplate(15, EmailComposerComponent_span_15_Template, 2, 0, "span", 9);
+        ɵɵtemplate(15, EmailComposerComponent_span_15_Template, 2, 0, "span", 8);
         ɵɵelementEnd();
-        ɵɵelementStart(16, "div", 2);
-        ɵɵelementStart(17, "label", 10);
+        ɵɵelementStart(16, "div", 1);
+        ɵɵelementStart(17, "label", 9);
         ɵɵtext(18, "Message");
         ɵɵelementEnd();
-        ɵɵelementStart(19, "textarea", 11, 12);
+        ɵɵelementStart(19, "textarea", 10, 11);
         ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_textarea_ngModelChange_19_listener($event) { return ctx.messageBody = $event; });
         ɵɵtext(22, "        ");
         ɵɵelementEnd();
-        ɵɵtemplate(23, EmailComposerComponent_span_23_Template, 2, 0, "span", 9);
+        ɵɵtemplate(23, EmailComposerComponent_span_23_Template, 2, 0, "span", 8);
         ɵɵelementEnd();
-        ɵɵelementStart(24, "div", 13);
-        ɵɵelementStart(25, "button", 14);
+        ɵɵelementStart(24, "div", 12);
+        ɵɵelementStart(25, "button", 13);
+        ɵɵlistener("click", function EmailComposerComponent_Template_button_click_25_listener() { return ctx.submit(); });
         ɵɵtext(26, "Submit");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -921,7 +921,7 @@ EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponen
         ɵɵproperty("minRows", 5)("maxRows", 10)("ngModel", ctx.messageBody);
         ɵɵadvance(4);
         ɵɵproperty("ngIf", !_r6.valid && _r6.touched);
-    } }, directives: [NgIf, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, TagInputComponent, NgControlStatus, NgModel, TagInputDropdown, DefaultValueAccessor, RequiredValidator, AutosizeDirective], pipes: [AsyncPipe], styles: [""] });
+    } }, directives: [NgIf, TagInputComponent, NgControlStatus, NgModel, TagInputDropdown, DefaultValueAccessor, RequiredValidator, AutosizeDirective], pipes: [AsyncPipe], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(EmailComposerComponent, [{
         type: Component,
         args: [{
