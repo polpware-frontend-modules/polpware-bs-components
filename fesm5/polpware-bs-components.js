@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, ɵɵInheritDefinitionFeature, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, EventEmitter, ɵɵInheritDefinitionFeature, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -12,6 +12,7 @@ import { AutofocusDirective, FtAutofocusModule } from '@40three/ngx-autofocus-di
 import { AlertTypeEnum, EmailFormAbstractComponent } from '@polpware/ngx-email-composer';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { TagInputComponent, TagInputDropdown, TagInputModule } from 'ngx-chips';
+import { AlertComponent, AlertModule } from 'ngx-bootstrap/alert';
 import { FaIconComponent, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 var ActionKind;
@@ -811,22 +812,23 @@ var PromptFormComponent = /** @class */ (function () {
             args: ['window:keyup', ['$event']]
         }] }); })();
 
-function EmailComposerComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 15);
+function EmailComposerComponent_alert_0_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "alert", 15);
     ɵɵelementStart(1, "p");
     ɵɵtext(2);
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
     var ctx_r0 = ɵɵnextContext();
+    ɵɵproperty("type", ctx_r0.bsAlertType)("dismissible", ctx_r0.alertDismissible);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r0.alertMessage, " ");
 } }
 function EmailComposerComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0);
 } if (rf & 2) {
-    var item_r9 = ctx.item;
-    ɵɵtextInterpolate1(" ", item_r9.display, " ");
+    var item_r11 = ctx.item;
+    ɵɵtextInterpolate1(" ", item_r11.display, " ");
 } }
 function EmailComposerComponent_span_15_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span", 16);
@@ -838,11 +840,31 @@ function EmailComposerComponent_span_23_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1, " Body message is required. ");
     ɵɵelementEnd();
 } }
-function EmailComposerComponent_fa_icon_27_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "fa-icon", 17);
+function EmailComposerComponent_button_25_fa_icon_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "fa-icon", 19);
+} if (rf & 2) {
+    var ctx_r13 = ɵɵnextContext(2);
+    ɵɵproperty("icon", ctx_r13.faSpinner)("spin", true);
+} }
+function EmailComposerComponent_button_25_Template(rf, ctx) { if (rf & 1) {
+    var _r15 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "button", 17);
+    ɵɵlistener("click", function EmailComposerComponent_button_25_Template_button_click_0_listener() { ɵɵrestoreView(_r15); var ctx_r14 = ɵɵnextContext(); return ctx_r14.submit(); });
+    ɵɵtext(1, " Submit ");
+    ɵɵtemplate(2, EmailComposerComponent_button_25_fa_icon_2_Template, 1, 2, "fa-icon", 18);
+    ɵɵelementEnd();
 } if (rf & 2) {
     var ctx_r8 = ɵɵnextContext();
-    ɵɵproperty("icon", ctx_r8.faSpinner)("spin", true);
+    ɵɵproperty("disabled", ctx_r8.alertType == 3);
+    ɵɵadvance(2);
+    ɵɵproperty("ngIf", ctx_r8.alertType == 3);
+} }
+function EmailComposerComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+    var _r17 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "button", 20);
+    ɵɵlistener("click", function EmailComposerComponent_ng_template_26_Template_button_click_0_listener() { ɵɵrestoreView(_r17); var ctx_r16 = ɵɵnextContext(); return ctx_r16.close(); });
+    ɵɵtext(1, " Close ");
+    ɵɵelementEnd();
 } }
 var _c0$1 = function () { return [32, 44, 58, 59]; };
 var EmailComposerComponent = /** @class */ (function (_super) {
@@ -850,10 +872,27 @@ var EmailComposerComponent = /** @class */ (function (_super) {
     function EmailComposerComponent() {
         var _this = _super.call(this) || this;
         _this.faSpinner = faSpinner;
-        _this.messageTitle = '';
-        _this.messageBody = '';
+        _this.onClose = new EventEmitter();
         return _this;
     }
+    Object.defineProperty(EmailComposerComponent.prototype, "bsAlertType", {
+        get: function () {
+            switch (this.alertType) {
+                case AlertTypeEnum.info:
+                    return 'info';
+                case AlertTypeEnum.error:
+                    return 'danger';
+                case AlertTypeEnum.success:
+                    return 'success';
+                case AlertTypeEnum.warning:
+                    return 'warning';
+                default:
+                    return 'info';
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     EmailComposerComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         setTimeout(function () {
@@ -880,9 +919,12 @@ var EmailComposerComponent = /** @class */ (function (_super) {
         }
         _super.prototype.submit.call(this);
     };
+    EmailComposerComponent.prototype.close = function () {
+        this.onClose.emit();
+    };
     EmailComposerComponent.ɵfac = function EmailComposerComponent_Factory(t) { return new (t || EmailComposerComponent)(); };
-    EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [ɵɵInheritDefinitionFeature], decls: 28, vars: 25, consts: [["class", "alert alert-danger show", "role", "alert", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", 1, "btn", "btn-primary", 3, "disabled", "click"], ["class", "ml-2", 3, "icon", "spin", 4, "ngIf"], ["role", "alert", 1, "alert", "alert-danger", "show"], [1, "d-block", "small", "text-danger"], [1, "ml-2", 3, "icon", "spin"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵtemplate(0, EmailComposerComponent_div_0_Template, 3, 1, "div", 0);
+    EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], outputs: { onClose: "onClose" }, features: [ɵɵInheritDefinitionFeature], decls: 28, vars: 25, consts: [[3, "type", "dismissible", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", "class", "btn btn-primary", 3, "disabled", "click", 4, "ngIf", "ngIfElse"], ["closeBtnTmpl", ""], [3, "type", "dismissible"], [1, "d-block", "small", "text-danger"], ["type", "button", 1, "btn", "btn-primary", 3, "disabled", "click"], ["class", "ml-2", 3, "icon", "spin", 4, "ngIf"], [1, "ml-2", 3, "icon", "spin"], ["type", "button", 1, "btn", "btn-secondary", 3, "click"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
+            ɵɵtemplate(0, EmailComposerComponent_alert_0_Template, 3, 3, "alert", 0);
             ɵɵelementStart(1, "div");
             ɵɵelementStart(2, "div", 1);
             ɵɵelementStart(3, "label");
@@ -916,16 +958,14 @@ var EmailComposerComponent = /** @class */ (function (_super) {
             ɵɵtemplate(23, EmailComposerComponent_span_23_Template, 2, 0, "span", 8);
             ɵɵelementEnd();
             ɵɵelementStart(24, "div", 12);
-            ɵɵelementStart(25, "button", 13);
-            ɵɵlistener("click", function EmailComposerComponent_Template_button_click_25_listener() { return ctx.submit(); });
-            ɵɵtext(26, " Submit ");
-            ɵɵtemplate(27, EmailComposerComponent_fa_icon_27_Template, 1, 2, "fa-icon", 14);
-            ɵɵelementEnd();
+            ɵɵtemplate(25, EmailComposerComponent_button_25_Template, 3, 2, "button", 13);
+            ɵɵtemplate(26, EmailComposerComponent_ng_template_26_Template, 2, 0, "ng-template", null, 14, ɵɵtemplateRefExtractor);
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
             var _r3 = ɵɵreference(14);
             var _r6 = ɵɵreference(21);
+            var _r9 = ɵɵreference(27);
             ɵɵproperty("ngIf", ctx.alertType > 0);
             ɵɵadvance(5);
             ɵɵproperty("ngModel", ctx.emails)("addOnPaste", true)("modelAsStrings", true)("trimTags", true)("editable", true)("errorMessages", ctx.errorMessages)("validators", ctx.validators)("secondaryPlaceholder", "Emails")("separatorKeyCodes", ɵɵpureFunction0(24, _c0$1))("displayBy", "display")("identifyBy", "value")("placeholder", "+ Email");
@@ -940,10 +980,8 @@ var EmailComposerComponent = /** @class */ (function (_super) {
             ɵɵadvance(4);
             ɵɵproperty("ngIf", !_r6.valid && _r6.touched);
             ɵɵadvance(2);
-            ɵɵproperty("disabled", ctx.alertType == 3);
-            ɵɵadvance(2);
-            ɵɵproperty("ngIf", ctx.alertType == 3);
-        } }, directives: [NgIf, TagInputComponent, NgControlStatus, NgModel, TagInputDropdown, DefaultValueAccessor, RequiredValidator, AutosizeDirective, FaIconComponent], pipes: [AsyncPipe], styles: [""] });
+            ɵɵproperty("ngIf", !ctx.showCloseBtn)("ngIfElse", _r9);
+        } }, directives: [NgIf, TagInputComponent, NgControlStatus, NgModel, TagInputDropdown, DefaultValueAccessor, RequiredValidator, AutosizeDirective, AlertComponent, FaIconComponent], pipes: [AsyncPipe], styles: [""] });
     return EmailComposerComponent;
 }(EmailFormAbstractComponent));
 /*@__PURE__*/ (function () { ɵsetClassMetadata(EmailComposerComponent, [{
@@ -953,7 +991,9 @@ var EmailComposerComponent = /** @class */ (function (_super) {
                 templateUrl: './email-composer.component.html',
                 styleUrls: ['./email-composer.component.css']
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return []; }, { onClose: [{
+            type: Output
+        }] }); })();
 
 var PolpBsComponentsModule = /** @class */ (function () {
     function PolpBsComponentsModule() {
@@ -964,6 +1004,7 @@ var PolpBsComponentsModule = /** @class */ (function () {
                 RouterModule,
                 FormsModule,
                 ReactiveFormsModule,
+                AlertModule,
                 FontAwesomeModule,
                 FtAutofocusModule,
                 AutosizeModule,
@@ -978,6 +1019,7 @@ var PolpBsComponentsModule = /** @class */ (function () {
         RouterModule,
         FormsModule,
         ReactiveFormsModule,
+        AlertModule,
         FontAwesomeModule,
         FtAutofocusModule,
         AutosizeModule,
@@ -999,6 +1041,7 @@ var PolpBsComponentsModule = /** @class */ (function () {
                     RouterModule,
                     FormsModule,
                     ReactiveFormsModule,
+                    AlertModule,
                     FontAwesomeModule,
                     FtAutofocusModule,
                     AutosizeModule,

@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@polpware/ngx-email-composer'), require('@fortawesome/free-solid-svg-icons'), require('ngx-chips'), require('@fortawesome/angular-fontawesome')) :
-    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@polpware/ngx-email-composer', '@fortawesome/free-solid-svg-icons', 'ngx-chips', '@fortawesome/angular-fontawesome'], factory) :
-    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.ngxEmailComposer, global.freeSolidSvgIcons, global.ngxChips, global.angularFontawesome));
-}(this, (function (exports, core, common, router, rxjs, modal, forms, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, ngxEmailComposer, freeSolidSvgIcons, ngxChips, angularFontawesome) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@polpware/ngx-email-composer'), require('@fortawesome/free-solid-svg-icons'), require('ngx-chips'), require('ngx-bootstrap/alert'), require('@fortawesome/angular-fontawesome')) :
+    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@polpware/ngx-email-composer', '@fortawesome/free-solid-svg-icons', 'ngx-chips', 'ngx-bootstrap/alert', '@fortawesome/angular-fontawesome'], factory) :
+    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.ngxEmailComposer, global.freeSolidSvgIcons, global.ngxChips, global.alert, global.angularFontawesome));
+}(this, (function (exports, core, common, router, rxjs, modal, forms, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, ngxEmailComposer, freeSolidSvgIcons, ngxChips, alert, angularFontawesome) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1014,22 +1014,23 @@
                 args: ['window:keyup', ['$event']]
             }] }); })();
 
-    function EmailComposerComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelementStart(0, "div", 15);
+    function EmailComposerComponent_alert_0_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelementStart(0, "alert", 15);
         core.ɵɵelementStart(1, "p");
         core.ɵɵtext(2);
         core.ɵɵelementEnd();
         core.ɵɵelementEnd();
     } if (rf & 2) {
         var ctx_r0 = core.ɵɵnextContext();
+        core.ɵɵproperty("type", ctx_r0.bsAlertType)("dismissible", ctx_r0.alertDismissible);
         core.ɵɵadvance(2);
         core.ɵɵtextInterpolate1(" ", ctx_r0.alertMessage, " ");
     } }
     function EmailComposerComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵtext(0);
     } if (rf & 2) {
-        var item_r9 = ctx.item;
-        core.ɵɵtextInterpolate1(" ", item_r9.display, " ");
+        var item_r11 = ctx.item;
+        core.ɵɵtextInterpolate1(" ", item_r11.display, " ");
     } }
     function EmailComposerComponent_span_15_Template(rf, ctx) { if (rf & 1) {
         core.ɵɵelementStart(0, "span", 16);
@@ -1041,11 +1042,31 @@
         core.ɵɵtext(1, " Body message is required. ");
         core.ɵɵelementEnd();
     } }
-    function EmailComposerComponent_fa_icon_27_Template(rf, ctx) { if (rf & 1) {
-        core.ɵɵelement(0, "fa-icon", 17);
+    function EmailComposerComponent_button_25_fa_icon_2_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelement(0, "fa-icon", 19);
+    } if (rf & 2) {
+        var ctx_r13 = core.ɵɵnextContext(2);
+        core.ɵɵproperty("icon", ctx_r13.faSpinner)("spin", true);
+    } }
+    function EmailComposerComponent_button_25_Template(rf, ctx) { if (rf & 1) {
+        var _r15 = core.ɵɵgetCurrentView();
+        core.ɵɵelementStart(0, "button", 17);
+        core.ɵɵlistener("click", function EmailComposerComponent_button_25_Template_button_click_0_listener() { core.ɵɵrestoreView(_r15); var ctx_r14 = core.ɵɵnextContext(); return ctx_r14.submit(); });
+        core.ɵɵtext(1, " Submit ");
+        core.ɵɵtemplate(2, EmailComposerComponent_button_25_fa_icon_2_Template, 1, 2, "fa-icon", 18);
+        core.ɵɵelementEnd();
     } if (rf & 2) {
         var ctx_r8 = core.ɵɵnextContext();
-        core.ɵɵproperty("icon", ctx_r8.faSpinner)("spin", true);
+        core.ɵɵproperty("disabled", ctx_r8.alertType == 3);
+        core.ɵɵadvance(2);
+        core.ɵɵproperty("ngIf", ctx_r8.alertType == 3);
+    } }
+    function EmailComposerComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+        var _r17 = core.ɵɵgetCurrentView();
+        core.ɵɵelementStart(0, "button", 20);
+        core.ɵɵlistener("click", function EmailComposerComponent_ng_template_26_Template_button_click_0_listener() { core.ɵɵrestoreView(_r17); var ctx_r16 = core.ɵɵnextContext(); return ctx_r16.close(); });
+        core.ɵɵtext(1, " Close ");
+        core.ɵɵelementEnd();
     } }
     var _c0$1 = function () { return [32, 44, 58, 59]; };
     var EmailComposerComponent = /** @class */ (function (_super) {
@@ -1053,10 +1074,27 @@
         function EmailComposerComponent() {
             var _this = _super.call(this) || this;
             _this.faSpinner = freeSolidSvgIcons.faSpinner;
-            _this.messageTitle = '';
-            _this.messageBody = '';
+            _this.onClose = new core.EventEmitter();
             return _this;
         }
+        Object.defineProperty(EmailComposerComponent.prototype, "bsAlertType", {
+            get: function () {
+                switch (this.alertType) {
+                    case ngxEmailComposer.AlertTypeEnum.info:
+                        return 'info';
+                    case ngxEmailComposer.AlertTypeEnum.error:
+                        return 'danger';
+                    case ngxEmailComposer.AlertTypeEnum.success:
+                        return 'success';
+                    case ngxEmailComposer.AlertTypeEnum.warning:
+                        return 'warning';
+                    default:
+                        return 'info';
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
         EmailComposerComponent.prototype.ngAfterViewInit = function () {
             var _this = this;
             setTimeout(function () {
@@ -1083,9 +1121,12 @@
             }
             _super.prototype.submit.call(this);
         };
+        EmailComposerComponent.prototype.close = function () {
+            this.onClose.emit();
+        };
         EmailComposerComponent.ɵfac = function EmailComposerComponent_Factory(t) { return new (t || EmailComposerComponent)(); };
-        EmailComposerComponent.ɵcmp = core.ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], features: [core.ɵɵInheritDefinitionFeature], decls: 28, vars: 25, consts: [["class", "alert alert-danger show", "role", "alert", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", 1, "btn", "btn-primary", 3, "disabled", "click"], ["class", "ml-2", 3, "icon", "spin", 4, "ngIf"], ["role", "alert", 1, "alert", "alert-danger", "show"], [1, "d-block", "small", "text-danger"], [1, "ml-2", 3, "icon", "spin"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
-                core.ɵɵtemplate(0, EmailComposerComponent_div_0_Template, 3, 1, "div", 0);
+        EmailComposerComponent.ɵcmp = core.ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], outputs: { onClose: "onClose" }, features: [core.ɵɵInheritDefinitionFeature], decls: 28, vars: 25, consts: [[3, "type", "dismissible", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", "class", "btn btn-primary", 3, "disabled", "click", 4, "ngIf", "ngIfElse"], ["closeBtnTmpl", ""], [3, "type", "dismissible"], [1, "d-block", "small", "text-danger"], ["type", "button", 1, "btn", "btn-primary", 3, "disabled", "click"], ["class", "ml-2", 3, "icon", "spin", 4, "ngIf"], [1, "ml-2", 3, "icon", "spin"], ["type", "button", 1, "btn", "btn-secondary", 3, "click"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
+                core.ɵɵtemplate(0, EmailComposerComponent_alert_0_Template, 3, 3, "alert", 0);
                 core.ɵɵelementStart(1, "div");
                 core.ɵɵelementStart(2, "div", 1);
                 core.ɵɵelementStart(3, "label");
@@ -1119,16 +1160,14 @@
                 core.ɵɵtemplate(23, EmailComposerComponent_span_23_Template, 2, 0, "span", 8);
                 core.ɵɵelementEnd();
                 core.ɵɵelementStart(24, "div", 12);
-                core.ɵɵelementStart(25, "button", 13);
-                core.ɵɵlistener("click", function EmailComposerComponent_Template_button_click_25_listener() { return ctx.submit(); });
-                core.ɵɵtext(26, " Submit ");
-                core.ɵɵtemplate(27, EmailComposerComponent_fa_icon_27_Template, 1, 2, "fa-icon", 14);
-                core.ɵɵelementEnd();
+                core.ɵɵtemplate(25, EmailComposerComponent_button_25_Template, 3, 2, "button", 13);
+                core.ɵɵtemplate(26, EmailComposerComponent_ng_template_26_Template, 2, 0, "ng-template", null, 14, core.ɵɵtemplateRefExtractor);
                 core.ɵɵelementEnd();
                 core.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r3 = core.ɵɵreference(14);
                 var _r6 = core.ɵɵreference(21);
+                var _r9 = core.ɵɵreference(27);
                 core.ɵɵproperty("ngIf", ctx.alertType > 0);
                 core.ɵɵadvance(5);
                 core.ɵɵproperty("ngModel", ctx.emails)("addOnPaste", true)("modelAsStrings", true)("trimTags", true)("editable", true)("errorMessages", ctx.errorMessages)("validators", ctx.validators)("secondaryPlaceholder", "Emails")("separatorKeyCodes", core.ɵɵpureFunction0(24, _c0$1))("displayBy", "display")("identifyBy", "value")("placeholder", "+ Email");
@@ -1143,10 +1182,8 @@
                 core.ɵɵadvance(4);
                 core.ɵɵproperty("ngIf", !_r6.valid && _r6.touched);
                 core.ɵɵadvance(2);
-                core.ɵɵproperty("disabled", ctx.alertType == 3);
-                core.ɵɵadvance(2);
-                core.ɵɵproperty("ngIf", ctx.alertType == 3);
-            } }, directives: [common.NgIf, ngxChips.TagInputComponent, forms.NgControlStatus, forms.NgModel, ngxChips.TagInputDropdown, forms.DefaultValueAccessor, forms.RequiredValidator, ngxAutosize.AutosizeDirective, angularFontawesome.FaIconComponent], pipes: [common.AsyncPipe], styles: [""] });
+                core.ɵɵproperty("ngIf", !ctx.showCloseBtn)("ngIfElse", _r9);
+            } }, directives: [common.NgIf, ngxChips.TagInputComponent, forms.NgControlStatus, forms.NgModel, ngxChips.TagInputDropdown, forms.DefaultValueAccessor, forms.RequiredValidator, ngxAutosize.AutosizeDirective, alert.AlertComponent, angularFontawesome.FaIconComponent], pipes: [common.AsyncPipe], styles: [""] });
         return EmailComposerComponent;
     }(ngxEmailComposer.EmailFormAbstractComponent));
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(EmailComposerComponent, [{
@@ -1156,7 +1193,9 @@
                     templateUrl: './email-composer.component.html',
                     styleUrls: ['./email-composer.component.css']
                 }]
-        }], function () { return []; }, null); })();
+        }], function () { return []; }, { onClose: [{
+                type: core.Output
+            }] }); })();
 
     var PolpBsComponentsModule = /** @class */ (function () {
         function PolpBsComponentsModule() {
@@ -1167,6 +1206,7 @@
                     router.RouterModule,
                     forms.FormsModule,
                     forms.ReactiveFormsModule,
+                    alert.AlertModule,
                     angularFontawesome.FontAwesomeModule,
                     ngxAutofocusDirective.FtAutofocusModule,
                     ngxAutosize.AutosizeModule,
@@ -1181,6 +1221,7 @@
             router.RouterModule,
             forms.FormsModule,
             forms.ReactiveFormsModule,
+            alert.AlertModule,
             angularFontawesome.FontAwesomeModule,
             ngxAutofocusDirective.FtAutofocusModule,
             ngxAutosize.AutosizeModule,
@@ -1202,6 +1243,7 @@
                         router.RouterModule,
                         forms.FormsModule,
                         forms.ReactiveFormsModule,
+                        alert.AlertModule,
                         angularFontawesome.FontAwesomeModule,
                         ngxAutofocusDirective.FtAutofocusModule,
                         ngxAutosize.AutosizeModule,
