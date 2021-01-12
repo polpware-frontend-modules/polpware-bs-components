@@ -11,7 +11,8 @@ import * as i9 from "@fortawesome/angular-fontawesome";
 import * as i10 from "@40three/ngx-autofocus-directive";
 import * as i11 from "ngx-autosize";
 import * as i12 from "ngx-chips";
+import * as i13 from "ngx-mask";
 export declare class PolpBsComponentsModule {
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent], [typeof i5.CommonModule, typeof i6.RouterModule, typeof i7.FormsModule, typeof i7.ReactiveFormsModule, typeof i8.AlertModule, typeof i9.FontAwesomeModule, typeof i10.FtAutofocusModule, typeof i11.AutosizeModule, typeof i12.TagInputModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent]>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent], [typeof i5.CommonModule, typeof i6.RouterModule, typeof i7.FormsModule, typeof i7.ReactiveFormsModule, typeof i8.AlertModule, typeof i9.FontAwesomeModule, typeof i10.FtAutofocusModule, typeof i11.AutosizeModule, typeof i12.TagInputModule, typeof i13.NgxMaskModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent]>;
     static ɵinj: i0.ɵɵInjectorDef<PolpBsComponentsModule>;
 }
