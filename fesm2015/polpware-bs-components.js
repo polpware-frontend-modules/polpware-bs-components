@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, EventEmitter, ɵɵInheritDefinitionFeature, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, Output, EventEmitter, ɵɵInheritDefinitionFeature, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineDirective, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -1043,6 +1043,28 @@ EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponen
             type: Output
         }] }); })();
 
+/**
+ * Provides a base for most modal components.  This base is built with
+ * the capability of synchronousely waiting for a modal to close.
+ */
+class ObservableModalAbstractComponent {
+    constructor() {
+        this.result = new Subject();
+    }
+    closeModal(value) {
+        this.result.next(value);
+        this.result.complete();
+        if (this.modalId) {
+            this.bsModalService.hide(this.modalId);
+        }
+        else {
+            this.bsModalRef.hide();
+        }
+    }
+}
+ObservableModalAbstractComponent.ɵfac = function ObservableModalAbstractComponent_Factory(t) { return new (t || ObservableModalAbstractComponent)(); };
+ObservableModalAbstractComponent.ɵdir = ɵɵdefineDirective({ type: ObservableModalAbstractComponent, inputs: { modalId: "modalId" } });
+
 class PolpBsComponentsModule {
 }
 PolpBsComponentsModule.ɵmod = ɵɵdefineNgModule({ type: PolpBsComponentsModule });
@@ -1105,6 +1127,24 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
             }]
     }], null, null); })();
 
+class BsModalAssistantService {
+    constructor() {
+        this._modalId = 0;
+    }
+    get modalId() {
+        this._modalId++;
+        return this._modalId;
+    }
+}
+BsModalAssistantService.ɵfac = function BsModalAssistantService_Factory(t) { return new (t || BsModalAssistantService)(); };
+BsModalAssistantService.ɵprov = ɵɵdefineInjectable({ token: BsModalAssistantService, factory: BsModalAssistantService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BsModalAssistantService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
+
 /*
  * Public API Surface of bs-components
  */
@@ -1113,5 +1153,5 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
  * Generated bundle index. Do not edit.
  */
 
-export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, EmailComposerComponent, PolpBsComponentsModule, PromptFormComponent, makeValidations };
+export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, EmailComposerComponent, ObservableModalAbstractComponent, PolpBsComponentsModule, PromptFormComponent, makeValidations };
 //# sourceMappingURL=polpware-bs-components.js.map

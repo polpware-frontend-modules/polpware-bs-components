@@ -1258,6 +1258,29 @@
                 type: core.Output
             }] }); })();
 
+    /**
+     * Provides a base for most modal components.  This base is built with
+     * the capability of synchronousely waiting for a modal to close.
+     */
+    var ObservableModalAbstractComponent = /** @class */ (function () {
+        function ObservableModalAbstractComponent() {
+            this.result = new rxjs.Subject();
+        }
+        ObservableModalAbstractComponent.prototype.closeModal = function (value) {
+            this.result.next(value);
+            this.result.complete();
+            if (this.modalId) {
+                this.bsModalService.hide(this.modalId);
+            }
+            else {
+                this.bsModalRef.hide();
+            }
+        };
+        ObservableModalAbstractComponent.ɵfac = function ObservableModalAbstractComponent_Factory(t) { return new (t || ObservableModalAbstractComponent)(); };
+        ObservableModalAbstractComponent.ɵdir = core.ɵɵdefineDirective({ type: ObservableModalAbstractComponent, inputs: { modalId: "modalId" } });
+        return ObservableModalAbstractComponent;
+    }());
+
     var PolpBsComponentsModule = /** @class */ (function () {
         function PolpBsComponentsModule() {
         }
@@ -1323,10 +1346,35 @@
                 }]
         }], null, null); })();
 
+    var BsModalAssistantService = /** @class */ (function () {
+        function BsModalAssistantService() {
+            this._modalId = 0;
+        }
+        Object.defineProperty(BsModalAssistantService.prototype, "modalId", {
+            get: function () {
+                this._modalId++;
+                return this._modalId;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        BsModalAssistantService.ɵfac = function BsModalAssistantService_Factory(t) { return new (t || BsModalAssistantService)(); };
+        BsModalAssistantService.ɵprov = core.ɵɵdefineInjectable({ token: BsModalAssistantService, factory: BsModalAssistantService.ɵfac, providedIn: 'root' });
+        return BsModalAssistantService;
+    }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(BsModalAssistantService, [{
+            type: core.Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }], function () { return []; }, null); })();
+
     exports.AlertBoxComponent = AlertBoxComponent;
     exports.BreadcrumbClipboardService = BreadcrumbClipboardService;
     exports.BreadcrumbComponent = BreadcrumbComponent;
+    exports.BsModalAssistantService = BsModalAssistantService;
     exports.EmailComposerComponent = EmailComposerComponent;
+    exports.ObservableModalAbstractComponent = ObservableModalAbstractComponent;
     exports.PolpBsComponentsModule = PolpBsComponentsModule;
     exports.PromptFormComponent = PromptFormComponent;
     exports.makeValidations = makeValidations;
