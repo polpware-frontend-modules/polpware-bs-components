@@ -3,6 +3,7 @@ export * from './lib/components/breadcrumb/breadcrumb.component';
 export * from './lib/services/breadcrumb-clipboard.service';
 export * from './lib/components/alert-box/alert-box.component';
 export * from './lib/components/prompt-form/prompt-form.component';
+export * from './lib/components/prompt-modal/prompt-modal.component';
 export * from './lib/components/email-composer/email-composer.component';
 export * from './lib/components/modals/observable-modal-abstract.component';
 export * from './lib/utils/form-helper';

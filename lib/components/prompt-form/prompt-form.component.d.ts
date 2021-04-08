@@ -1,51 +1,32 @@
-import { OnInit } from '@angular/core';
+import { OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Subject } from 'rxjs';
+import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { IInputFieldSpec } from '../../utils/form-helper';
 import * as i0 from "@angular/core";
 interface IInputFieldSpecExt extends IInputFieldSpec {
     fieldId: string;
     autocompleteKey?: string;
+    visible: boolean;
 }
-export interface IPrompFormInputs {
-    autocomplete?: 'on' | 'off';
-    enableEnter?: boolean;
-    hideCancelBtn?: boolean;
-    hideCloseBtn?: boolean;
-    cancelBtnLabel?: string;
-    confirmBtnLabel?: string;
-    cancelBtnClasses?: string;
-    confirmBtnClasses?: string;
-    title: string;
-    innerBody: string;
-    fields: Array<IInputFieldSpec>;
-}
-export declare class PromptFormComponent implements OnInit {
+export declare class PromptFormComponent extends DefaultFormBaseComponent implements OnInit, OnDestroy {
     private readonly _builder;
-    private readonly _bsModalRef;
     autocomplete: string;
     enableEnter: boolean;
-    hideCancelBtn: boolean;
-    hideCloseBtn: boolean;
-    cancelBtnLabel: string;
-    confirmBtnLabel: string;
     cancelBtnClasses: string;
-    confirmBtnClasses: string;
-    title: string;
-    innerBody: string;
+    submitBtnClasses: string;
     fields: Array<IInputFieldSpec>;
-    result: Subject<{
-        [key: string]: any;
-    }>;
     extFields: IInputFieldSpecExt[];
     form: FormGroup;
-    constructor(_builder: FormBuilder, _bsModalRef: BsModalRef);
+    faEyeSlash: import("@fortawesome/fontawesome-common-types").IconDefinition;
+    faEye: import("@fortawesome/fontawesome-common-types").IconDefinition;
+    private _subr;
+    constructor(_builder: FormBuilder);
     ngOnInit(): void;
+    ngOnDestroy(): void;
+    cancel(): void;
+    submit(): void;
     keyEvent(event: KeyboardEvent): void;
-    close(): void;
-    confirm(): void;
     static ɵfac: i0.ɵɵFactoryDef<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "hideCancelBtn": "hideCancelBtn"; "hideCloseBtn": "hideCloseBtn"; "cancelBtnLabel": "cancelBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "cancelBtnClasses": "cancelBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; }, {}, never, never>;
 }
 export {};
