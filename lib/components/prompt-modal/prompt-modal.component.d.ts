@@ -3,8 +3,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Subject } from 'rxjs';
 import { IInputFieldSpec } from '../../utils/form-helper';
 import * as i0 from "@angular/core";
-export interface IPrompFormInputs {
-    autocomplete?: boolean;
+export interface IPromptFormInputs {
+    autocomplete?: string;
     enableEnter?: boolean;
     hideCancelBtn?: boolean;
     hideCloseBtn?: boolean;
