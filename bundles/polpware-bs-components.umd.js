@@ -1394,10 +1394,41 @@
                 }]
         }], function () { return []; }, null); })();
 
+    var CommonModalsService = /** @class */ (function () {
+        function CommonModalsService(_modalService) {
+            this._modalService = _modalService;
+        }
+        CommonModalsService.prototype.showConfirmAsync = function (title, innerBody, modalClasses) {
+            if (modalClasses === void 0) { modalClasses = 'modal-dialog-centered'; }
+            var modalRef = this._modalService.show(AlertBoxComponent, {
+                animated: true,
+                keyboard: false,
+                class: modalClasses,
+                initialState: {
+                    enableEnter: true,
+                    title: title,
+                    innerBody: innerBody
+                },
+                ignoreBackdropClick: true
+            });
+            return modalRef.content.result.toPromise();
+        };
+        CommonModalsService.ɵfac = function CommonModalsService_Factory(t) { return new (t || CommonModalsService)(core.ɵɵinject(modal.BsModalService)); };
+        CommonModalsService.ɵprov = core.ɵɵdefineInjectable({ token: CommonModalsService, factory: CommonModalsService.ɵfac, providedIn: 'root' });
+        return CommonModalsService;
+    }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(CommonModalsService, [{
+            type: core.Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }], function () { return [{ type: modal.BsModalService }]; }, null); })();
+
     exports.AlertBoxComponent = AlertBoxComponent;
     exports.BreadcrumbClipboardService = BreadcrumbClipboardService;
     exports.BreadcrumbComponent = BreadcrumbComponent;
     exports.BsModalAssistantService = BsModalAssistantService;
+    exports.CommonModalsService = CommonModalsService;
     exports.EmailComposerComponent = EmailComposerComponent;
     exports.ObservableModalAbstractComponent = ObservableModalAbstractComponent;
     exports.PolpBsComponentsModule = PolpBsComponentsModule;

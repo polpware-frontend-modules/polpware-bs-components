@@ -11,3 +11,4 @@ export * from './lib/bs-components.module';
 export * from './lib/services/bs-modal-assistant.service';
 export * from './lib/components/modals/child-modal-state.interface';
 export * from './lib/components/modals/has-child-modal.interface';
+export * from './lib/services/common-modals.service';

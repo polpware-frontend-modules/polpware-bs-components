@@ -1,8 +1,8 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineDirective, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineDirective, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
+import { BsModalRef, ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { faEyeSlash, faEye, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
@@ -1168,6 +1168,34 @@ BsModalAssistantService.ɵprov = ɵɵdefineInjectable({ token: BsModalAssistantS
             }]
     }], function () { return []; }, null); })();
 
+class CommonModalsService {
+    constructor(_modalService) {
+        this._modalService = _modalService;
+    }
+    showConfirmAsync(title, innerBody, modalClasses = 'modal-dialog-centered') {
+        const modalRef = this._modalService.show(AlertBoxComponent, {
+            animated: true,
+            keyboard: false,
+            class: modalClasses,
+            initialState: {
+                enableEnter: true,
+                title: title,
+                innerBody: innerBody
+            },
+            ignoreBackdropClick: true
+        });
+        return modalRef.content.result.toPromise();
+    }
+}
+CommonModalsService.ɵfac = function CommonModalsService_Factory(t) { return new (t || CommonModalsService)(ɵɵinject(BsModalService)); };
+CommonModalsService.ɵprov = ɵɵdefineInjectable({ token: CommonModalsService, factory: CommonModalsService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CommonModalsService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: BsModalService }]; }, null); })();
+
 /*
  * Public API Surface of bs-components
  */
@@ -1176,5 +1204,5 @@ BsModalAssistantService.ɵprov = ɵɵdefineInjectable({ token: BsModalAssistantS
  * Generated bundle index. Do not edit.
  */
 
-export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, EmailComposerComponent, ObservableModalAbstractComponent, PolpBsComponentsModule, PromptFormComponent, PromptModalComponent, makeValidations };
+export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, CommonModalsService, EmailComposerComponent, ObservableModalAbstractComponent, PolpBsComponentsModule, PromptFormComponent, PromptModalComponent, makeValidations };
 //# sourceMappingURL=polpware-bs-components.js.map
