@@ -20,6 +20,7 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     faEyeSlash: import("@fortawesome/fontawesome-common-types").IconDefinition;
     faEye: import("@fortawesome/fontawesome-common-types").IconDefinition;
     private _subr;
+    readonly name: string;
     constructor(_builder: FormBuilder);
     ngOnInit(): void;
     ngOnDestroy(): void;
