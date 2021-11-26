@@ -1,10 +1,10 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵdefineDirective, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵprojectionDef, ɵɵprojection, ɵɵattribute, ɵɵdefineDirective, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { BsModalRef, ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, CheckboxControlValueAccessor, NgControlStatus, FormControlName, RadioControlValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { faEyeSlash, faEye, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faEyeSlash, faEye, faSpinner, faChevronUp, faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { v4 } from 'uuid';
 import { buildUrlValidator } from '@polpware/ngx-input-validators';
@@ -15,6 +15,7 @@ import { MaskDirective, NgxMaskModule } from 'ngx-mask';
 import { EmailFormAbstractComponent, AlertTypeEnum } from '@polpware/ngx-email-composer';
 import { TagInputComponent, TagInputDropdown, TagInputModule } from 'ngx-chips';
 import { AlertComponent, AlertModule } from 'ngx-bootstrap/alert';
+import { CollapseDirective, CollapseModule } from 'ngx-bootstrap/collapse';
 
 var ActionKind;
 (function (ActionKind) {
@@ -1312,6 +1313,55 @@ EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponen
             type: Output
         }] }); })();
 
+const _c0$2 = [[["", "title", ""]], [["", "body", ""]]];
+const _c1 = ["[title]", "[body]"];
+let GlobalElementId = 1;
+class ExpandableCardComponent {
+    constructor() {
+        this.isCollapsed = false;
+        this.titleClass = '';
+        this.faChevronUp = faChevronUp;
+        this.faChevronDown = faChevronDown;
+        this.faChevronRight = faChevronRight;
+        this.elementId = 'expandableCardBody' + GlobalElementId++;
+    }
+    ngOnInit() {
+    }
+}
+ExpandableCardComponent.ɵfac = function ExpandableCardComponent_Factory(t) { return new (t || ExpandableCardComponent)(); };
+ExpandableCardComponent.ɵcmp = ɵɵdefineComponent({ type: ExpandableCardComponent, selectors: [["polp-bs-expandable-card"]], inputs: { isCollapsed: "isCollapsed", titleClass: "titleClass" }, ngContentSelectors: _c1, decls: 6, vars: 4, consts: [[1, "card"], ["aria-controls", "expandableCardBody", 1, "card-header", 3, "click"], [3, "icon"], ["id", "expandableCardBody", 1, "card-body", 3, "collapse", "isAnimated"]], template: function ExpandableCardComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef(_c0$2);
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "a", 1);
+        ɵɵlistener("click", function ExpandableCardComponent_Template_a_click_1_listener() { return ctx.isCollapsed = !ctx.isCollapsed; });
+        ɵɵprojection(2);
+        ɵɵelement(3, "fa-icon", 2);
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "div", 3);
+        ɵɵprojection(5, 1);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵattribute("aria-expanded", !ctx.isCollapsed);
+        ɵɵadvance(2);
+        ɵɵproperty("icon", ctx.isCollapsed ? ctx.faChevronRight : ctx.faChevronDown);
+        ɵɵadvance(1);
+        ɵɵproperty("collapse", ctx.isCollapsed)("isAnimated", true);
+    } }, directives: [FaIconComponent, CollapseDirective], styles: [""] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpandableCardComponent, [{
+        type: Component,
+        args: [{
+                selector: 'polp-bs-expandable-card',
+                templateUrl: './expandable-card.component.html',
+                styleUrls: ['./expandable-card.component.css']
+            }]
+    }], function () { return []; }, { isCollapsed: [{
+            type: Input
+        }], titleClass: [{
+            type: Input
+        }] }); })();
+
 /**
  * Provides a base for most modal components.  This base is built with
  * the capability of synchronousely waiting for a modal to close.
@@ -1344,6 +1394,7 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
             ReactiveFormsModule,
             AlertModule,
             ModalModule,
+            CollapseModule,
             FontAwesomeModule,
             FtAutofocusModule,
             AutosizeModule,
@@ -1354,12 +1405,14 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
         AlertBoxComponent,
         PromptFormComponent,
         EmailComposerComponent,
-        PromptModalComponent], imports: [CommonModule,
+        PromptModalComponent,
+        ExpandableCardComponent], imports: [CommonModule,
         RouterModule,
         FormsModule,
         ReactiveFormsModule,
         AlertModule,
         ModalModule,
+        CollapseModule,
         FontAwesomeModule,
         FtAutofocusModule,
         AutosizeModule,
@@ -1368,7 +1421,8 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
         AlertBoxComponent,
         PromptFormComponent,
         EmailComposerComponent,
-        PromptModalComponent] }); })();
+        PromptModalComponent,
+        ExpandableCardComponent] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
         type: NgModule,
         args: [{
@@ -1377,7 +1431,8 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
                     AlertBoxComponent,
                     PromptFormComponent,
                     EmailComposerComponent,
-                    PromptModalComponent
+                    PromptModalComponent,
+                    ExpandableCardComponent
                 ],
                 imports: [
                     CommonModule,
@@ -1386,6 +1441,7 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
                     ReactiveFormsModule,
                     AlertModule,
                     ModalModule,
+                    CollapseModule,
                     FontAwesomeModule,
                     FtAutofocusModule,
                     AutosizeModule,
@@ -1397,7 +1453,8 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
                     AlertBoxComponent,
                     PromptFormComponent,
                     EmailComposerComponent,
-                    PromptModalComponent
+                    PromptModalComponent,
+                    ExpandableCardComponent
                 ],
                 entryComponents: []
             }]
@@ -1457,5 +1514,5 @@ CommonModalsService.ɵprov = ɵɵdefineInjectable({ token: CommonModalsService, 
  * Generated bundle index. Do not edit.
  */
 
-export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, CommonModalsService, EmailComposerComponent, ObservableModalAbstractComponent, PolpBsComponentsModule, PromptFormComponent, PromptModalComponent, makeValidations };
+export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, CommonModalsService, EmailComposerComponent, ExpandableCardComponent, ObservableModalAbstractComponent, PolpBsComponentsModule, PromptFormComponent, PromptModalComponent, makeValidations };
 //# sourceMappingURL=polpware-bs-components.js.map

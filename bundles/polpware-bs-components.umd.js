@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('@fortawesome/free-solid-svg-icons'), require('@polpware/ngx-form-common'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@fortawesome/angular-fontawesome'), require('ngx-mask'), require('@polpware/ngx-email-composer'), require('ngx-chips'), require('ngx-bootstrap/alert')) :
-    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', '@fortawesome/free-solid-svg-icons', '@polpware/ngx-form-common', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@fortawesome/angular-fontawesome', 'ngx-mask', '@polpware/ngx-email-composer', 'ngx-chips', 'ngx-bootstrap/alert'], factory) :
-    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.freeSolidSvgIcons, global.ngxFormCommon, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.angularFontawesome, global.ngxMask, global.ngxEmailComposer, global.ngxChips, global.alert));
-}(this, (function (exports, core, common, router, rxjs, modal, forms, freeSolidSvgIcons, ngxFormCommon, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, angularFontawesome, ngxMask, ngxEmailComposer, ngxChips, alert) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('@fortawesome/free-solid-svg-icons'), require('@polpware/ngx-form-common'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@fortawesome/angular-fontawesome'), require('ngx-mask'), require('@polpware/ngx-email-composer'), require('ngx-chips'), require('ngx-bootstrap/alert'), require('ngx-bootstrap/collapse')) :
+    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', '@fortawesome/free-solid-svg-icons', '@polpware/ngx-form-common', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@fortawesome/angular-fontawesome', 'ngx-mask', '@polpware/ngx-email-composer', 'ngx-chips', 'ngx-bootstrap/alert', 'ngx-bootstrap/collapse'], factory) :
+    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.freeSolidSvgIcons, global.ngxFormCommon, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.angularFontawesome, global.ngxMask, global.ngxEmailComposer, global.ngxChips, global.alert, global.collapse));
+}(this, (function (exports, core, common, router, rxjs, modal, forms, freeSolidSvgIcons, ngxFormCommon, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, angularFontawesome, ngxMask, ngxEmailComposer, ngxChips, alert, collapse) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1530,6 +1530,56 @@
                 type: core.Output
             }] }); })();
 
+    var _c0$2 = [[["", "title", ""]], [["", "body", ""]]];
+    var _c1 = ["[title]", "[body]"];
+    var GlobalElementId = 1;
+    var ExpandableCardComponent = /** @class */ (function () {
+        function ExpandableCardComponent() {
+            this.isCollapsed = false;
+            this.titleClass = '';
+            this.faChevronUp = freeSolidSvgIcons.faChevronUp;
+            this.faChevronDown = freeSolidSvgIcons.faChevronDown;
+            this.faChevronRight = freeSolidSvgIcons.faChevronRight;
+            this.elementId = 'expandableCardBody' + GlobalElementId++;
+        }
+        ExpandableCardComponent.prototype.ngOnInit = function () {
+        };
+        ExpandableCardComponent.ɵfac = function ExpandableCardComponent_Factory(t) { return new (t || ExpandableCardComponent)(); };
+        ExpandableCardComponent.ɵcmp = core.ɵɵdefineComponent({ type: ExpandableCardComponent, selectors: [["polp-bs-expandable-card"]], inputs: { isCollapsed: "isCollapsed", titleClass: "titleClass" }, ngContentSelectors: _c1, decls: 6, vars: 4, consts: [[1, "card"], ["aria-controls", "expandableCardBody", 1, "card-header", 3, "click"], [3, "icon"], ["id", "expandableCardBody", 1, "card-body", 3, "collapse", "isAnimated"]], template: function ExpandableCardComponent_Template(rf, ctx) { if (rf & 1) {
+                core.ɵɵprojectionDef(_c0$2);
+                core.ɵɵelementStart(0, "div", 0);
+                core.ɵɵelementStart(1, "a", 1);
+                core.ɵɵlistener("click", function ExpandableCardComponent_Template_a_click_1_listener() { return ctx.isCollapsed = !ctx.isCollapsed; });
+                core.ɵɵprojection(2);
+                core.ɵɵelement(3, "fa-icon", 2);
+                core.ɵɵelementEnd();
+                core.ɵɵelementStart(4, "div", 3);
+                core.ɵɵprojection(5, 1);
+                core.ɵɵelementEnd();
+                core.ɵɵelementEnd();
+            } if (rf & 2) {
+                core.ɵɵadvance(1);
+                core.ɵɵattribute("aria-expanded", !ctx.isCollapsed);
+                core.ɵɵadvance(2);
+                core.ɵɵproperty("icon", ctx.isCollapsed ? ctx.faChevronRight : ctx.faChevronDown);
+                core.ɵɵadvance(1);
+                core.ɵɵproperty("collapse", ctx.isCollapsed)("isAnimated", true);
+            } }, directives: [angularFontawesome.FaIconComponent, collapse.CollapseDirective], styles: [""] });
+        return ExpandableCardComponent;
+    }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(ExpandableCardComponent, [{
+            type: core.Component,
+            args: [{
+                    selector: 'polp-bs-expandable-card',
+                    templateUrl: './expandable-card.component.html',
+                    styleUrls: ['./expandable-card.component.css']
+                }]
+        }], function () { return []; }, { isCollapsed: [{
+                type: core.Input
+            }], titleClass: [{
+                type: core.Input
+            }] }); })();
+
     /**
      * Provides a base for most modal components.  This base is built with
      * the capability of synchronousely waiting for a modal to close.
@@ -1564,6 +1614,7 @@
                     forms.ReactiveFormsModule,
                     alert.AlertModule,
                     modal.ModalModule,
+                    collapse.CollapseModule,
                     angularFontawesome.FontAwesomeModule,
                     ngxAutofocusDirective.FtAutofocusModule,
                     ngxAutosize.AutosizeModule,
@@ -1576,12 +1627,14 @@
             AlertBoxComponent,
             PromptFormComponent,
             EmailComposerComponent,
-            PromptModalComponent], imports: [common.CommonModule,
+            PromptModalComponent,
+            ExpandableCardComponent], imports: [common.CommonModule,
             router.RouterModule,
             forms.FormsModule,
             forms.ReactiveFormsModule,
             alert.AlertModule,
             modal.ModalModule,
+            collapse.CollapseModule,
             angularFontawesome.FontAwesomeModule,
             ngxAutofocusDirective.FtAutofocusModule,
             ngxAutosize.AutosizeModule,
@@ -1590,7 +1643,8 @@
             AlertBoxComponent,
             PromptFormComponent,
             EmailComposerComponent,
-            PromptModalComponent] }); })();
+            PromptModalComponent,
+            ExpandableCardComponent] }); })();
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PolpBsComponentsModule, [{
             type: core.NgModule,
             args: [{
@@ -1599,7 +1653,8 @@
                         AlertBoxComponent,
                         PromptFormComponent,
                         EmailComposerComponent,
-                        PromptModalComponent
+                        PromptModalComponent,
+                        ExpandableCardComponent
                     ],
                     imports: [
                         common.CommonModule,
@@ -1608,6 +1663,7 @@
                         forms.ReactiveFormsModule,
                         alert.AlertModule,
                         modal.ModalModule,
+                        collapse.CollapseModule,
                         angularFontawesome.FontAwesomeModule,
                         ngxAutofocusDirective.FtAutofocusModule,
                         ngxAutosize.AutosizeModule,
@@ -1619,7 +1675,8 @@
                         AlertBoxComponent,
                         PromptFormComponent,
                         EmailComposerComponent,
-                        PromptModalComponent
+                        PromptModalComponent,
+                        ExpandableCardComponent
                     ],
                     entryComponents: []
                 }]
@@ -1684,6 +1741,7 @@
     exports.BsModalAssistantService = BsModalAssistantService;
     exports.CommonModalsService = CommonModalsService;
     exports.EmailComposerComponent = EmailComposerComponent;
+    exports.ExpandableCardComponent = ExpandableCardComponent;
     exports.ObservableModalAbstractComponent = ObservableModalAbstractComponent;
     exports.PolpBsComponentsModule = PolpBsComponentsModule;
     exports.PromptFormComponent = PromptFormComponent;
