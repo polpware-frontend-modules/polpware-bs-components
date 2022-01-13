@@ -1603,6 +1603,210 @@
         return ObservableModalAbstractComponent;
     }());
 
+    var _c0$3 = ["searchControlElem"];
+    function SearchBoxWidgetComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+        core.ɵɵelementStart(0, "div", 9);
+        core.ɵɵelementStart(1, "span", 10);
+        core.ɵɵtext(2);
+        core.ɵɵelementEnd();
+        core.ɵɵelementEnd();
+    } if (rf & 2) {
+        var ctx_r0 = core.ɵɵnextContext();
+        core.ɵɵadvance(2);
+        core.ɵɵtextInterpolate(ctx_r0.prependText);
+    } }
+    function SearchBoxWidgetComponent_button_6_Template(rf, ctx) { if (rf & 1) {
+        var _r4 = core.ɵɵgetCurrentView();
+        core.ɵɵelementStart(0, "button", 11);
+        core.ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { core.ɵɵrestoreView(_r4); var ctx_r3 = core.ɵɵnextContext(); return ctx_r3.cancelTypedKeyword(); });
+        core.ɵɵelement(1, "fa-icon", 8);
+        core.ɵɵelementEnd();
+    } if (rf & 2) {
+        var ctx_r2 = core.ɵɵnextContext();
+        core.ɵɵadvance(1);
+        core.ɵɵproperty("icon", ctx_r2.faTimes);
+    } }
+    var SearchBoxWidgetComponent = /** @class */ (function () {
+        function SearchBoxWidgetComponent() {
+            this.faSearch = freeSolidSvgIcons.faSearch;
+            this.faTimes = freeSolidSvgIcons.faTimes;
+            this.formClass = 'border rounded my-2 py-4 px-4 bg-light';
+            this.prependText = 'Filter';
+            // todo: More inputs
+            // Allowing for disabling auto search
+            this.minLength = 0;
+            this.onSearch = new core.EventEmitter();
+            this._emitEvent = true;
+        }
+        Object.defineProperty(SearchBoxWidgetComponent.prototype, "emitEvent", {
+            get: function () {
+                var old = this._emitEvent;
+                this._emitEvent = true;
+                return old;
+            },
+            set: function (v) {
+                this._emitEvent = v;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        SearchBoxWidgetComponent.prototype.ngOnInit = function () {
+            this.searchControl = new forms.FormControl(this.initKeyword || '');
+            this.startObserveSearchKeyword();
+        };
+        SearchBoxWidgetComponent.prototype.ngOnDestroy = function () {
+            this.stopObserveSearchKeyword();
+        };
+        // Cancel typed keyword and
+        // reset to whatever the previous state
+        //
+        // This operation does not cause new network request.
+        SearchBoxWidgetComponent.prototype.cancelTypedKeyword = function () {
+            this.searchControl.setValue('');
+            // Auto focus the search input
+            this.searchControlElem.nativeElement.focus();
+        };
+        // Starts a new round of search
+        //
+        // This operation causes new network request.
+        SearchBoxWidgetComponent.prototype.kickOffSearch = function () {
+            var k = this.anyFutureKeyword;
+            this.onSearch.emit(k);
+        };
+        SearchBoxWidgetComponent.prototype.resetKeyword = function (emitEvent) {
+            if (emitEvent === void 0) { emitEvent = false; }
+            this.emitEvent = emitEvent;
+            this.cancelTypedKeyword();
+        };
+        // Start to listen for search keyword change
+        SearchBoxWidgetComponent.prototype.startObserveSearchKeyword = function () {
+            var _this = this;
+            this._searchKeywordSubr = this.searchControl.valueChanges.subscribe(function (a) {
+                a = (a || '').toLowerCase();
+                _this.anyFutureKeyword = a;
+                if (_this.minLength > 0 && _this.anyFutureKeyword.length >= _this.minLength && _this.emitEvent) {
+                    _this.kickOffSearch();
+                }
+            });
+        };
+        SearchBoxWidgetComponent.prototype.stopObserveSearchKeyword = function () {
+            this._searchKeywordSubr && this._searchKeywordSubr.unsubscribe();
+        };
+        SearchBoxWidgetComponent.ɵfac = function SearchBoxWidgetComponent_Factory(t) { return new (t || SearchBoxWidgetComponent)(); };
+        SearchBoxWidgetComponent.ɵcmp = core.ɵɵdefineComponent({ type: SearchBoxWidgetComponent, selectors: [["polp-bs-search-box-widget"]], viewQuery: function SearchBoxWidgetComponent_Query(rf, ctx) { if (rf & 1) {
+                core.ɵɵviewQuery(_c0$3, true);
+            } if (rf & 2) {
+                var _t;
+                core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx.searchControlElem = _t.first);
+            } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", prependText: "prependText", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 6, consts: [[3, "ngClass"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 1, "form-control", 3, "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only", 3, "click"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
+                core.ɵɵelementStart(0, "form", 0);
+                core.ɵɵelementStart(1, "div", 1);
+                core.ɵɵtemplate(2, SearchBoxWidgetComponent_div_2_Template, 3, 1, "div", 2);
+                core.ɵɵelement(3, "input", 3, 4);
+                core.ɵɵelementStart(5, "div", 5);
+                core.ɵɵtemplate(6, SearchBoxWidgetComponent_button_6_Template, 2, 1, "button", 6);
+                core.ɵɵelementStart(7, "button", 7);
+                core.ɵɵlistener("click", function SearchBoxWidgetComponent_Template_button_click_7_listener() { return ctx.kickOffSearch; });
+                core.ɵɵelement(8, "fa-icon", 8);
+                core.ɵɵelementEnd();
+                core.ɵɵelementEnd();
+                core.ɵɵelementEnd();
+                core.ɵɵelementEnd();
+            } if (rf & 2) {
+                core.ɵɵproperty("ngClass", ctx.formClass);
+                core.ɵɵadvance(2);
+                core.ɵɵproperty("ngIf", ctx.prependText);
+                core.ɵɵadvance(1);
+                core.ɵɵproperty("formControl", ctx.searchControl)("autofocus", true);
+                core.ɵɵadvance(3);
+                core.ɵɵproperty("ngIf", ctx.anyFutureKeyword);
+                core.ɵɵadvance(2);
+                core.ɵɵproperty("icon", ctx.faSearch);
+            } }, directives: [forms.ɵangular_packages_forms_forms_y, forms.NgControlStatusGroup, forms.NgForm, common.NgClass, common.NgIf, forms.DefaultValueAccessor, forms.NgControlStatus, forms.FormControlDirective, ngxAutofocusDirective.AutofocusDirective, angularFontawesome.FaIconComponent], styles: [""] });
+        return SearchBoxWidgetComponent;
+    }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(SearchBoxWidgetComponent, [{
+            type: core.Component,
+            args: [{
+                    selector: 'polp-bs-search-box-widget',
+                    templateUrl: './search-box-widget.component.html',
+                    styleUrls: ['./search-box-widget.component.css']
+                }]
+        }], function () { return []; }, { initKeyword: [{
+                type: core.Input
+            }], formClass: [{
+                type: core.Input
+            }], prependText: [{
+                type: core.Input
+            }], minLength: [{
+                type: core.Input
+            }], onSearch: [{
+                type: core.Output
+            }], searchControlElem: [{
+                type: core.ViewChild,
+                args: ['searchControlElem']
+            }] }); })();
+
+    function PageSizeOptionsWidgetComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
+        var _r3 = core.ɵɵgetCurrentView();
+        core.ɵɵelementContainerStart(0);
+        core.ɵɵelementStart(1, "li", 3);
+        core.ɵɵelementStart(2, "a", 4);
+        core.ɵɵlistener("click", function PageSizeOptionsWidgetComponent_ng_container_2_Template_a_click_2_listener() { core.ɵɵrestoreView(_r3); var o_r1 = ctx.$implicit; var ctx_r2 = core.ɵɵnextContext(); return ctx_r2.changeSize(o_r1); });
+        core.ɵɵtext(3);
+        core.ɵɵelementEnd();
+        core.ɵɵelementEnd();
+        core.ɵɵelementContainerEnd();
+    } if (rf & 2) {
+        var o_r1 = ctx.$implicit;
+        var ctx_r0 = core.ɵɵnextContext();
+        core.ɵɵadvance(1);
+        core.ɵɵproperty("ngClass", ctx_r0.size == o_r1);
+        core.ɵɵadvance(2);
+        core.ɵɵtextInterpolate(o_r1);
+    } }
+    var PageSizeOptionsWidgetComponent = /** @class */ (function () {
+        function PageSizeOptionsWidgetComponent() {
+            this.initSize = 40;
+            this.options = [40, 100, 200, 400, 800];
+            this.onChange = new core.EventEmitter();
+            this.size = 40;
+        }
+        PageSizeOptionsWidgetComponent.prototype.ngOnInit = function () {
+            this.size = this.initSize;
+        };
+        PageSizeOptionsWidgetComponent.prototype.changeSize = function (s) {
+            this.size = s;
+            this.onChange.emit(s);
+        };
+        PageSizeOptionsWidgetComponent.ɵfac = function PageSizeOptionsWidgetComponent_Factory(t) { return new (t || PageSizeOptionsWidgetComponent)(); };
+        PageSizeOptionsWidgetComponent.ɵcmp = core.ɵɵdefineComponent({ type: PageSizeOptionsWidgetComponent, selectors: [["polp-bs-page-size-options-widget"]], inputs: { initSize: "initSize", options: "options" }, outputs: { onChange: "onChange" }, decls: 3, vars: 1, consts: [["aria-label", "page size options"], [1, "pagination"], [4, "ngFor", "ngForOf"], [1, "page-item", 3, "ngClass"], [1, "page-link", 3, "click"]], template: function PageSizeOptionsWidgetComponent_Template(rf, ctx) { if (rf & 1) {
+                core.ɵɵelementStart(0, "nav", 0);
+                core.ɵɵelementStart(1, "ul", 1);
+                core.ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 2, "ng-container", 2);
+                core.ɵɵelementEnd();
+                core.ɵɵelementEnd();
+            } if (rf & 2) {
+                core.ɵɵadvance(2);
+                core.ɵɵproperty("ngForOf", ctx.options);
+            } }, directives: [common.NgForOf, common.NgClass], styles: [""] });
+        return PageSizeOptionsWidgetComponent;
+    }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PageSizeOptionsWidgetComponent, [{
+            type: core.Component,
+            args: [{
+                    selector: 'polp-bs-page-size-options-widget',
+                    templateUrl: './page-size-options-widget.component.html',
+                    styleUrls: ['./page-size-options-widget.component.css']
+                }]
+        }], function () { return []; }, { initSize: [{
+                type: core.Input
+            }], options: [{
+                type: core.Input
+            }], onChange: [{
+                type: core.Output
+            }] }); })();
+
     var PolpBsComponentsModule = /** @class */ (function () {
         function PolpBsComponentsModule() {
         }
@@ -1628,7 +1832,9 @@
             PromptFormComponent,
             EmailComposerComponent,
             PromptModalComponent,
-            ExpandableCardComponent], imports: [common.CommonModule,
+            ExpandableCardComponent,
+            SearchBoxWidgetComponent,
+            PageSizeOptionsWidgetComponent], imports: [common.CommonModule,
             router.RouterModule,
             forms.FormsModule,
             forms.ReactiveFormsModule,
@@ -1654,7 +1860,9 @@
                         PromptFormComponent,
                         EmailComposerComponent,
                         PromptModalComponent,
-                        ExpandableCardComponent
+                        ExpandableCardComponent,
+                        SearchBoxWidgetComponent,
+                        PageSizeOptionsWidgetComponent
                     ],
                     imports: [
                         common.CommonModule,
@@ -1743,9 +1951,11 @@
     exports.EmailComposerComponent = EmailComposerComponent;
     exports.ExpandableCardComponent = ExpandableCardComponent;
     exports.ObservableModalAbstractComponent = ObservableModalAbstractComponent;
+    exports.PageSizeOptionsWidgetComponent = PageSizeOptionsWidgetComponent;
     exports.PolpBsComponentsModule = PolpBsComponentsModule;
     exports.PromptFormComponent = PromptFormComponent;
     exports.PromptModalComponent = PromptModalComponent;
+    exports.SearchBoxWidgetComponent = SearchBoxWidgetComponent;
     exports.makeValidations = makeValidations;
 
     Object.defineProperty(exports, '__esModule', { value: true });

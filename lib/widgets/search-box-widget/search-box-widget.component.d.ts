@@ -1,0 +1,30 @@
+import { ElementRef, EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
+    faSearch: import("@fortawesome/fontawesome-common-types").IconDefinition;
+    faTimes: import("@fortawesome/fontawesome-common-types").IconDefinition;
+    initKeyword: string;
+    formClass: string;
+    prependText: string;
+    minLength: number;
+    onSearch: EventEmitter<string>;
+    searchControlElem: ElementRef;
+    searchControl: FormControl;
+    anyFutureKeyword: string;
+    _searchKeywordSubr: Subscription;
+    private _emitEvent;
+    constructor();
+    set emitEvent(v: boolean);
+    get emitEvent(): boolean;
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    cancelTypedKeyword(): void;
+    kickOffSearch(): void;
+    resetKeyword(emitEvent?: boolean): void;
+    startObserveSearchKeyword(): void;
+    stopObserveSearchKeyword(): void;
+    static ɵfac: i0.ɵɵFactoryDef<SearchBoxWidgetComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "prependText": "prependText"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never>;
+}

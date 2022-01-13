@@ -1,10 +1,10 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵprojectionDef, ɵɵprojection, ɵɵattribute, ɵɵdefineDirective, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵprojectionDef, ɵɵprojection, ɵɵattribute, ɵɵdefineDirective, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { BsModalRef, ModalModule, BsModalService } from 'ngx-bootstrap/modal';
-import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, CheckboxControlValueAccessor, NgControlStatus, FormControlName, RadioControlValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { faEyeSlash, faEye, faSpinner, faChevronUp, faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, CheckboxControlValueAccessor, NgControlStatus, FormControlName, RadioControlValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, NgModel, RequiredValidator, NgForm, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { faEyeSlash, faEye, faSpinner, faChevronUp, faChevronDown, faChevronRight, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { v4 } from 'uuid';
 import { buildUrlValidator } from '@polpware/ngx-input-validators';
@@ -1384,6 +1384,202 @@ class ObservableModalAbstractComponent {
 ObservableModalAbstractComponent.ɵfac = function ObservableModalAbstractComponent_Factory(t) { return new (t || ObservableModalAbstractComponent)(); };
 ObservableModalAbstractComponent.ɵdir = ɵɵdefineDirective({ type: ObservableModalAbstractComponent, inputs: { modalId: "modalId" } });
 
+const _c0$3 = ["searchControlElem"];
+function SearchBoxWidgetComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "div", 9);
+    ɵɵelementStart(1, "span", 10);
+    ɵɵtext(2);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵɵnextContext();
+    ɵɵadvance(2);
+    ɵɵtextInterpolate(ctx_r0.prependText);
+} }
+function SearchBoxWidgetComponent_button_6_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "button", 11);
+    ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { ɵɵrestoreView(_r4); const ctx_r3 = ɵɵnextContext(); return ctx_r3.cancelTypedKeyword(); });
+    ɵɵelement(1, "fa-icon", 8);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r2 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵproperty("icon", ctx_r2.faTimes);
+} }
+class SearchBoxWidgetComponent {
+    constructor() {
+        this.faSearch = faSearch;
+        this.faTimes = faTimes;
+        this.formClass = 'border rounded my-2 py-4 px-4 bg-light';
+        this.prependText = 'Filter';
+        // todo: More inputs
+        // Allowing for disabling auto search
+        this.minLength = 0;
+        this.onSearch = new EventEmitter();
+        this._emitEvent = true;
+    }
+    set emitEvent(v) {
+        this._emitEvent = v;
+    }
+    get emitEvent() {
+        const old = this._emitEvent;
+        this._emitEvent = true;
+        return old;
+    }
+    ngOnInit() {
+        this.searchControl = new FormControl(this.initKeyword || '');
+        this.startObserveSearchKeyword();
+    }
+    ngOnDestroy() {
+        this.stopObserveSearchKeyword();
+    }
+    // Cancel typed keyword and
+    // reset to whatever the previous state
+    //
+    // This operation does not cause new network request.
+    cancelTypedKeyword() {
+        this.searchControl.setValue('');
+        // Auto focus the search input
+        this.searchControlElem.nativeElement.focus();
+    }
+    // Starts a new round of search
+    //
+    // This operation causes new network request.
+    kickOffSearch() {
+        const k = this.anyFutureKeyword;
+        this.onSearch.emit(k);
+    }
+    resetKeyword(emitEvent = false) {
+        this.emitEvent = emitEvent;
+        this.cancelTypedKeyword();
+    }
+    // Start to listen for search keyword change
+    startObserveSearchKeyword() {
+        this._searchKeywordSubr = this.searchControl.valueChanges.subscribe(a => {
+            a = (a || '').toLowerCase();
+            this.anyFutureKeyword = a;
+            if (this.minLength > 0 && this.anyFutureKeyword.length >= this.minLength && this.emitEvent) {
+                this.kickOffSearch();
+            }
+        });
+    }
+    stopObserveSearchKeyword() {
+        this._searchKeywordSubr && this._searchKeywordSubr.unsubscribe();
+    }
+}
+SearchBoxWidgetComponent.ɵfac = function SearchBoxWidgetComponent_Factory(t) { return new (t || SearchBoxWidgetComponent)(); };
+SearchBoxWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: SearchBoxWidgetComponent, selectors: [["polp-bs-search-box-widget"]], viewQuery: function SearchBoxWidgetComponent_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(_c0$3, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.searchControlElem = _t.first);
+    } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", prependText: "prependText", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 6, consts: [[3, "ngClass"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 1, "form-control", 3, "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only", 3, "click"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "form", 0);
+        ɵɵelementStart(1, "div", 1);
+        ɵɵtemplate(2, SearchBoxWidgetComponent_div_2_Template, 3, 1, "div", 2);
+        ɵɵelement(3, "input", 3, 4);
+        ɵɵelementStart(5, "div", 5);
+        ɵɵtemplate(6, SearchBoxWidgetComponent_button_6_Template, 2, 1, "button", 6);
+        ɵɵelementStart(7, "button", 7);
+        ɵɵlistener("click", function SearchBoxWidgetComponent_Template_button_click_7_listener() { return ctx.kickOffSearch; });
+        ɵɵelement(8, "fa-icon", 8);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("ngClass", ctx.formClass);
+        ɵɵadvance(2);
+        ɵɵproperty("ngIf", ctx.prependText);
+        ɵɵadvance(1);
+        ɵɵproperty("formControl", ctx.searchControl)("autofocus", true);
+        ɵɵadvance(3);
+        ɵɵproperty("ngIf", ctx.anyFutureKeyword);
+        ɵɵadvance(2);
+        ɵɵproperty("icon", ctx.faSearch);
+    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NgClass, NgIf, DefaultValueAccessor, NgControlStatus, FormControlDirective, AutofocusDirective, FaIconComponent], styles: [""] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SearchBoxWidgetComponent, [{
+        type: Component,
+        args: [{
+                selector: 'polp-bs-search-box-widget',
+                templateUrl: './search-box-widget.component.html',
+                styleUrls: ['./search-box-widget.component.css']
+            }]
+    }], function () { return []; }, { initKeyword: [{
+            type: Input
+        }], formClass: [{
+            type: Input
+        }], prependText: [{
+            type: Input
+        }], minLength: [{
+            type: Input
+        }], onSearch: [{
+            type: Output
+        }], searchControlElem: [{
+            type: ViewChild,
+            args: ['searchControlElem']
+        }] }); })();
+
+function PageSizeOptionsWidgetComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = ɵɵgetCurrentView();
+    ɵɵelementContainerStart(0);
+    ɵɵelementStart(1, "li", 3);
+    ɵɵelementStart(2, "a", 4);
+    ɵɵlistener("click", function PageSizeOptionsWidgetComponent_ng_container_2_Template_a_click_2_listener() { ɵɵrestoreView(_r3); const o_r1 = ctx.$implicit; const ctx_r2 = ɵɵnextContext(); return ctx_r2.changeSize(o_r1); });
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementContainerEnd();
+} if (rf & 2) {
+    const o_r1 = ctx.$implicit;
+    const ctx_r0 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵproperty("ngClass", ctx_r0.size == o_r1);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate(o_r1);
+} }
+class PageSizeOptionsWidgetComponent {
+    constructor() {
+        this.initSize = 40;
+        this.options = [40, 100, 200, 400, 800];
+        this.onChange = new EventEmitter();
+        this.size = 40;
+    }
+    ngOnInit() {
+        this.size = this.initSize;
+    }
+    changeSize(s) {
+        this.size = s;
+        this.onChange.emit(s);
+    }
+}
+PageSizeOptionsWidgetComponent.ɵfac = function PageSizeOptionsWidgetComponent_Factory(t) { return new (t || PageSizeOptionsWidgetComponent)(); };
+PageSizeOptionsWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: PageSizeOptionsWidgetComponent, selectors: [["polp-bs-page-size-options-widget"]], inputs: { initSize: "initSize", options: "options" }, outputs: { onChange: "onChange" }, decls: 3, vars: 1, consts: [["aria-label", "page size options"], [1, "pagination"], [4, "ngFor", "ngForOf"], [1, "page-item", 3, "ngClass"], [1, "page-link", 3, "click"]], template: function PageSizeOptionsWidgetComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "nav", 0);
+        ɵɵelementStart(1, "ul", 1);
+        ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 2, "ng-container", 2);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(2);
+        ɵɵproperty("ngForOf", ctx.options);
+    } }, directives: [NgForOf, NgClass], styles: [""] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PageSizeOptionsWidgetComponent, [{
+        type: Component,
+        args: [{
+                selector: 'polp-bs-page-size-options-widget',
+                templateUrl: './page-size-options-widget.component.html',
+                styleUrls: ['./page-size-options-widget.component.css']
+            }]
+    }], function () { return []; }, { initSize: [{
+            type: Input
+        }], options: [{
+            type: Input
+        }], onChange: [{
+            type: Output
+        }] }); })();
+
 class PolpBsComponentsModule {
 }
 PolpBsComponentsModule.ɵmod = ɵɵdefineNgModule({ type: PolpBsComponentsModule });
@@ -1406,7 +1602,9 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
         PromptFormComponent,
         EmailComposerComponent,
         PromptModalComponent,
-        ExpandableCardComponent], imports: [CommonModule,
+        ExpandableCardComponent,
+        SearchBoxWidgetComponent,
+        PageSizeOptionsWidgetComponent], imports: [CommonModule,
         RouterModule,
         FormsModule,
         ReactiveFormsModule,
@@ -1432,7 +1630,9 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
                     PromptFormComponent,
                     EmailComposerComponent,
                     PromptModalComponent,
-                    ExpandableCardComponent
+                    ExpandableCardComponent,
+                    SearchBoxWidgetComponent,
+                    PageSizeOptionsWidgetComponent
                 ],
                 imports: [
                     CommonModule,
@@ -1514,5 +1714,5 @@ CommonModalsService.ɵprov = ɵɵdefineInjectable({ token: CommonModalsService, 
  * Generated bundle index. Do not edit.
  */
 
-export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, CommonModalsService, EmailComposerComponent, ExpandableCardComponent, ObservableModalAbstractComponent, PolpBsComponentsModule, PromptFormComponent, PromptModalComponent, makeValidations };
+export { ActionKind, AlertBoxComponent, BreadcrumbClipboardService, BreadcrumbComponent, BsModalAssistantService, CommonModalsService, EmailComposerComponent, ExpandableCardComponent, ObservableModalAbstractComponent, PageSizeOptionsWidgetComponent, PolpBsComponentsModule, PromptFormComponent, PromptModalComponent, SearchBoxWidgetComponent, makeValidations };
 //# sourceMappingURL=polpware-bs-components.js.map
