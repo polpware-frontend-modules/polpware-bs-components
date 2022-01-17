@@ -7,7 +7,9 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     faTimes: import("@fortawesome/fontawesome-common-types").IconDefinition;
     initKeyword: string;
     formClass: string;
+    inputClass: string;
     prependText: string;
+    debounceTime: number;
     minLength: number;
     onSearch: EventEmitter<string>;
     searchControlElem: ElementRef;
@@ -26,5 +28,5 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     startObserveSearchKeyword(): void;
     stopObserveSearchKeyword(): void;
     static ɵfac: i0.ɵɵFactoryDef<SearchBoxWidgetComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "prependText": "prependText"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "inputClass": "inputClass"; "prependText": "prependText"; "debounceTime": "debounceTime"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never>;
 }

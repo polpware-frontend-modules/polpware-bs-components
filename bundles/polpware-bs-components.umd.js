@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('@fortawesome/free-solid-svg-icons'), require('@polpware/ngx-form-common'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@fortawesome/angular-fontawesome'), require('ngx-mask'), require('@polpware/ngx-email-composer'), require('ngx-chips'), require('ngx-bootstrap/alert'), require('ngx-bootstrap/collapse')) :
-    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', '@fortawesome/free-solid-svg-icons', '@polpware/ngx-form-common', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@fortawesome/angular-fontawesome', 'ngx-mask', '@polpware/ngx-email-composer', 'ngx-chips', 'ngx-bootstrap/alert', 'ngx-bootstrap/collapse'], factory) :
-    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.freeSolidSvgIcons, global.ngxFormCommon, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.angularFontawesome, global.ngxMask, global.ngxEmailComposer, global.ngxChips, global.alert, global.collapse));
-}(this, (function (exports, core, common, router, rxjs, modal, forms, freeSolidSvgIcons, ngxFormCommon, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, angularFontawesome, ngxMask, ngxEmailComposer, ngxChips, alert, collapse) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/router'), require('rxjs'), require('ngx-bootstrap/modal'), require('@angular/forms'), require('@fortawesome/free-solid-svg-icons'), require('@polpware/ngx-form-common'), require('uuid'), require('@polpware/ngx-input-validators'), require('ngx-autosize'), require('@40three/ngx-autofocus-directive'), require('@fortawesome/angular-fontawesome'), require('ngx-mask'), require('@polpware/ngx-email-composer'), require('ngx-chips'), require('ngx-bootstrap/alert'), require('ngx-bootstrap/collapse'), require('rxjs/operators')) :
+    typeof define === 'function' && define.amd ? define('@polpware/bs-components', ['exports', '@angular/core', '@angular/common', '@angular/router', 'rxjs', 'ngx-bootstrap/modal', '@angular/forms', '@fortawesome/free-solid-svg-icons', '@polpware/ngx-form-common', 'uuid', '@polpware/ngx-input-validators', 'ngx-autosize', '@40three/ngx-autofocus-directive', '@fortawesome/angular-fontawesome', 'ngx-mask', '@polpware/ngx-email-composer', 'ngx-chips', 'ngx-bootstrap/alert', 'ngx-bootstrap/collapse', 'rxjs/operators'], factory) :
+    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['bs-components'] = {}), global.ng.core, global.ng.common, global.ng.router, global.rxjs, global.modal, global.ng.forms, global.freeSolidSvgIcons, global.ngxFormCommon, global.uuid, global.ngxInputValidators, global.ngxAutosize, global.ngxAutofocusDirective, global.angularFontawesome, global.ngxMask, global.ngxEmailComposer, global.ngxChips, global.alert, global.collapse, global.rxjs.operators));
+}(this, (function (exports, core, common, router, rxjs, modal, forms, freeSolidSvgIcons, ngxFormCommon, uuid, ngxInputValidators, ngxAutosize, ngxAutofocusDirective, angularFontawesome, ngxMask, ngxEmailComposer, ngxChips, alert, collapse, operators) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1631,7 +1631,9 @@
             this.faSearch = freeSolidSvgIcons.faSearch;
             this.faTimes = freeSolidSvgIcons.faTimes;
             this.formClass = 'border rounded my-2 py-4 px-4 bg-light';
+            this.inputClass = 'form-control';
             this.prependText = 'Filter';
+            this.debounceTime = 500;
             // todo: More inputs
             // Allowing for disabling auto search
             this.minLength = 0;
@@ -1681,7 +1683,9 @@
         // Start to listen for search keyword change
         SearchBoxWidgetComponent.prototype.startObserveSearchKeyword = function () {
             var _this = this;
-            this._searchKeywordSubr = this.searchControl.valueChanges.subscribe(function (a) {
+            this._searchKeywordSubr = this.searchControl.valueChanges
+                .pipe(operators.debounceTime(this.debounceTime))
+                .subscribe(function (a) {
                 a = (a || '').toLowerCase();
                 _this.anyFutureKeyword = a;
                 if (_this.minLength > 0 && _this.anyFutureKeyword.length >= _this.minLength && _this.emitEvent) {
@@ -1698,15 +1702,15 @@
             } if (rf & 2) {
                 var _t;
                 core.ɵɵqueryRefresh(_t = core.ɵɵloadQuery()) && (ctx.searchControlElem = _t.first);
-            } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", prependText: "prependText", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 6, consts: [[3, "ngClass"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 1, "form-control", 3, "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only", 3, "click"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
+            } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", inputClass: "inputClass", prependText: "prependText", debounceTime: "debounceTime", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 7, consts: [[3, "ngClass", "ngSubmit"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 3, "ngClass", "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
                 core.ɵɵelementStart(0, "form", 0);
+                core.ɵɵlistener("ngSubmit", function SearchBoxWidgetComponent_Template_form_ngSubmit_0_listener() { return ctx.kickOffSearch(); });
                 core.ɵɵelementStart(1, "div", 1);
                 core.ɵɵtemplate(2, SearchBoxWidgetComponent_div_2_Template, 3, 1, "div", 2);
                 core.ɵɵelement(3, "input", 3, 4);
                 core.ɵɵelementStart(5, "div", 5);
                 core.ɵɵtemplate(6, SearchBoxWidgetComponent_button_6_Template, 2, 1, "button", 6);
                 core.ɵɵelementStart(7, "button", 7);
-                core.ɵɵlistener("click", function SearchBoxWidgetComponent_Template_button_click_7_listener() { return ctx.kickOffSearch; });
                 core.ɵɵelement(8, "fa-icon", 8);
                 core.ɵɵelementEnd();
                 core.ɵɵelementEnd();
@@ -1717,7 +1721,7 @@
                 core.ɵɵadvance(2);
                 core.ɵɵproperty("ngIf", ctx.prependText);
                 core.ɵɵadvance(1);
-                core.ɵɵproperty("formControl", ctx.searchControl)("autofocus", true);
+                core.ɵɵproperty("ngClass", ctx.inputClass)("formControl", ctx.searchControl)("autofocus", true);
                 core.ɵɵadvance(3);
                 core.ɵɵproperty("ngIf", ctx.anyFutureKeyword);
                 core.ɵɵadvance(2);
@@ -1736,7 +1740,11 @@
                 type: core.Input
             }], formClass: [{
                 type: core.Input
+            }], inputClass: [{
+                type: core.Input
             }], prependText: [{
+                type: core.Input
+            }], debounceTime: [{
                 type: core.Input
             }], minLength: [{
                 type: core.Input

@@ -16,6 +16,7 @@ import { EmailFormAbstractComponent, AlertTypeEnum } from '@polpware/ngx-email-c
 import { TagInputComponent, TagInputDropdown, TagInputModule } from 'ngx-chips';
 import { AlertComponent, AlertModule } from 'ngx-bootstrap/alert';
 import { CollapseDirective, CollapseModule } from 'ngx-bootstrap/collapse';
+import { debounceTime } from 'rxjs/operators';
 
 var ActionKind;
 (function (ActionKind) {
@@ -1412,7 +1413,9 @@ class SearchBoxWidgetComponent {
         this.faSearch = faSearch;
         this.faTimes = faTimes;
         this.formClass = 'border rounded my-2 py-4 px-4 bg-light';
+        this.inputClass = 'form-control';
         this.prependText = 'Filter';
+        this.debounceTime = 500;
         // todo: More inputs
         // Allowing for disabling auto search
         this.minLength = 0;
@@ -1456,7 +1459,9 @@ class SearchBoxWidgetComponent {
     }
     // Start to listen for search keyword change
     startObserveSearchKeyword() {
-        this._searchKeywordSubr = this.searchControl.valueChanges.subscribe(a => {
+        this._searchKeywordSubr = this.searchControl.valueChanges
+            .pipe(debounceTime(this.debounceTime))
+            .subscribe(a => {
             a = (a || '').toLowerCase();
             this.anyFutureKeyword = a;
             if (this.minLength > 0 && this.anyFutureKeyword.length >= this.minLength && this.emitEvent) {
@@ -1474,15 +1479,15 @@ SearchBoxWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: SearchBoxWidgetComp
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.searchControlElem = _t.first);
-    } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", prependText: "prependText", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 6, consts: [[3, "ngClass"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 1, "form-control", 3, "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only", 3, "click"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", inputClass: "inputClass", prependText: "prependText", debounceTime: "debounceTime", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 7, consts: [[3, "ngClass", "ngSubmit"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 3, "ngClass", "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "form", 0);
+        ɵɵlistener("ngSubmit", function SearchBoxWidgetComponent_Template_form_ngSubmit_0_listener() { return ctx.kickOffSearch(); });
         ɵɵelementStart(1, "div", 1);
         ɵɵtemplate(2, SearchBoxWidgetComponent_div_2_Template, 3, 1, "div", 2);
         ɵɵelement(3, "input", 3, 4);
         ɵɵelementStart(5, "div", 5);
         ɵɵtemplate(6, SearchBoxWidgetComponent_button_6_Template, 2, 1, "button", 6);
         ɵɵelementStart(7, "button", 7);
-        ɵɵlistener("click", function SearchBoxWidgetComponent_Template_button_click_7_listener() { return ctx.kickOffSearch; });
         ɵɵelement(8, "fa-icon", 8);
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -1493,7 +1498,7 @@ SearchBoxWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: SearchBoxWidgetComp
         ɵɵadvance(2);
         ɵɵproperty("ngIf", ctx.prependText);
         ɵɵadvance(1);
-        ɵɵproperty("formControl", ctx.searchControl)("autofocus", true);
+        ɵɵproperty("ngClass", ctx.inputClass)("formControl", ctx.searchControl)("autofocus", true);
         ɵɵadvance(3);
         ɵɵproperty("ngIf", ctx.anyFutureKeyword);
         ɵɵadvance(2);
@@ -1510,7 +1515,11 @@ SearchBoxWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: SearchBoxWidgetComp
             type: Input
         }], formClass: [{
             type: Input
+        }], inputClass: [{
+            type: Input
         }], prependText: [{
+            type: Input
+        }], debounceTime: [{
             type: Input
         }], minLength: [{
             type: Input
