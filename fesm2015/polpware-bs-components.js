@@ -1620,7 +1620,9 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
         PromptFormComponent,
         EmailComposerComponent,
         PromptModalComponent,
-        ExpandableCardComponent] }); })();
+        ExpandableCardComponent,
+        SearchBoxWidgetComponent,
+        PageSizeOptionsWidgetComponent] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
         type: NgModule,
         args: [{
@@ -1654,7 +1656,9 @@ PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComp
                     PromptFormComponent,
                     EmailComposerComponent,
                     PromptModalComponent,
-                    ExpandableCardComponent
+                    ExpandableCardComponent,
+                    SearchBoxWidgetComponent,
+                    PageSizeOptionsWidgetComponent
                 ],
                 entryComponents: []
             }]

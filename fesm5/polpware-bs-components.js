@@ -1651,7 +1651,9 @@ var PolpBsComponentsModule = /** @class */ (function () {
         PromptFormComponent,
         EmailComposerComponent,
         PromptModalComponent,
-        ExpandableCardComponent] }); })();
+        ExpandableCardComponent,
+        SearchBoxWidgetComponent,
+        PageSizeOptionsWidgetComponent] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
         type: NgModule,
         args: [{
@@ -1685,7 +1687,9 @@ var PolpBsComponentsModule = /** @class */ (function () {
                     PromptFormComponent,
                     EmailComposerComponent,
                     PromptModalComponent,
-                    ExpandableCardComponent
+                    ExpandableCardComponent,
+                    SearchBoxWidgetComponent,
+                    PageSizeOptionsWidgetComponent
                 ],
                 entryComponents: []
             }]

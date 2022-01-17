@@ -1850,7 +1850,9 @@
             PromptFormComponent,
             EmailComposerComponent,
             PromptModalComponent,
-            ExpandableCardComponent] }); })();
+            ExpandableCardComponent,
+            SearchBoxWidgetComponent,
+            PageSizeOptionsWidgetComponent] }); })();
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PolpBsComponentsModule, [{
             type: core.NgModule,
             args: [{
@@ -1884,7 +1886,9 @@
                         PromptFormComponent,
                         EmailComposerComponent,
                         PromptModalComponent,
-                        ExpandableCardComponent
+                        ExpandableCardComponent,
+                        SearchBoxWidgetComponent,
+                        PageSizeOptionsWidgetComponent
                     ],
                     entryComponents: []
                 }]
