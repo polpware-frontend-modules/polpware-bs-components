@@ -1,6 +1,6 @@
 {
   "name": "@polpware/bs-components",
-  "version": "9.9.4",
+  "version": "9.9.5",
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",

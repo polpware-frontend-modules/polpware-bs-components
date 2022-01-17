@@ -1476,7 +1476,7 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
     // This operation causes new network request.
     SearchBoxWidgetComponent.prototype.kickOffSearch = function () {
         this.effectiveKeyword = this.anyFutureKeyword;
-        this.onSearch.emit(this.effectiveKeyword);
+        this.onSearch.emit();
     };
     SearchBoxWidgetComponent.prototype.resetKeyword = function (emitEvent) {
         if (emitEvent === void 0) { emitEvent = false; }

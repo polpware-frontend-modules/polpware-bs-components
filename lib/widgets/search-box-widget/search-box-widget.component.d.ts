@@ -11,7 +11,7 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     prependText: string;
     debounceTime: number;
     minLength: number;
-    onSearch: EventEmitter<string>;
+    onSearch: EventEmitter<void>;
     searchControlElem: ElementRef;
     searchControl: FormControl;
     anyFutureKeyword: string;

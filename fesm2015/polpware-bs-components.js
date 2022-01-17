@@ -1452,7 +1452,7 @@ class SearchBoxWidgetComponent {
     // This operation causes new network request.
     kickOffSearch() {
         this.effectiveKeyword = this.anyFutureKeyword;
-        this.onSearch.emit(this.effectiveKeyword);
+        this.onSearch.emit();
     }
     resetKeyword(emitEvent = false) {
         this.emitEvent = emitEvent;
