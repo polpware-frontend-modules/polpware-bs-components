@@ -1400,7 +1400,7 @@ function SearchBoxWidgetComponent_div_2_Template(rf, ctx) { if (rf & 1) {
 function SearchBoxWidgetComponent_button_6_Template(rf, ctx) { if (rf & 1) {
     const _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "button", 11);
-    ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { ɵɵrestoreView(_r4); const ctx_r3 = ɵɵnextContext(); return ctx_r3.cancelTypedKeyword(); });
+    ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { ɵɵrestoreView(_r4); const ctx_r3 = ɵɵnextContext(); return ctx_r3.resetKeyword(true); });
     ɵɵelement(1, "fa-icon", 8);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -1420,14 +1420,14 @@ class SearchBoxWidgetComponent {
         // Allowing for disabling auto search
         this.minLength = 0;
         this.onSearch = new EventEmitter();
-        this._emitEvent = true;
+        this._emitEvent = false;
     }
     set emitEvent(v) {
         this._emitEvent = v;
     }
     get emitEvent() {
         const old = this._emitEvent;
-        this._emitEvent = true;
+        this._emitEvent = false;
         return old;
     }
     ngOnInit() {
@@ -1456,7 +1456,6 @@ class SearchBoxWidgetComponent {
     }
     resetKeyword(emitEvent = false) {
         this.emitEvent = emitEvent;
-        this.effectiveKeyword = '';
         this.cancelTypedKeyword();
     }
     // Start to listen for search keyword change
@@ -1466,7 +1465,10 @@ class SearchBoxWidgetComponent {
             .subscribe(a => {
             a = (a || '').toLowerCase();
             this.anyFutureKeyword = a;
-            if (this.minLength > 0 && this.anyFutureKeyword.length >= this.minLength && this.emitEvent) {
+            if (this.minLength > 0 && this.anyFutureKeyword.length >= this.minLength) {
+                this.kickOffSearch();
+            }
+            else if (this.emitEvent) {
                 this.kickOffSearch();
             }
         });

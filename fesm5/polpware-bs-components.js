@@ -1420,7 +1420,7 @@ function SearchBoxWidgetComponent_div_2_Template(rf, ctx) { if (rf & 1) {
 function SearchBoxWidgetComponent_button_6_Template(rf, ctx) { if (rf & 1) {
     var _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "button", 11);
-    ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { ɵɵrestoreView(_r4); var ctx_r3 = ɵɵnextContext(); return ctx_r3.cancelTypedKeyword(); });
+    ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { ɵɵrestoreView(_r4); var ctx_r3 = ɵɵnextContext(); return ctx_r3.resetKeyword(true); });
     ɵɵelement(1, "fa-icon", 8);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -1440,12 +1440,12 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
         // Allowing for disabling auto search
         this.minLength = 0;
         this.onSearch = new EventEmitter();
-        this._emitEvent = true;
+        this._emitEvent = false;
     }
     Object.defineProperty(SearchBoxWidgetComponent.prototype, "emitEvent", {
         get: function () {
             var old = this._emitEvent;
-            this._emitEvent = true;
+            this._emitEvent = false;
             return old;
         },
         set: function (v) {
@@ -1481,7 +1481,6 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
     SearchBoxWidgetComponent.prototype.resetKeyword = function (emitEvent) {
         if (emitEvent === void 0) { emitEvent = false; }
         this.emitEvent = emitEvent;
-        this.effectiveKeyword = '';
         this.cancelTypedKeyword();
     };
     // Start to listen for search keyword change
@@ -1492,7 +1491,10 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
             .subscribe(function (a) {
             a = (a || '').toLowerCase();
             _this.anyFutureKeyword = a;
-            if (_this.minLength > 0 && _this.anyFutureKeyword.length >= _this.minLength && _this.emitEvent) {
+            if (_this.minLength > 0 && _this.anyFutureKeyword.length >= _this.minLength) {
+                _this.kickOffSearch();
+            }
+            else if (_this.emitEvent) {
                 _this.kickOffSearch();
             }
         });
