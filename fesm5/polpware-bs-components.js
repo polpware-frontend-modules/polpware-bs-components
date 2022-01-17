@@ -1456,6 +1456,7 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
     });
     SearchBoxWidgetComponent.prototype.ngOnInit = function () {
         this.searchControl = new FormControl(this.initKeyword || '');
+        this.effectiveKeyword = this.initKeyword;
         this.startObserveSearchKeyword();
     };
     SearchBoxWidgetComponent.prototype.ngOnDestroy = function () {
@@ -1474,12 +1475,13 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
     //
     // This operation causes new network request.
     SearchBoxWidgetComponent.prototype.kickOffSearch = function () {
-        var k = this.anyFutureKeyword;
-        this.onSearch.emit(k);
+        this.effectiveKeyword = this.anyFutureKeyword;
+        this.onSearch.emit(this.effectiveKeyword);
     };
     SearchBoxWidgetComponent.prototype.resetKeyword = function (emitEvent) {
         if (emitEvent === void 0) { emitEvent = false; }
         this.emitEvent = emitEvent;
+        this.effectiveKeyword = '';
         this.cancelTypedKeyword();
     };
     // Start to listen for search keyword change

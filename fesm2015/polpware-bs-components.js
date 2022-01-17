@@ -1432,6 +1432,7 @@ class SearchBoxWidgetComponent {
     }
     ngOnInit() {
         this.searchControl = new FormControl(this.initKeyword || '');
+        this.effectiveKeyword = this.initKeyword;
         this.startObserveSearchKeyword();
     }
     ngOnDestroy() {
@@ -1450,11 +1451,12 @@ class SearchBoxWidgetComponent {
     //
     // This operation causes new network request.
     kickOffSearch() {
-        const k = this.anyFutureKeyword;
-        this.onSearch.emit(k);
+        this.effectiveKeyword = this.anyFutureKeyword;
+        this.onSearch.emit(this.effectiveKeyword);
     }
     resetKeyword(emitEvent = false) {
         this.emitEvent = emitEvent;
+        this.effectiveKeyword = '';
         this.cancelTypedKeyword();
     }
     // Start to listen for search keyword change

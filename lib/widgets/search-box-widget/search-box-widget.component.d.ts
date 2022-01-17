@@ -15,6 +15,7 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     searchControlElem: ElementRef;
     searchControl: FormControl;
     anyFutureKeyword: string;
+    effectiveKeyword: string;
     _searchKeywordSubr: Subscription;
     private _emitEvent;
     constructor();
