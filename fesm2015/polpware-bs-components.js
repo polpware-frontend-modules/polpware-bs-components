@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵprojectionDef, ɵɵprojection, ɵɵattribute, ɵɵdefineDirective, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵprojectionDef, ɵɵprojection, ɵɵattribute, ɵɵdefineDirective, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵpureFunction1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
 import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -1534,6 +1534,7 @@ SearchBoxWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: SearchBoxWidgetComp
             args: ['searchControlElem']
         }] }); })();
 
+const _c0$4 = function (a0) { return { "active": a0 }; };
 function PageSizeOptionsWidgetComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
     const _r3 = ɵɵgetCurrentView();
     ɵɵelementContainerStart(0);
@@ -1548,7 +1549,7 @@ function PageSizeOptionsWidgetComponent_ng_container_2_Template(rf, ctx) { if (r
     const o_r1 = ctx.$implicit;
     const ctx_r0 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵproperty("ngClass", ctx_r0.size == o_r1);
+    ɵɵproperty("ngClass", ɵɵpureFunction1(2, _c0$4, ctx_r0.size == o_r1));
     ɵɵadvance(2);
     ɵɵtextInterpolate(o_r1);
 } }
@@ -1571,13 +1572,13 @@ PageSizeOptionsWidgetComponent.ɵfac = function PageSizeOptionsWidgetComponent_F
 PageSizeOptionsWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: PageSizeOptionsWidgetComponent, selectors: [["polp-bs-page-size-options-widget"]], inputs: { initSize: "initSize", options: "options" }, outputs: { onChange: "onChange" }, decls: 3, vars: 1, consts: [["aria-label", "page size options"], [1, "pagination"], [4, "ngFor", "ngForOf"], [1, "page-item", 3, "ngClass"], [1, "page-link", 3, "click"]], template: function PageSizeOptionsWidgetComponent_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "nav", 0);
         ɵɵelementStart(1, "ul", 1);
-        ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 2, "ng-container", 2);
+        ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 4, "ng-container", 2);
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵadvance(2);
         ɵɵproperty("ngForOf", ctx.options);
-    } }, directives: [NgForOf, NgClass], styles: [""] });
+    } }, directives: [NgForOf, NgClass], styles: [".page-link[_ngcontent-%COMP%]{cursor:pointer}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PageSizeOptionsWidgetComponent, [{
         type: Component,
         args: [{

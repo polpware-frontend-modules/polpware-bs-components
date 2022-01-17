@@ -1759,6 +1759,7 @@
                 args: ['searchControlElem']
             }] }); })();
 
+    var _c0$4 = function (a0) { return { "active": a0 }; };
     function PageSizeOptionsWidgetComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
         var _r3 = core.ɵɵgetCurrentView();
         core.ɵɵelementContainerStart(0);
@@ -1773,7 +1774,7 @@
         var o_r1 = ctx.$implicit;
         var ctx_r0 = core.ɵɵnextContext();
         core.ɵɵadvance(1);
-        core.ɵɵproperty("ngClass", ctx_r0.size == o_r1);
+        core.ɵɵproperty("ngClass", core.ɵɵpureFunction1(2, _c0$4, ctx_r0.size == o_r1));
         core.ɵɵadvance(2);
         core.ɵɵtextInterpolate(o_r1);
     } }
@@ -1795,13 +1796,13 @@
         PageSizeOptionsWidgetComponent.ɵcmp = core.ɵɵdefineComponent({ type: PageSizeOptionsWidgetComponent, selectors: [["polp-bs-page-size-options-widget"]], inputs: { initSize: "initSize", options: "options" }, outputs: { onChange: "onChange" }, decls: 3, vars: 1, consts: [["aria-label", "page size options"], [1, "pagination"], [4, "ngFor", "ngForOf"], [1, "page-item", 3, "ngClass"], [1, "page-link", 3, "click"]], template: function PageSizeOptionsWidgetComponent_Template(rf, ctx) { if (rf & 1) {
                 core.ɵɵelementStart(0, "nav", 0);
                 core.ɵɵelementStart(1, "ul", 1);
-                core.ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 2, "ng-container", 2);
+                core.ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 4, "ng-container", 2);
                 core.ɵɵelementEnd();
                 core.ɵɵelementEnd();
             } if (rf & 2) {
                 core.ɵɵadvance(2);
                 core.ɵɵproperty("ngForOf", ctx.options);
-            } }, directives: [common.NgForOf, common.NgClass], styles: [""] });
+            } }, directives: [common.NgForOf, common.NgClass], styles: [".page-link[_ngcontent-%COMP%]{cursor:pointer}"] });
         return PageSizeOptionsWidgetComponent;
     }());
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PageSizeOptionsWidgetComponent, [{
