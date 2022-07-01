@@ -40,6 +40,6 @@ export declare class PromptModalComponent implements OnInit {
     confirm(value: {
         [key: string]: any;
     }): void;
-    static ɵfac: i0.ɵɵFactoryDef<PromptModalComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptModalComponent, "polp-bs-prompt-modal", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "hideCancelBtn": "hideCancelBtn"; "hideConfirmBtn": "hideConfirmBtn"; "hideCloseBtn": "hideCloseBtn"; "cancelBtnLabel": "cancelBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "cancelBtnClasses": "cancelBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PromptModalComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PromptModalComponent, "polp-bs-prompt-modal", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "hideCancelBtn": "hideCancelBtn"; "hideConfirmBtn": "hideConfirmBtn"; "hideCloseBtn": "hideCloseBtn"; "cancelBtnLabel": "cancelBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "cancelBtnClasses": "cancelBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
 }

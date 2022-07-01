@@ -6,11 +6,11 @@ export declare class EmailComposerComponent extends EmailFormAbstractComponent i
     initEmails: string[];
     onClose: EventEmitter<any>;
     constructor();
-    get bsAlertType(): "success" | "info" | "danger" | "warning";
+    get bsAlertType(): "success" | "info" | "warning" | "danger";
     ngOnInit(): void;
     ngAfterViewInit(): void;
     submit(): void;
     close(): void;
-    static ɵfac: i0.ɵɵFactoryDef<EmailComposerComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<EmailComposerComponent, "polp-email-composer", never, { "initEmails": "initEmails"; }, { "onClose": "onClose"; }, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<EmailComposerComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<EmailComposerComponent, "polp-email-composer", never, { "initEmails": "initEmails"; }, { "onClose": "onClose"; }, never, never>;
 }

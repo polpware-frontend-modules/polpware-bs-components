@@ -1,36 +1,44 @@
 {
   "name": "@polpware/bs-components",
-  "version": "9.9.6",
-  "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "ngx-bootstrap": "6.x",
-    "uuid": "8.x",
-    "@40three/ngx-autofocus-directive": "^9.0.0",
-    "ngx-autosize": "^1.8.0",
-    "@polpware/ngx-input-validators": "^9.0.0",
-    "@polpware/ngx-email-composer": "^9.0.0",
-    "@polpware/ngx-form-common": "^9.0.0",
-    "ngx-chips": "2.2.0",
-    "@fortawesome/angular-fontawesome": "0.6.x",
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-regular-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "ngx-mask": "^9.1.4"
-  },
-  "main": "bundles/polpware-bs-components.umd.js",
-  "module": "fesm5/polpware-bs-components.js",
-  "es2015": "fesm2015/polpware-bs-components.js",
-  "esm5": "esm5/polpware-bs-components.js",
-  "esm2015": "esm2015/polpware-bs-components.js",
-  "fesm5": "fesm5/polpware-bs-components.js",
-  "fesm2015": "fesm2015/polpware-bs-components.js",
-  "typings": "polpware-bs-components.d.ts",
-  "sideEffects": false,
+  "version": "13.0.0",
   "dependencies": {
-    "tslib": "^1.10.0"
+    "tslib": "^2.0.0"
   },
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  "peerDependencies": {
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "ngx-bootstrap": "^8.0.0",
+    "uuid": "^8.0.0",
+    "ngx-autofocus-fix": "^1.0.0",
+    "ngx-autosize": "^1.8.0",
+    "@polpware/ngx-input-validators": "^13.0.0",
+    "@polpware/ngx-email-composer": "^13.0.0",
+    "@polpware/ngx-form-common": "^13.0.0",
+    "ngx-chips": "^3.0.0",
+    "@fortawesome/angular-fontawesome": "~0.10.2",
+    "@fortawesome/fontawesome-svg-core": "~6.1.1",
+    "@fortawesome/free-regular-svg-icons": "~6.1.1",
+    "@fortawesome/free-solid-svg-icons": "~6.1.1",
+    "ngx-mask": "^13.0.0"
+  },
+  "module": "fesm2015/polpware-bs-components.mjs",
+  "es2020": "fesm2020/polpware-bs-components.mjs",
+  "esm2020": "esm2020/polpware-bs-components.mjs",
+  "fesm2020": "fesm2020/polpware-bs-components.mjs",
+  "fesm2015": "fesm2015/polpware-bs-components.mjs",
+  "typings": "polpware-bs-components.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./polpware-bs-components.d.ts",
+      "esm2020": "./esm2020/polpware-bs-components.mjs",
+      "es2020": "./fesm2020/polpware-bs-components.mjs",
+      "es2015": "./fesm2015/polpware-bs-components.mjs",
+      "node": "./fesm2015/polpware-bs-components.mjs",
+      "default": "./fesm2020/polpware-bs-components.mjs"
+    }
+  },
+  "sideEffects": false
 }

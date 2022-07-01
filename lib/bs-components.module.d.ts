@@ -14,11 +14,12 @@ import * as i12 from "ngx-bootstrap/alert";
 import * as i13 from "ngx-bootstrap/modal";
 import * as i14 from "ngx-bootstrap/collapse";
 import * as i15 from "@fortawesome/angular-fontawesome";
-import * as i16 from "@40three/ngx-autofocus-directive";
+import * as i16 from "ngx-autofocus-fix";
 import * as i17 from "ngx-autosize";
 import * as i18 from "ngx-chips";
 import * as i19 from "ngx-mask";
 export declare class PolpBsComponentsModule {
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent], [typeof i9.CommonModule, typeof i10.RouterModule, typeof i11.FormsModule, typeof i11.ReactiveFormsModule, typeof i12.AlertModule, typeof i13.ModalModule, typeof i14.CollapseModule, typeof i15.FontAwesomeModule, typeof i16.FtAutofocusModule, typeof i17.AutosizeModule, typeof i18.TagInputModule, typeof i19.NgxMaskModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent]>;
-    static ɵinj: i0.ɵɵInjectorDef<PolpBsComponentsModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PolpBsComponentsModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent], [typeof i9.CommonModule, typeof i10.RouterModule, typeof i11.FormsModule, typeof i11.ReactiveFormsModule, typeof i12.AlertModule, typeof i13.ModalModule, typeof i14.CollapseModule, typeof i15.FontAwesomeModule, typeof i16.AutofocusFixModule, typeof i17.AutosizeModule, typeof i18.TagInputModule, typeof i19.NgxMaskModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<PolpBsComponentsModule>;
 }

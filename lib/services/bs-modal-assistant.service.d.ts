@@ -3,6 +3,6 @@ export declare class BsModalAssistantService {
     private _modalId;
     constructor();
     get modalId(): number;
-    static ɵfac: i0.ɵɵFactoryDef<BsModalAssistantService, never>;
-    static ɵprov: i0.ɵɵInjectableDef<BsModalAssistantService>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BsModalAssistantService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<BsModalAssistantService>;
 }

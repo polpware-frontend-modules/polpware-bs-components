@@ -5,6 +5,6 @@ export declare class BreadcrumbClipboardService {
     readonly clipboard: BehaviorSubject<IBreadcrumbItem[]>;
     constructor();
     paste(items: IBreadcrumbItem[]): void;
-    static ɵfac: i0.ɵɵFactoryDef<BreadcrumbClipboardService, never>;
-    static ɵprov: i0.ɵɵInjectableDef<BreadcrumbClipboardService>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BreadcrumbClipboardService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<BreadcrumbClipboardService>;
 }

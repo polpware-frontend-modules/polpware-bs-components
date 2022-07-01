@@ -28,6 +28,6 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     resetKeyword(emitEvent?: boolean): void;
     startObserveSearchKeyword(): void;
     stopObserveSearchKeyword(): void;
-    static ɵfac: i0.ɵɵFactoryDef<SearchBoxWidgetComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "inputClass": "inputClass"; "prependText": "prependText"; "debounceTime": "debounceTime"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SearchBoxWidgetComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "inputClass": "inputClass"; "prependText": "prependText"; "debounceTime": "debounceTime"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never>;
 }
