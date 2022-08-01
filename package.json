@@ -1,6 +1,6 @@
 {
   "name": "@polpware/bs-components",
-  "version": "13.1.0",
+  "version": "13.1.1",
   "dependencies": {
     "tslib": "^2.0.0"
   },
@@ -13,7 +13,7 @@
     "@polpware/ngx-input-validators": "^13.0.0",
     "@polpware/ngx-email-composer": "^13.0.0",
     "@polpware/ngx-form-common": "^13.0.0",
-    "ngx-chips": "^2.0.0",
+    "ngx-chips": "^3.0.0",
     "@fortawesome/angular-fontawesome": "~0.10.2",
     "@fortawesome/fontawesome-svg-core": "~6.1.1",
     "@fortawesome/free-regular-svg-icons": "~6.1.1",
