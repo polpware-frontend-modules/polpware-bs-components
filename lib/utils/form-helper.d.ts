@@ -15,5 +15,9 @@ export interface IInputFieldSpec {
     maskSettings?: {
         mask: string;
     };
+    options?: Array<{
+        value: any;
+        label: string;
+    }>;
 }
 export declare function makeValidations(data: IValidationsSpec): ValidatorFn;
