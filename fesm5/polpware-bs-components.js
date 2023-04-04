@@ -1,22 +1,22 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵproperty, ɵɵsanitizeUrl, ɵɵadvance, ɵɵtextInterpolate, ɵɵpureFunction0, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵdefineComponent, ɵɵNgOnChangesFeature, ɵsetClassMetadata, Component, Input, ɵɵdefineInjectable, Injectable, ɵɵtextInterpolate1, ɵɵdirectiveInject, ɵɵresolveWindow, ɵɵelement, ɵɵsanitizeHtml, HostListener, ɵɵpropertyInterpolate, ɵɵtemplateRefExtractor, ɵɵreference, ɵɵInheritDefinitionFeature, Output, EventEmitter, ɵɵpipe, ɵɵpipeBind1, ɵɵprojectionDef, ɵɵprojection, ɵɵattribute, ɵɵdefineDirective, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵpureFunction1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵinject } from '@angular/core';
-import { NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, AsyncPipe, CommonModule } from '@angular/common';
-import { RouterLinkWithHref, RouterModule } from '@angular/router';
+import { __decorate, __metadata, __extends, __assign, __spread } from 'tslib';
+import { Input, Component, ɵɵdefineInjectable, Injectable, HostListener, Output, EventEmitter, ViewChild, ElementRef, NgModule, ɵɵinject } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { BsModalRef, ModalModule, BsModalService } from 'ngx-bootstrap/modal';
-import { __extends, __assign, __spread } from 'tslib';
-import { Validators, FormControl, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, CheckboxControlValueAccessor, NgControlStatus, FormControlName, RadioControlValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, NgModel, RequiredValidator, NgForm, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Validators, FormControl, FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { faEyeSlash, faEye, faSpinner, faChevronUp, faChevronDown, faChevronRight, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { v4 } from 'uuid';
 import { buildUrlValidator } from '@polpware/ngx-input-validators';
-import { AutosizeDirective, AutosizeModule } from 'ngx-autosize';
-import { AutofocusDirective, FtAutofocusModule } from '@40three/ngx-autofocus-directive';
-import { FaIconComponent, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MaskDirective, NgxMaskModule } from 'ngx-mask';
 import { AlertTypeEnum, EmailFormAbstractComponent } from '@polpware/ngx-email-composer';
-import { TagInputComponent, TagInputDropdown, TagInputModule } from 'ngx-chips';
-import { AlertComponent, AlertModule } from 'ngx-bootstrap/alert';
-import { CollapseDirective, CollapseModule } from 'ngx-bootstrap/collapse';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FtAutofocusModule } from '@40three/ngx-autofocus-directive';
+import { AutosizeModule } from 'ngx-autosize';
+import { TagInputModule } from 'ngx-chips';
+import { NgxMaskModule } from 'ngx-mask';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { debounceTime } from 'rxjs/operators';
 
 var ActionKind;
@@ -27,131 +27,6 @@ var ActionKind;
     ActionKind[ActionKind["CUSTOM_ACTION"] = 3] = "CUSTOM_ACTION";
 })(ActionKind || (ActionKind = {}));
 
-function BreadcrumbComponent_li_1_a_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "a", 8);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r2 = ɵɵnextContext().$implicit;
-    ɵɵproperty("href", item_r2.url, ɵɵsanitizeUrl);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r2.title);
-} }
-var _c0 = function () { return {}; };
-function BreadcrumbComponent_li_1_a_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "a", 9);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r2 = ɵɵnextContext().$implicit;
-    ɵɵproperty("routerLink", item_r2.routerLink)("queryParams", item_r2.queryParams || ɵɵpureFunction0(3, _c0));
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r2.title);
-} }
-function BreadcrumbComponent_li_1_a_4_Template(rf, ctx) { if (rf & 1) {
-    var _r11 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "a", 10);
-    ɵɵlistener("click", function BreadcrumbComponent_li_1_a_4_Template_a_click_0_listener() { ɵɵrestoreView(_r11); var item_r2 = ɵɵnextContext().$implicit; return item_r2.action(); });
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r2 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r2.title);
-} }
-function BreadcrumbComponent_li_1_a_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "a");
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r2 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r2.title);
-} }
-function BreadcrumbComponent_li_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "li", 0);
-    ɵɵelementContainerStart(1, 3);
-    ɵɵtemplate(2, BreadcrumbComponent_li_1_a_2_Template, 2, 2, "a", 4);
-    ɵɵtemplate(3, BreadcrumbComponent_li_1_a_3_Template, 2, 4, "a", 5);
-    ɵɵtemplate(4, BreadcrumbComponent_li_1_a_4_Template, 2, 1, "a", 6);
-    ɵɵtemplate(5, BreadcrumbComponent_li_1_a_5_Template, 2, 1, "a", 7);
-    ɵɵelementContainerEnd();
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r2 = ctx.$implicit;
-    var ctx_r0 = ɵɵnextContext();
-    ɵɵproperty("ngClass", ctx_r0.inactiveItemClasses);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitch", item_r2.kind);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", 1);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", 2);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", 3);
-} }
-function BreadcrumbComponent_li_2_a_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "a", 8);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r14 = ɵɵnextContext().ngIf;
-    ɵɵproperty("href", item_r14.url, ɵɵsanitizeUrl);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r14.title);
-} }
-function BreadcrumbComponent_li_2_a_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "a", 9);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r14 = ɵɵnextContext().ngIf;
-    ɵɵproperty("routerLink", item_r14.routerLink)("queryParams", item_r14.queryParams || ɵɵpureFunction0(3, _c0));
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r14.title);
-} }
-function BreadcrumbComponent_li_2_a_4_Template(rf, ctx) { if (rf & 1) {
-    var _r23 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "a", 10);
-    ɵɵlistener("click", function BreadcrumbComponent_li_2_a_4_Template_a_click_0_listener() { ɵɵrestoreView(_r23); var item_r14 = ɵɵnextContext().ngIf; return item_r14.action(); });
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r14 = ɵɵnextContext().ngIf;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r14.title);
-} }
-function BreadcrumbComponent_li_2_a_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "a");
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r14 = ɵɵnextContext().ngIf;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r14.title);
-} }
-function BreadcrumbComponent_li_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "li", 11);
-    ɵɵelementContainerStart(1, 3);
-    ɵɵtemplate(2, BreadcrumbComponent_li_2_a_2_Template, 2, 2, "a", 4);
-    ɵɵtemplate(3, BreadcrumbComponent_li_2_a_3_Template, 2, 4, "a", 5);
-    ɵɵtemplate(4, BreadcrumbComponent_li_2_a_4_Template, 2, 1, "a", 6);
-    ɵɵtemplate(5, BreadcrumbComponent_li_2_a_5_Template, 2, 1, "a", 7);
-    ɵɵelementContainerEnd();
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var item_r14 = ctx.ngIf;
-    var ctx_r1 = ɵɵnextContext();
-    ɵɵproperty("ngClass", ctx_r1.activeItemClasses);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitch", item_r14.kind);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", 1);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", 2);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", 3);
-} }
 /*
  Presumptions:
  1. items are fixed at the moment of page init
@@ -199,37 +74,31 @@ var BreadcrumbComponent = /** @class */ (function () {
             this.activeItem = this.items[this.items.length - 1];
         }
     };
-    BreadcrumbComponent.ɵfac = function BreadcrumbComponent_Factory(t) { return new (t || BreadcrumbComponent)(); };
-    BreadcrumbComponent.ɵcmp = ɵɵdefineComponent({ type: BreadcrumbComponent, selectors: [["polp-bs-breadcrumb"]], inputs: { items: "items", listClasses: "listClasses", inactiveItemClasses: "inactiveItemClasses", activeItemClasses: "activeItemClasses" }, features: [ɵɵNgOnChangesFeature], decls: 3, vars: 3, consts: [[3, "ngClass"], [3, "ngClass", 4, "ngFor", "ngForOf"], ["aria-current", "page", 3, "ngClass", 4, "ngIf"], [3, "ngSwitch"], [3, "href", 4, "ngSwitchCase"], [3, "routerLink", "queryParams", 4, "ngSwitchCase"], [3, "click", 4, "ngSwitchCase"], [4, "ngSwitchDefault"], [3, "href"], [3, "routerLink", "queryParams"], [3, "click"], ["aria-current", "page", 3, "ngClass"]], template: function BreadcrumbComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "ol", 0);
-            ɵɵtemplate(1, BreadcrumbComponent_li_1_Template, 6, 5, "li", 1);
-            ɵɵtemplate(2, BreadcrumbComponent_li_2_Template, 6, 5, "li", 2);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("ngClass", ctx.listClasses);
-            ɵɵadvance(1);
-            ɵɵproperty("ngForOf", ctx.interItems);
-            ɵɵadvance(1);
-            ɵɵproperty("ngIf", ctx.activeItem);
-        } }, directives: [NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, RouterLinkWithHref], styles: [""] });
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], BreadcrumbComponent.prototype, "items", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], BreadcrumbComponent.prototype, "listClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], BreadcrumbComponent.prototype, "inactiveItemClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], BreadcrumbComponent.prototype, "activeItemClasses", void 0);
+    BreadcrumbComponent = __decorate([
+        Component({
+            selector: 'polp-bs-breadcrumb',
+            template: "    <ol [ngClass]=\"listClasses\">\n        <li [ngClass]=\"inactiveItemClasses\" *ngFor=\"let item of interItems\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" [queryParams]=\"item.queryParams || {}\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n        <li [ngClass]=\"activeItemClasses\" aria-current=\"page\" *ngIf=\"activeItem as item\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" [queryParams]=\"item.queryParams || {}\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n    </ol>\n",
+            styles: [""]
+        })
+    ], BreadcrumbComponent);
     return BreadcrumbComponent;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BreadcrumbComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-breadcrumb',
-                templateUrl: './breadcrumb.component.html',
-                styleUrls: ['./breadcrumb.component.scss']
-            }]
-    }], null, { items: [{
-            type: Input
-        }], listClasses: [{
-            type: Input
-        }], inactiveItemClasses: [{
-            type: Input
-        }], activeItemClasses: [{
-            type: Input
-        }] }); })();
 
 var BreadcrumbClipboardService = /** @class */ (function () {
     function BreadcrumbClipboardService() {
@@ -238,29 +107,16 @@ var BreadcrumbClipboardService = /** @class */ (function () {
     BreadcrumbClipboardService.prototype.paste = function (items) {
         this.clipboard.next(items);
     };
-    BreadcrumbClipboardService.ɵfac = function BreadcrumbClipboardService_Factory(t) { return new (t || BreadcrumbClipboardService)(); };
-    BreadcrumbClipboardService.ɵprov = ɵɵdefineInjectable({ token: BreadcrumbClipboardService, factory: BreadcrumbClipboardService.ɵfac, providedIn: 'root' });
+    BreadcrumbClipboardService.ɵprov = ɵɵdefineInjectable({ factory: function BreadcrumbClipboardService_Factory() { return new BreadcrumbClipboardService(); }, token: BreadcrumbClipboardService, providedIn: "root" });
+    BreadcrumbClipboardService = __decorate([
+        Injectable({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], BreadcrumbClipboardService);
     return BreadcrumbClipboardService;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BreadcrumbClipboardService, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
 
-function AlertBoxComponent_button_9_Template(rf, ctx) { if (rf & 1) {
-    var _r2 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 9);
-    ɵɵlistener("click", function AlertBoxComponent_button_9_Template_button_click_0_listener() { ɵɵrestoreView(_r2); var ctx_r1 = ɵɵnextContext(); return ctx_r1.close(); });
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r0 = ɵɵnextContext();
-    ɵɵproperty("ngClass", ctx_r0.noBtnClasses);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", ctx_r0.noBtnLabel, " ");
-} }
 var KEY_CODE;
 (function (KEY_CODE) {
     KEY_CODE[KEY_CODE["ENTER"] = 13] = "ENTER";
@@ -293,72 +149,57 @@ var AlertBoxComponent = /** @class */ (function () {
         this.result.complete();
         this._bsModalRef.hide();
     };
-    AlertBoxComponent.ɵfac = function AlertBoxComponent_Factory(t) { return new (t || AlertBoxComponent)(ɵɵdirectiveInject(BsModalRef)); };
-    AlertBoxComponent.ɵcmp = ɵɵdefineComponent({ type: AlertBoxComponent, selectors: [["polp-bs-alert-box"]], hostBindings: function AlertBoxComponent_HostBindings(rf, ctx) { if (rf & 1) {
-            ɵɵlistener("keyup", function AlertBoxComponent_keyup_HostBindingHandler($event) { return ctx.keyEvent($event); }, false, ɵɵresolveWindow);
-        } }, inputs: { hideNoBtn: "hideNoBtn", yesBtnLabel: "yesBtnLabel", noBtnLabel: "noBtnLabel", noBtnClasses: "noBtnClasses", yesBtnClasses: "yesBtnClasses", enableEnter: "enableEnter", title: "title", innerBody: "innerBody" }, decls: 12, vars: 5, consts: [[1, "modal-header"], [1, "modal-title", "pull-left"], ["type", "button", "aria-label", "Close", 1, "close", "pull-right", 3, "click"], ["aria-hidden", "true"], [1, "modal-body"], [3, "innerHtml"], [1, "modal-footer"], ["type", "button", "class", "btn mr-2", 3, "ngClass", "click", 4, "ngIf"], ["type", "button", 1, "btn", 3, "ngClass", "click"], ["type", "button", 1, "btn", "mr-2", 3, "ngClass", "click"]], template: function AlertBoxComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "h4", 1);
-            ɵɵtext(2);
-            ɵɵelementEnd();
-            ɵɵelementStart(3, "button", 2);
-            ɵɵlistener("click", function AlertBoxComponent_Template_button_click_3_listener() { return ctx.close(); });
-            ɵɵelementStart(4, "span", 3);
-            ɵɵtext(5, "\u00D7");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(6, "div", 4);
-            ɵɵelement(7, "div", 5);
-            ɵɵelementEnd();
-            ɵɵelementStart(8, "div", 6);
-            ɵɵtemplate(9, AlertBoxComponent_button_9_Template, 2, 2, "button", 7);
-            ɵɵelementStart(10, "button", 8);
-            ɵɵlistener("click", function AlertBoxComponent_Template_button_click_10_listener() { return ctx.confirm(); });
-            ɵɵtext(11);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(2);
-            ɵɵtextInterpolate(ctx.title);
-            ɵɵadvance(5);
-            ɵɵproperty("innerHtml", ctx.innerBody, ɵɵsanitizeHtml);
-            ɵɵadvance(2);
-            ɵɵproperty("ngIf", !ctx.hideNoBtn);
-            ɵɵadvance(1);
-            ɵɵproperty("ngClass", ctx.yesBtnClasses);
-            ɵɵadvance(1);
-            ɵɵtextInterpolate1(" ", ctx.yesBtnLabel, " ");
-        } }, directives: [NgIf, NgClass], styles: [""] });
+    AlertBoxComponent.ctorParameters = function () { return [
+        { type: BsModalRef }
+    ]; };
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], AlertBoxComponent.prototype, "hideNoBtn", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], AlertBoxComponent.prototype, "yesBtnLabel", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], AlertBoxComponent.prototype, "noBtnLabel", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], AlertBoxComponent.prototype, "noBtnClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], AlertBoxComponent.prototype, "yesBtnClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], AlertBoxComponent.prototype, "enableEnter", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], AlertBoxComponent.prototype, "title", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], AlertBoxComponent.prototype, "innerBody", void 0);
+    __decorate([
+        HostListener('window:keyup', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [KeyboardEvent]),
+        __metadata("design:returntype", void 0)
+    ], AlertBoxComponent.prototype, "keyEvent", null);
+    AlertBoxComponent = __decorate([
+        Component({
+            selector: 'polp-bs-alert-box',
+            template: "<div class=\"modal-header\">\n    <h4 class=\"modal-title pull-left\">{{title}}</h4>\n    <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"close()\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div [innerHtml]=\"innerBody\">\n    </div>\n</div>\n<div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn mr-2\" [ngClass]=\"noBtnClasses\" (click)=\"close()\" *ngIf=\"!hideNoBtn\">\n        {{noBtnLabel}}\n    </button>    \n    <button type=\"button\" class=\"btn\" [ngClass]=\"yesBtnClasses\" (click)=\"confirm()\">\n        {{yesBtnLabel}}\n    </button>\n</div>\n\n\n",
+            styles: [""]
+        }),
+        __metadata("design:paramtypes", [BsModalRef])
+    ], AlertBoxComponent);
     return AlertBoxComponent;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AlertBoxComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-alert-box',
-                templateUrl: './alert-box.component.html',
-                styleUrls: ['./alert-box.component.css']
-            }]
-    }], function () { return [{ type: BsModalRef }]; }, { hideNoBtn: [{
-            type: Input
-        }], yesBtnLabel: [{
-            type: Input
-        }], noBtnLabel: [{
-            type: Input
-        }], noBtnClasses: [{
-            type: Input
-        }], yesBtnClasses: [{
-            type: Input
-        }], enableEnter: [{
-            type: Input
-        }], title: [{
-            type: Input
-        }], innerBody: [{
-            type: Input
-        }], keyEvent: [{
-            type: HostListener,
-            args: ['window:keyup', ['$event']]
-        }] }); })();
 
 function makeValidations(data) {
     var validations = Object.keys(data);
@@ -386,549 +227,6 @@ function makeValidations(data) {
     return Validators.compose(x);
 }
 
-function PromptFormComponent_div_1_ng_container_1_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "div", 12);
-    ɵɵelement(2, "input", 13);
-    ɵɵelementStart(3, "label", 14);
-    ɵɵtext(4);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(2);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_3_div_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 12);
-    ɵɵelement(1, "input", 16);
-    ɵɵelementStart(2, "label", 14);
-    ɵɵtext(3);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var o_r23 = ctx.$implicit;
-    var i_r24 = ctx.index;
-    var elem_r3 = ɵɵnextContext(3).$implicit;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("value", o_r23.value);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId + i_r24);
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId + i_r24);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", o_r23.label, " ");
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵtemplate(1, PromptFormComponent_div_1_ng_container_1_ng_container_3_div_1_Template, 4, 6, "div", 15);
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(1);
-    ɵɵproperty("ngForOf", elem_r3.options);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_4_option_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "option", 20);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var o_r28 = ctx.$implicit;
-    ɵɵpropertyInterpolate("value", o_r28.value);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", o_r28.label, " ");
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "select", 18);
-    ɵɵelementStart(4, "option");
-    ɵɵtext(5, "Choose ...");
-    ɵɵelementEnd();
-    ɵɵtemplate(6, PromptFormComponent_div_1_ng_container_1_ng_container_4_option_6_Template, 2, 2, "option", 19);
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵadvance(3);
-    ɵɵproperty("ngForOf", elem_r3.options);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "textarea", 21);
-    ɵɵtext(4, "                    ");
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var ctx_r30 = ɵɵnextContext(2);
-    var elem_r3 = ctx_r30.$implicit;
-    var isFirst_r4 = ctx_r30.first;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵproperty("autofocus", isFirst_r4);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_6_Template(rf, ctx) { if (rf & 1) {
-    var _r33 = ɵɵgetCurrentView();
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "div", 22);
-    ɵɵelement(4, "input", 23);
-    ɵɵelementStart(5, "div", 24);
-    ɵɵelementStart(6, "button", 25);
-    ɵɵlistener("click", function PromptFormComponent_div_1_ng_container_1_ng_container_6_Template_button_click_6_listener() { ɵɵrestoreView(_r33); var elem_r3 = ɵɵnextContext(2).$implicit; return elem_r3.visible = !elem_r3.visible; });
-    ɵɵelement(7, "fa-icon", 26);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var ctx_r34 = ɵɵnextContext(2);
-    var elem_r3 = ctx_r34.$implicit;
-    var isFirst_r4 = ctx_r34.first;
-    var ctx_r19 = ɵɵnextContext();
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(2);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("type", elem_r3.visible ? "text" : "password");
-    ɵɵproperty("autofocus", isFirst_r4);
-    ɵɵadvance(3);
-    ɵɵproperty("icon", elem_r3.visible ? ctx_r19.faEyeSlash : ctx_r19.faEye);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_7_input_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "input", 29);
-} if (rf & 2) {
-    var ctx_r38 = ɵɵnextContext(3);
-    var elem_r3 = ctx_r38.$implicit;
-    var isFirst_r4 = ctx_r38.first;
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("autocomplete", elem_r3.autocompleteKey);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("type", elem_r3.category);
-    ɵɵproperty("autofocus", isFirst_r4);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_7_ng_template_4_input_0_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "input", 31);
-} if (rf & 2) {
-    var ctx_r40 = ɵɵnextContext(4);
-    var elem_r3 = ctx_r40.$implicit;
-    var isFirst_r4 = ctx_r40.first;
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("autocomplete", elem_r3.autocompleteKey);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("type", elem_r3.category);
-    ɵɵpropertyInterpolate("mask", elem_r3.maskSettings.mask);
-    ɵɵproperty("autofocus", isFirst_r4);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_7_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵtemplate(0, PromptFormComponent_div_1_ng_container_1_ng_container_7_ng_template_4_input_0_Template, 1, 7, "input", 30);
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(3).$implicit;
-    ɵɵproperty("ngIf", elem_r3.maskSettings);
-} }
-function PromptFormComponent_div_1_ng_container_1_ng_container_7_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵtemplate(3, PromptFormComponent_div_1_ng_container_1_ng_container_7_input_3_Template, 1, 6, "input", 27);
-    ɵɵtemplate(4, PromptFormComponent_div_1_ng_container_1_ng_container_7_ng_template_4_Template, 1, 1, "ng-template", null, 28, ɵɵtemplateRefExtractor);
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var _r36 = ɵɵreference(5);
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", !elem_r3.maskSettings)("ngIfElse", _r36);
-} }
-function PromptFormComponent_div_1_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementContainerStart(1, 9);
-    ɵɵtemplate(2, PromptFormComponent_div_1_ng_container_1_ng_container_2_Template, 5, 5, "ng-container", 10);
-    ɵɵtemplate(3, PromptFormComponent_div_1_ng_container_1_ng_container_3_Template, 2, 1, "ng-container", 10);
-    ɵɵtemplate(4, PromptFormComponent_div_1_ng_container_1_ng_container_4_Template, 7, 4, "ng-container", 10);
-    ɵɵtemplate(5, PromptFormComponent_div_1_ng_container_1_ng_container_5_Template, 5, 6, "ng-container", 10);
-    ɵɵtemplate(6, PromptFormComponent_div_1_ng_container_1_ng_container_6_Template, 8, 8, "ng-container", 10);
-    ɵɵtemplate(7, PromptFormComponent_div_1_ng_container_1_ng_container_7_Template, 6, 4, "ng-container", 11);
-    ɵɵelementContainerEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitch", elem_r3.category);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "checkbox");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "radio");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "select");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "textarea");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "password");
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "div", 12);
-    ɵɵelement(2, "input", 13);
-    ɵɵelementStart(3, "label", 14);
-    ɵɵtext(4);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(2);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_2_div_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 12);
-    ɵɵelement(1, "input", 16);
-    ɵɵelementStart(2, "label", 14);
-    ɵɵtext(3);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var o_r52 = ctx.$implicit;
-    var i_r53 = ctx.index;
-    var elem_r3 = ɵɵnextContext(3).$implicit;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("value", o_r52.value);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId + i_r53);
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId + i_r53);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", o_r52.label, " ");
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵtemplate(1, PromptFormComponent_div_1_ng_template_2_ng_container_2_div_1_Template, 4, 6, "div", 15);
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(1);
-    ɵɵproperty("ngForOf", elem_r3.options);
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_3_option_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "option", 20);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var o_r57 = ctx.$implicit;
-    ɵɵpropertyInterpolate("value", o_r57.value);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", o_r57.label, " ");
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "select", 18);
-    ɵɵelementStart(4, "option");
-    ɵɵtext(5, "Choose ...");
-    ɵɵelementEnd();
-    ɵɵtemplate(6, PromptFormComponent_div_1_ng_template_2_ng_container_3_option_6_Template, 2, 2, "option", 19);
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵadvance(3);
-    ɵɵproperty("ngForOf", elem_r3.options);
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "textarea", 21);
-    ɵɵtext(4, "                    ");
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var ctx_r59 = ɵɵnextContext(2);
-    var elem_r3 = ctx_r59.$implicit;
-    var isFirst_r4 = ctx_r59.first;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵproperty("autofocus", isFirst_r4);
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_5_Template(rf, ctx) { if (rf & 1) {
-    var _r62 = ɵɵgetCurrentView();
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "div", 22);
-    ɵɵelement(4, "input", 23);
-    ɵɵelementStart(5, "div", 24);
-    ɵɵelementStart(6, "button", 25);
-    ɵɵlistener("click", function PromptFormComponent_div_1_ng_template_2_ng_container_5_Template_button_click_6_listener() { ɵɵrestoreView(_r62); var elem_r3 = ɵɵnextContext(2).$implicit; return elem_r3.visible = !elem_r3.visible; });
-    ɵɵelement(7, "fa-icon", 26);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var ctx_r63 = ɵɵnextContext(2);
-    var elem_r3 = ctx_r63.$implicit;
-    var isFirst_r4 = ctx_r63.first;
-    var ctx_r48 = ɵɵnextContext();
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(2);
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("type", elem_r3.visible ? "text" : "password");
-    ɵɵproperty("autofocus", isFirst_r4);
-    ɵɵadvance(3);
-    ɵɵproperty("icon", elem_r3.visible ? ctx_r48.faEyeSlash : ctx_r48.faEye);
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_6_input_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "input", 23);
-} if (rf & 2) {
-    var ctx_r67 = ɵɵnextContext(3);
-    var elem_r3 = ctx_r67.$implicit;
-    var isFirst_r4 = ctx_r67.first;
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("type", elem_r3.category);
-    ɵɵproperty("autofocus", isFirst_r4);
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_6_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "input", 34);
-} if (rf & 2) {
-    var ctx_r68 = ɵɵnextContext(3);
-    var elem_r3 = ctx_r68.$implicit;
-    var isFirst_r4 = ctx_r68.first;
-    ɵɵpropertyInterpolate("formControlName", elem_r3.name);
-    ɵɵpropertyInterpolate("id", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("name", elem_r3.fieldId);
-    ɵɵpropertyInterpolate("type", elem_r3.category);
-    ɵɵpropertyInterpolate("mask", elem_r3.maskSettings.mask);
-    ɵɵproperty("autofocus", isFirst_r4);
-} }
-function PromptFormComponent_div_1_ng_template_2_ng_container_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "label", 17);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵtemplate(3, PromptFormComponent_div_1_ng_template_2_ng_container_6_input_3_Template, 1, 5, "input", 32);
-    ɵɵtemplate(4, PromptFormComponent_div_1_ng_template_2_ng_container_6_ng_template_4_Template, 1, 6, "ng-template", null, 33, ɵɵtemplateRefExtractor);
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var _r65 = ɵɵreference(5);
-    var elem_r3 = ɵɵnextContext(2).$implicit;
-    ɵɵadvance(1);
-    ɵɵpropertyInterpolate("for", elem_r3.fieldId);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.label, " ");
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", !elem_r3.maskSettings)("ngIfElse", _r65);
-} }
-function PromptFormComponent_div_1_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementContainerStart(0, 9);
-    ɵɵtemplate(1, PromptFormComponent_div_1_ng_template_2_ng_container_1_Template, 5, 5, "ng-container", 10);
-    ɵɵtemplate(2, PromptFormComponent_div_1_ng_template_2_ng_container_2_Template, 2, 1, "ng-container", 10);
-    ɵɵtemplate(3, PromptFormComponent_div_1_ng_template_2_ng_container_3_Template, 7, 4, "ng-container", 10);
-    ɵɵtemplate(4, PromptFormComponent_div_1_ng_template_2_ng_container_4_Template, 5, 6, "ng-container", 10);
-    ɵɵtemplate(5, PromptFormComponent_div_1_ng_template_2_ng_container_5_Template, 8, 8, "ng-container", 10);
-    ɵɵtemplate(6, PromptFormComponent_div_1_ng_template_2_ng_container_6_Template, 6, 4, "ng-container", 11);
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵproperty("ngSwitch", elem_r3.category);
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "checkbox");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "radio");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "select");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "textarea");
-    ɵɵadvance(1);
-    ɵɵproperty("ngSwitchCase", "password");
-} }
-function PromptFormComponent_div_1_small_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.required.message, " ");
-} }
-function PromptFormComponent_div_1_small_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.min.message, " ");
-} }
-function PromptFormComponent_div_1_small_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.max.message, " ");
-} }
-function PromptFormComponent_div_1_small_7_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.pattern.message, " ");
-} }
-function PromptFormComponent_div_1_small_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.minLength.message, " ");
-} }
-function PromptFormComponent_div_1_small_9_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.maxLength.message, " ");
-} }
-function PromptFormComponent_div_1_small_10_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "small", 35);
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ɵɵnextContext().$implicit;
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", elem_r3.validators.url.message, " ");
-} }
-function PromptFormComponent_div_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 5);
-    ɵɵtemplate(1, PromptFormComponent_div_1_ng_container_1_Template, 8, 6, "ng-container", 6);
-    ɵɵtemplate(2, PromptFormComponent_div_1_ng_template_2_Template, 7, 6, "ng-template", null, 7, ɵɵtemplateRefExtractor);
-    ɵɵtemplate(4, PromptFormComponent_div_1_small_4_Template, 2, 1, "small", 8);
-    ɵɵtemplate(5, PromptFormComponent_div_1_small_5_Template, 2, 1, "small", 8);
-    ɵɵtemplate(6, PromptFormComponent_div_1_small_6_Template, 2, 1, "small", 8);
-    ɵɵtemplate(7, PromptFormComponent_div_1_small_7_Template, 2, 1, "small", 8);
-    ɵɵtemplate(8, PromptFormComponent_div_1_small_8_Template, 2, 1, "small", 8);
-    ɵɵtemplate(9, PromptFormComponent_div_1_small_9_Template, 2, 1, "small", 8);
-    ɵɵtemplate(10, PromptFormComponent_div_1_small_10_Template, 2, 1, "small", 8);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var elem_r3 = ctx.$implicit;
-    var _r6 = ɵɵreference(3);
-    var ctx_r0 = ɵɵnextContext();
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", ctx_r0.autocomplete)("ngIfElse", _r6);
-    ɵɵadvance(3);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.required) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.min) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.max) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.pattern) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.minlength) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.maxlength) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-    ɵɵadvance(1);
-    ɵɵproperty("ngIf", (ctx_r0.form.controls[elem_r3.name].errors == null ? null : ctx_r0.form.controls[elem_r3.name].errors.url) && (ctx_r0.form.touched || ctx_r0.form.dirty));
-} }
-function PromptFormComponent_button_3_Template(rf, ctx) { if (rf & 1) {
-    var _r79 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 36);
-    ɵɵlistener("click", function PromptFormComponent_button_3_Template_button_click_0_listener() { ɵɵrestoreView(_r79); var ctx_r78 = ɵɵnextContext(); return ctx_r78.cancel(); });
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r1 = ɵɵnextContext();
-    ɵɵproperty("ngClass", ctx_r1.cancelBtnClasses);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", ctx_r1.cancelBtnTxt, " ");
-} }
-function PromptFormComponent_button_4_Template(rf, ctx) { if (rf & 1) {
-    var _r81 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 37);
-    ɵɵlistener("click", function PromptFormComponent_button_4_Template_button_click_0_listener() { ɵɵrestoreView(_r81); var ctx_r80 = ɵɵnextContext(); return ctx_r80.submit(); });
-    ɵɵtext(1);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r2 = ɵɵnextContext();
-    ɵɵproperty("ngClass", ctx_r2.submitBtnClasses)("disabled", !ctx_r2.form.valid);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", ctx_r2.submitBtnTxt, " ");
-} }
 var KEY_CODE$1;
 (function (KEY_CODE) {
     KEY_CODE[KEY_CODE["ENTER"] = 13] = "ENTER";
@@ -1003,62 +301,56 @@ var PromptFormComponent = /** @class */ (function (_super) {
             }
         }
     };
-    PromptFormComponent.ɵfac = function PromptFormComponent_Factory(t) { return new (t || PromptFormComponent)(ɵɵdirectiveInject(FormBuilder)); };
-    PromptFormComponent.ɵcmp = ɵɵdefineComponent({ type: PromptFormComponent, selectors: [["polp-bs-prompt-form"]], hostBindings: function PromptFormComponent_HostBindings(rf, ctx) { if (rf & 1) {
-            ɵɵlistener("keyup", function PromptFormComponent_keyup_HostBindingHandler($event) { return ctx.keyEvent($event); }, false, ɵɵresolveWindow);
-        } }, inputs: { autocomplete: "autocomplete", enableEnter: "enableEnter", cancelBtnClasses: "cancelBtnClasses", submitBtnClasses: "submitBtnClasses", fields: "fields", emitInitValue: "emitInitValue" }, features: [ɵɵInheritDefinitionFeature], decls: 5, vars: 5, consts: [["autocomplete", "autocomplete ? 'on' : 'off'", 3, "formGroup", "name"], ["class", "form-group mb-4", 4, "ngFor", "ngForOf"], [1, "form-group", "d-flex", "justify-content-end"], ["type", "button", "class", "btn mr-2", 3, "ngClass", "click", 4, "ngIf"], ["type", "button", "class", "btn", 3, "ngClass", "disabled", "click", 4, "ngIf"], [1, "form-group", "mb-4"], [4, "ngIf", "ngIfElse"], ["disableTmpl", ""], ["class", "text-danger", 4, "ngIf"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], [1, "form-check"], ["type", "checkbox", 1, "form-check-input", 3, "formControlName", "name", "id"], [1, "form-check-label", 3, "for"], ["class", "form-check", 4, "ngFor", "ngForOf"], ["type", "radio", 1, "form-check-input", 3, "formControlName", "value", "name", "id"], [3, "for"], [1, "form-control", 3, "id"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["autosize", "", 1, "form-control", 3, "formControlName", "id", "name", "autofocus"], [1, "input-group"], [1, "form-control", 3, "formControlName", "id", "name", "type", "autofocus"], [1, "input-group-append"], ["type", "button", 1, "btn", "btn-outline-secondary", "icon-only", 3, "click"], [3, "icon"], ["class", "form-control", 3, "formControlName", "autocomplete", "id", "name", "type", "autofocus", 4, "ngIf", "ngIfElse"], ["maskTmpl", ""], [1, "form-control", 3, "formControlName", "autocomplete", "id", "name", "type", "autofocus"], ["class", "form-control", 3, "formControlName", "autocomplete", "id", "name", "type", "autofocus", "mask", 4, "ngIf"], [1, "form-control", 3, "formControlName", "autocomplete", "id", "name", "type", "autofocus", "mask"], ["class", "form-control", 3, "formControlName", "id", "name", "type", "autofocus", 4, "ngIf", "ngIfElse"], ["anotherMaskTmpl", ""], [1, "form-control", 3, "formControlName", "id", "name", "type", "autofocus", "mask"], [1, "text-danger"], ["type", "button", 1, "btn", "mr-2", 3, "ngClass", "click"], ["type", "button", 1, "btn", 3, "ngClass", "disabled", "click"]], template: function PromptFormComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "form", 0);
-            ɵɵtemplate(1, PromptFormComponent_div_1_Template, 11, 9, "div", 1);
-            ɵɵelementStart(2, "div", 2);
-            ɵɵtemplate(3, PromptFormComponent_button_3_Template, 2, 2, "button", 3);
-            ɵɵtemplate(4, PromptFormComponent_button_4_Template, 2, 3, "button", 4);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵpropertyInterpolate("name", ctx.name);
-            ɵɵproperty("formGroup", ctx.form);
-            ɵɵadvance(1);
-            ɵɵproperty("ngForOf", ctx.extFields);
-            ɵɵadvance(2);
-            ɵɵproperty("ngIf", !ctx.hideCancelBtn);
-            ɵɵadvance(1);
-            ɵɵproperty("ngIf", !ctx.hideSubmitBtn);
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, CheckboxControlValueAccessor, NgControlStatus, FormControlName, RadioControlValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, AutosizeDirective, AutofocusDirective, FaIconComponent, MaskDirective, NgClass], styles: [""] });
+    PromptFormComponent.ctorParameters = function () { return [
+        { type: FormBuilder }
+    ]; };
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptFormComponent.prototype, "autocomplete", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], PromptFormComponent.prototype, "enableEnter", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptFormComponent.prototype, "cancelBtnClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptFormComponent.prototype, "submitBtnClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], PromptFormComponent.prototype, "fields", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], PromptFormComponent.prototype, "emitInitValue", void 0);
+    __decorate([
+        HostListener('window:keyup', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [KeyboardEvent]),
+        __metadata("design:returntype", void 0)
+    ], PromptFormComponent.prototype, "keyEvent", null);
+    PromptFormComponent = __decorate([
+        Component({
+            selector: 'polp-bs-prompt-form',
+            template: "<form [formGroup]=\"form\" name=\"{{name}}\" autocomplete=\"autocomplete ? 'on' : 'off'\">\n    <div class=\"form-group mb-4\" *ngFor=\"let elem of extFields; first as isFirst;\">\n        <ng-container *ngIf=\"autocomplete;else disableTmpl\">            \n            <ng-container [ngSwitch]=\"elem.category\">\n                <!-- Checkbox -->\n                <ng-container *ngSwitchCase=\"'checkbox'\">\n                    <div class=\"form-check\">\n                        <input formControlName=\"{{elem.name}}\"\n                               class=\"form-check-input\"\n                               type=\"checkbox\"\n                               name=\"{{elem.fieldId}}\"\n                               id=\"{{elem.fieldId}}\">\n                        <label class=\"form-check-label\" for=\"{{elem.fieldId}}\">\n                            {{elem.label}}\n                        </label>\n                    </div>                    \n                </ng-container>\n                <!-- Radio -->\n                <ng-container *ngSwitchCase=\"'radio'\">\n                    <div class=\"form-check\" *ngFor=\"let o of elem.options; let i = index\">\n                        <input formControlName=\"{{elem.name}}\"\n                               class=\"form-check-input\"\n                               type=\"radio\"\n                               value=\"{{o.value}}\"\n                               name=\"{{elem.fieldId}}\"\n                               id=\"{{elem.fieldId + i}}\">\n                        <label class=\"form-check-label\" for=\"{{elem.fieldId + i}}\">\n                            {{o.label}}\n                        </label>\n                    </div>                    \n                </ng-container>\n                <!-- Select -->\n                <ng-container *ngSwitchCase=\"'select'\">\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <select class=\"form-control\" id=\"{{elem.fieldId}}\">\n                        <option>Choose ...</option>\n                        <option *ngFor=\"let o of elem.options\" value=\"{{o.value}}\">\n                            {{o.label}}\n                        </option>\n                    </select>                    \n                </ng-container>\n                <!-- textarea -->\n                <ng-container *ngSwitchCase=\"'textarea'\">\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <textarea formControlName=\"{{elem.name}}\" \n                              id=\"{{elem.fieldId}}\"\n                              name=\"{{elem.fieldId}}\"                          \n                              autosize \n                              [autofocus]=\"isFirst\"\n                              class=\"form-control\">\n                    </textarea>\n                </ng-container>\n                <!-- password -->\n                <ng-container *ngSwitchCase=\"'password'\">\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <div class=\"input-group\">                        \n                        <input formControlName=\"{{elem.name}}\"\n                               id=\"{{elem.fieldId}}\"\n                               name=\"{{elem.fieldId}}\"                           \n                               type=\"{{elem.visible ? 'text' : 'password'}}\"\n                               [autofocus]=\"isFirst\"\n                               class=\"form-control\" />\n                        <div class=\"input-group-append\">\n                            <button class=\"btn btn-outline-secondary icon-only\" type=\"button\"\n                                    (click)=\"elem.visible = !elem.visible\">\n                                <fa-icon [icon]=\"elem.visible ? faEyeSlash : faEye\">\n                                </fa-icon>\n                            </button>\n                        </div>\n                    </div>\n                </ng-container>\n                <!-- Otherwise -->\n                <ng-container *ngSwitchDefault>\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <input *ngIf=\"!elem.maskSettings; else maskTmpl\"\n                           formControlName=\"{{elem.name}}\" \n                           autocomplete=\"{{elem.autocompleteKey}}\"\n                           id=\"{{elem.fieldId}}\"\n                           name=\"{{elem.fieldId}}\"                           \n                           type=\"{{elem.category}}\"\n                           [autofocus]=\"isFirst\"\n                           class=\"form-control\" />\n                    <ng-template #maskTmpl>\n                        <input *ngIf=\"elem.maskSettings\"\n                               formControlName=\"{{elem.name}}\"\n                               autocomplete=\"{{elem.autocompleteKey}}\"\n                               id=\"{{elem.fieldId}}\"\n                               name=\"{{elem.fieldId}}\"                           \n                               type=\"{{elem.category}}\"\n                               [autofocus]=\"isFirst\"\n                               mask=\"{{elem.maskSettings.mask}}\"\n                               class=\"form-control\" />\n                    </ng-template>\n                </ng-container>\n            </ng-container>\n        </ng-container>\n        <ng-template #disableTmpl>\n            <ng-container [ngSwitch]=\"elem.category\">\n                <!-- Checkbox -->\n                <ng-container *ngSwitchCase=\"'checkbox'\">\n                    <div class=\"form-check\">\n                        <input formControlName=\"{{elem.name}}\"\n                               class=\"form-check-input\"\n                               type=\"checkbox\"\n                               name=\"{{elem.fieldId}}\"\n                               id=\"{{elem.fieldId}}\">\n                        <label class=\"form-check-label\" for=\"{{elem.fieldId}}\">\n                            {{elem.label}}\n                        </label>\n                    </div>                    \n                </ng-container>\n                <!-- Radio -->\n                <ng-container *ngSwitchCase=\"'radio'\">\n                    <div class=\"form-check\" *ngFor=\"let o of elem.options; let i = index\">\n                        <input formControlName=\"{{elem.name}}\"\n                               class=\"form-check-input\"\n                               type=\"radio\"\n                               value=\"{{o.value}}\"\n                               name=\"{{elem.fieldId}}\"\n                               id=\"{{elem.fieldId + i}}\">\n                        <label class=\"form-check-label\" for=\"{{elem.fieldId + i}}\">\n                            {{o.label}}\n                        </label>\n                    </div>                    \n                </ng-container>\n                <!-- Select -->\n                <ng-container *ngSwitchCase=\"'select'\">\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <select class=\"form-control\" id=\"{{elem.fieldId}}\">\n                        <option>Choose ...</option>\n                        <option *ngFor=\"let o of elem.options\" value=\"{{o.value}}\">\n                            {{o.label}}\n                        </option>\n                    </select>                    \n                </ng-container>\n                <!-- textarea -->\n                <ng-container *ngSwitchCase=\"'textarea'\">\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <textarea formControlName=\"{{elem.name}}\" \n                              id=\"{{elem.fieldId}}\"\n                              name=\"{{elem.fieldId}}\"                                                    \n                              autosize \n                              [autofocus]=\"isFirst\"\n                              class=\"form-control\">\n                    </textarea>\n                </ng-container>\n                <!-- password -->\n                <ng-container *ngSwitchCase=\"'password'\">\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <div class=\"input-group\"> \n                        <input formControlName=\"{{elem.name}}\"\n                               id=\"{{elem.fieldId}}\"\n                               name=\"{{elem.fieldId}}\"                           \n                               type=\"{{elem.visible ? 'text' : 'password'}}\"\n                               [autofocus]=\"isFirst\"\n                               class=\"form-control\" />\n                        <div class=\"input-group-append\">\n                            <button class=\"btn btn-outline-secondary icon-only\" type=\"button\"\n                                    (click)=\"elem.visible = !elem.visible\">\n                                <fa-icon [icon]=\"elem.visible ? faEyeSlash : faEye\">\n                                </fa-icon>\n                            </button>\n                        </div>\n                    </div>\n                </ng-container>\n                <!-- Others -->\n                <ng-container *ngSwitchDefault>\n                    <label for=\"{{elem.fieldId}}\">\n                        {{elem.label}}\n                    </label>\n                    <input *ngIf=\"!elem.maskSettings; else anotherMaskTmpl\"\n                           formControlName=\"{{elem.name}}\"\n                           id=\"{{elem.fieldId}}\"\n                           name=\"{{elem.fieldId}}\"                           \n                           type=\"{{elem.category}}\"\n                           [autofocus]=\"isFirst\"\n                           class=\"form-control\" />\n                    <ng-template #anotherMaskTmpl>\n                        <input formControlName=\"{{elem.name}}\"\n                               id=\"{{elem.fieldId}}\"\n                               name=\"{{elem.fieldId}}\"                           \n                               type=\"{{elem.category}}\"\n                               [autofocus]=\"isFirst\"\n                               mask=\"{{elem.maskSettings.mask}}\"\n                               class=\"form-control\" />\n                    </ng-template>\n                </ng-container>\n            </ng-container>\n        </ng-template>                \n\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.required && (form.touched || form.dirty)\">\n            {{elem.validators.required.message}}\n        </small>\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.min && (form.touched || form.dirty)\">\n            {{elem.validators.min.message}}\n        </small>\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.max && (form.touched || form.dirty)\">\n            {{elem.validators.max.message}}\n        </small>\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.pattern && (form.touched || form.dirty)\">\n            {{elem.validators.pattern.message}}\n        </small>\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.minlength && (form.touched || form.dirty)\">\n            {{elem.validators.minLength.message}}\n        </small>\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.maxlength && (form.touched || form.dirty)\">\n            {{elem.validators.maxLength.message}}\n        </small>\n        <small class=\"text-danger\" *ngIf=\"form.controls[elem.name].errors?.url && (form.touched || form.dirty)\">\n            {{elem.validators.url.message}}\n        </small>\n    </div>\n    \n    <div class=\"form-group d-flex justify-content-end\">\n        <button *ngIf=\"!hideCancelBtn\"\n                type=\"button\" class=\"btn mr-2\"\n                [ngClass]=\"cancelBtnClasses\" (click)=\"cancel()\" >\n            {{cancelBtnTxt}}\n        </button>    \n        <button *ngIf=\"!hideSubmitBtn\"\n                type=\"button\" class=\"btn\"\n                [ngClass]=\"submitBtnClasses\" [disabled]=\"!form.valid\" (click)=\"submit()\">\n            {{submitBtnTxt}}\n        </button>\n    </div>\n    \n</form>\n\n\n",
+            inputs: [
+                'hideCancelBtn',
+                'hideSubmitBtn',
+                'submitBtnTxt',
+                'cancelBtnTxt'
+            ],
+            styles: [""]
+        }),
+        __metadata("design:paramtypes", [FormBuilder])
+    ], PromptFormComponent);
     return PromptFormComponent;
 }(DefaultFormBaseComponent));
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PromptFormComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-prompt-form',
-                templateUrl: './prompt-form.component.html',
-                styleUrls: ['./prompt-form.component.css']
-            }]
-    }], function () { return [{ type: FormBuilder }]; }, { autocomplete: [{
-            type: Input
-        }], enableEnter: [{
-            type: Input
-        }], cancelBtnClasses: [{
-            type: Input
-        }], submitBtnClasses: [{
-            type: Input
-        }], fields: [{
-            type: Input
-        }], emitInitValue: [{
-            type: Input
-        }], keyEvent: [{
-            type: HostListener,
-            args: ['window:keyup', ['$event']]
-        }] }); })();
 
-function PromptModalComponent_button_3_Template(rf, ctx) { if (rf & 1) {
-    var _r2 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 6);
-    ɵɵlistener("click", function PromptModalComponent_button_3_Template_button_click_0_listener() { ɵɵrestoreView(_r2); var ctx_r1 = ɵɵnextContext(); return ctx_r1.close(); });
-    ɵɵelementStart(1, "span", 7);
-    ɵɵtext(2, "\u00D7");
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-} }
 var PromptModalComponent = /** @class */ (function () {
     function PromptModalComponent(_bsModalRef) {
         this._bsModalRef = _bsModalRef;
@@ -1080,122 +372,72 @@ var PromptModalComponent = /** @class */ (function () {
         this.result.complete();
         this._bsModalRef.hide();
     };
-    PromptModalComponent.ɵfac = function PromptModalComponent_Factory(t) { return new (t || PromptModalComponent)(ɵɵdirectiveInject(BsModalRef)); };
-    PromptModalComponent.ɵcmp = ɵɵdefineComponent({ type: PromptModalComponent, selectors: [["polp-bs-prompt-modal"]], inputs: { autocomplete: "autocomplete", enableEnter: "enableEnter", hideCancelBtn: "hideCancelBtn", hideConfirmBtn: "hideConfirmBtn", hideCloseBtn: "hideCloseBtn", cancelBtnLabel: "cancelBtnLabel", confirmBtnLabel: "confirmBtnLabel", cancelBtnClasses: "cancelBtnClasses", confirmBtnClasses: "confirmBtnClasses", title: "title", innerBody: "innerBody", fields: "fields" }, outputs: { result: "result" }, decls: 7, vars: 12, consts: [[1, "modal-header"], [1, "modal-title", "pull-left"], ["type", "button", "class", "close pull-right", "aria-label", "Close", 3, "click", 4, "ngIf"], [1, "modal-body"], [3, "innerHtml"], [3, "fields", "hideCancelBtn", "hideSubmitBtn", "cancelBtnTxt", "submitBtnTxt", "cancelBtnClasses", "submitBtnClasses", "autocomplete", "enableEnter", "onCancel", "onSave"], ["type", "button", "aria-label", "Close", 1, "close", "pull-right", 3, "click"], ["aria-hidden", "true"]], template: function PromptModalComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "h4", 1);
-            ɵɵtext(2);
-            ɵɵelementEnd();
-            ɵɵtemplate(3, PromptModalComponent_button_3_Template, 3, 0, "button", 2);
-            ɵɵelementEnd();
-            ɵɵelementStart(4, "div", 3);
-            ɵɵelement(5, "div", 4);
-            ɵɵelementStart(6, "polp-bs-prompt-form", 5);
-            ɵɵlistener("onCancel", function PromptModalComponent_Template_polp_bs_prompt_form_onCancel_6_listener() { return ctx.close(); })("onSave", function PromptModalComponent_Template_polp_bs_prompt_form_onSave_6_listener($event) { return ctx.confirm($event); });
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(2);
-            ɵɵtextInterpolate(ctx.title);
-            ɵɵadvance(1);
-            ɵɵproperty("ngIf", !ctx.hideCloseBtn);
-            ɵɵadvance(2);
-            ɵɵproperty("innerHtml", ctx.innerBody, ɵɵsanitizeHtml);
-            ɵɵadvance(1);
-            ɵɵproperty("fields", ctx.fields)("hideCancelBtn", ctx.hideCancelBtn)("hideSubmitBtn", ctx.hideConfirmBtn)("cancelBtnTxt", ctx.cancelBtnLabel)("submitBtnTxt", ctx.confirmBtnLabel)("cancelBtnClasses", ctx.cancelBtnClasses)("submitBtnClasses", ctx.confirmBtnClasses)("autocomplete", ctx.autocomplete)("enableEnter", ctx.enableEnter);
-        } }, directives: [NgIf, PromptFormComponent], styles: [""] });
+    PromptModalComponent.ctorParameters = function () { return [
+        { type: BsModalRef }
+    ]; };
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "autocomplete", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], PromptModalComponent.prototype, "enableEnter", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], PromptModalComponent.prototype, "hideCancelBtn", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], PromptModalComponent.prototype, "hideConfirmBtn", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], PromptModalComponent.prototype, "hideCloseBtn", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "cancelBtnLabel", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "confirmBtnLabel", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "cancelBtnClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "confirmBtnClasses", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "title", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], PromptModalComponent.prototype, "innerBody", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], PromptModalComponent.prototype, "fields", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Subject)
+    ], PromptModalComponent.prototype, "result", void 0);
+    PromptModalComponent = __decorate([
+        Component({
+            selector: 'polp-bs-prompt-modal',
+            template: "<div class=\"modal-header\">\n    <h4 class=\"modal-title pull-left\">{{title}}</h4>\n    <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"close()\" *ngIf=\"!hideCloseBtn\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <div [innerHtml]=\"innerBody\">\n    </div>\n    <polp-bs-prompt-form [fields]=\"fields\"\n                         [hideCancelBtn]=\"hideCancelBtn\"\n                         [hideSubmitBtn]=\"hideConfirmBtn\"\n                         [cancelBtnTxt]=\"cancelBtnLabel\"\n                         [submitBtnTxt]=\"confirmBtnLabel\"\n                         [cancelBtnClasses]=\"cancelBtnClasses\"\n                         [submitBtnClasses]=\"confirmBtnClasses\"\n                         [autocomplete]=\"autocomplete\"\n                         [enableEnter]=\"enableEnter\"\n                         (onCancel)=\"close()\"\n                         (onSave)=\"confirm($event)\">\n    </polp-bs-prompt-form>\n</div>\n",
+            styles: [""]
+        }),
+        __metadata("design:paramtypes", [BsModalRef])
+    ], PromptModalComponent);
     return PromptModalComponent;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PromptModalComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-prompt-modal',
-                templateUrl: './prompt-modal.component.html',
-                styleUrls: ['./prompt-modal.component.css']
-            }]
-    }], function () { return [{ type: BsModalRef }]; }, { autocomplete: [{
-            type: Input
-        }], enableEnter: [{
-            type: Input
-        }], hideCancelBtn: [{
-            type: Input
-        }], hideConfirmBtn: [{
-            type: Input
-        }], hideCloseBtn: [{
-            type: Input
-        }], cancelBtnLabel: [{
-            type: Input
-        }], confirmBtnLabel: [{
-            type: Input
-        }], cancelBtnClasses: [{
-            type: Input
-        }], confirmBtnClasses: [{
-            type: Input
-        }], title: [{
-            type: Input
-        }], innerBody: [{
-            type: Input
-        }], fields: [{
-            type: Input
-        }], result: [{
-            type: Output
-        }] }); })();
 
-function EmailComposerComponent_alert_0_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "alert", 15);
-    ɵɵelementStart(1, "p");
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r0 = ɵɵnextContext();
-    ɵɵproperty("type", ctx_r0.bsAlertType)("dismissible", ctx_r0.alertDismissible);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r0.alertMessage, " ");
-} }
-function EmailComposerComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
-    ɵɵtext(0);
-} if (rf & 2) {
-    var item_r11 = ctx.item;
-    ɵɵtextInterpolate1(" ", item_r11.display, " ");
-} }
-function EmailComposerComponent_span_15_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "span", 16);
-    ɵɵtext(1, " Subject is required. ");
-    ɵɵelementEnd();
-} }
-function EmailComposerComponent_span_23_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "span", 16);
-    ɵɵtext(1, " Body message is required. ");
-    ɵɵelementEnd();
-} }
-function EmailComposerComponent_button_25_fa_icon_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "fa-icon", 19);
-} if (rf & 2) {
-    var ctx_r13 = ɵɵnextContext(2);
-    ɵɵproperty("icon", ctx_r13.faSpinner)("spin", true);
-} }
-function EmailComposerComponent_button_25_Template(rf, ctx) { if (rf & 1) {
-    var _r15 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 17);
-    ɵɵlistener("click", function EmailComposerComponent_button_25_Template_button_click_0_listener() { ɵɵrestoreView(_r15); var ctx_r14 = ɵɵnextContext(); return ctx_r14.submit(); });
-    ɵɵtext(1, " Submit ");
-    ɵɵtemplate(2, EmailComposerComponent_button_25_fa_icon_2_Template, 1, 2, "fa-icon", 18);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r8 = ɵɵnextContext();
-    ɵɵproperty("disabled", ctx_r8.alertType == 3);
-    ɵɵadvance(2);
-    ɵɵproperty("ngIf", ctx_r8.alertType == 3);
-} }
-function EmailComposerComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
-    var _r17 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 20);
-    ɵɵlistener("click", function EmailComposerComponent_ng_template_26_Template_button_click_0_listener() { ɵɵrestoreView(_r17); var ctx_r16 = ɵɵnextContext(); return ctx_r16.close(); });
-    ɵɵtext(1, " Close ");
-    ɵɵelementEnd();
-} }
-var _c0$1 = function () { return [32, 44, 58, 59]; };
 var EmailComposerComponent = /** @class */ (function (_super) {
     __extends(EmailComposerComponent, _super);
     function EmailComposerComponent() {
@@ -1257,83 +499,25 @@ var EmailComposerComponent = /** @class */ (function (_super) {
     EmailComposerComponent.prototype.close = function () {
         this.onClose.emit();
     };
-    EmailComposerComponent.ɵfac = function EmailComposerComponent_Factory(t) { return new (t || EmailComposerComponent)(); };
-    EmailComposerComponent.ɵcmp = ɵɵdefineComponent({ type: EmailComposerComponent, selectors: [["polp-email-composer"]], inputs: { initEmails: "initEmails" }, outputs: { onClose: "onClose" }, features: [ɵɵInheritDefinitionFeature], decls: 28, vars: 25, consts: [[3, "type", "dismissible", 4, "ngIf"], [1, "form-group", "mb-4"], ["name", "emailInputs", 3, "ngModel", "addOnPaste", "modelAsStrings", "trimTags", "editable", "errorMessages", "validators", "secondaryPlaceholder", "separatorKeyCodes", "displayBy", "identifyBy", "placeholder", "ngModelChange", "focusout", "onTextChange"], ["emailInputBox", ""], [3, "autocompleteItems"], ["for", "messageTitleInput"], ["name", "messageTitleInput", "id", "messageTitleInput", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["messageTitleCtrl", "ngModel"], ["class", "d-block small text-danger", 4, "ngIf"], ["for", "messageBodyInput"], ["name", "messageBodyInput", "id", "messageBodyInput", "autosize", "", "required", "", 1, "form-control", 3, "minRows", "maxRows", "ngModel", "ngModelChange"], ["emailBody", "", "messageBodyCtrl", "ngModel"], [1, "d-flex", "justify-content-end", "mb-4"], ["type", "button", "class", "btn btn-primary", 3, "disabled", "click", 4, "ngIf", "ngIfElse"], ["closeBtnTmpl", ""], [3, "type", "dismissible"], [1, "d-block", "small", "text-danger"], ["type", "button", 1, "btn", "btn-primary", 3, "disabled", "click"], ["class", "ml-2", 3, "icon", "spin", 4, "ngIf"], [1, "ml-2", 3, "icon", "spin"], ["type", "button", 1, "btn", "btn-secondary", 3, "click"]], template: function EmailComposerComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵtemplate(0, EmailComposerComponent_alert_0_Template, 3, 3, "alert", 0);
-            ɵɵelementStart(1, "div");
-            ɵɵelementStart(2, "div", 1);
-            ɵɵelementStart(3, "label");
-            ɵɵtext(4, "Recipients");
-            ɵɵelementEnd();
-            ɵɵelementStart(5, "tag-input", 2, 3);
-            ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_tag_input_ngModelChange_5_listener($event) { return ctx.emails = $event; })("focusout", function EmailComposerComponent_Template_tag_input_focusout_5_listener($event) { return ctx.onOutOfTagInput($event); })("onTextChange", function EmailComposerComponent_Template_tag_input_onTextChange_5_listener($event) { return ctx.textChanged($event); });
-            ɵɵelementStart(7, "tag-input-dropdown", 4);
-            ɵɵpipe(8, "async");
-            ɵɵtemplate(9, EmailComposerComponent_ng_template_9_Template, 1, 1, "ng-template");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(10, "div", 1);
-            ɵɵelementStart(11, "label", 5);
-            ɵɵtext(12, "Subject");
-            ɵɵelementEnd();
-            ɵɵelementStart(13, "input", 6, 7);
-            ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_input_ngModelChange_13_listener($event) { return ctx.messageTitle = $event; });
-            ɵɵelementEnd();
-            ɵɵtemplate(15, EmailComposerComponent_span_15_Template, 2, 0, "span", 8);
-            ɵɵelementEnd();
-            ɵɵelementStart(16, "div", 1);
-            ɵɵelementStart(17, "label", 9);
-            ɵɵtext(18, "Message");
-            ɵɵelementEnd();
-            ɵɵelementStart(19, "textarea", 10, 11);
-            ɵɵlistener("ngModelChange", function EmailComposerComponent_Template_textarea_ngModelChange_19_listener($event) { return ctx.messageBody = $event; });
-            ɵɵtext(22, "        ");
-            ɵɵelementEnd();
-            ɵɵtemplate(23, EmailComposerComponent_span_23_Template, 2, 0, "span", 8);
-            ɵɵelementEnd();
-            ɵɵelementStart(24, "div", 12);
-            ɵɵtemplate(25, EmailComposerComponent_button_25_Template, 3, 2, "button", 13);
-            ɵɵtemplate(26, EmailComposerComponent_ng_template_26_Template, 2, 0, "ng-template", null, 14, ɵɵtemplateRefExtractor);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            var _r3 = ɵɵreference(14);
-            var _r6 = ɵɵreference(21);
-            var _r9 = ɵɵreference(27);
-            ɵɵproperty("ngIf", ctx.alertType > 0);
-            ɵɵadvance(5);
-            ɵɵproperty("ngModel", ctx.emails)("addOnPaste", true)("modelAsStrings", true)("trimTags", true)("editable", true)("errorMessages", ctx.errorMessages)("validators", ctx.validators)("secondaryPlaceholder", "Emails")("separatorKeyCodes", ɵɵpureFunction0(24, _c0$1))("displayBy", "display")("identifyBy", "value")("placeholder", "+ Email");
-            ɵɵadvance(2);
-            ɵɵproperty("autocompleteItems", ɵɵpipeBind1(8, 22, ctx.autocompleteItemsAsync));
-            ɵɵadvance(6);
-            ɵɵproperty("ngModel", ctx.messageTitle);
-            ɵɵadvance(2);
-            ɵɵproperty("ngIf", !_r3.valid && _r3.touched);
-            ɵɵadvance(4);
-            ɵɵproperty("minRows", 5)("maxRows", 10)("ngModel", ctx.messageBody);
-            ɵɵadvance(4);
-            ɵɵproperty("ngIf", !_r6.valid && _r6.touched);
-            ɵɵadvance(2);
-            ɵɵproperty("ngIf", !ctx.showCloseBtn)("ngIfElse", _r9);
-        } }, directives: [NgIf, TagInputComponent, NgControlStatus, NgModel, TagInputDropdown, DefaultValueAccessor, RequiredValidator, AutosizeDirective, AlertComponent, FaIconComponent], pipes: [AsyncPipe], styles: [""] });
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], EmailComposerComponent.prototype, "initEmails", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], EmailComposerComponent.prototype, "onClose", void 0);
+    EmailComposerComponent = __decorate([
+        Component({
+            selector: 'polp-email-composer',
+            template: "<alert [type]=\"bsAlertType\" [dismissible]=\"alertDismissible\" *ngIf=\"alertType > 0\">\n    <p>\n        {{alertMessage}}\n    </p>\n</alert>\n\n<div>\n    <div class=\"form-group mb-4\">\n        <label>Recipients</label>\n        <tag-input [(ngModel)]=\"emails\" #emailInputBox\n                   name=\"emailInputs\"\n                   (focusout)=\"onOutOfTagInput($event)\"\n                   (onTextChange)=\"textChanged($event)\"\n                   [addOnPaste]=\"true\"\n                   [modelAsStrings]=\"true\"\n                   [trimTags]=\"true\"\n                   [editable]=\"true\"\n                   [errorMessages]=\"errorMessages\"\n                   [validators]=\"validators\"\n                   [secondaryPlaceholder]=\"'Emails'\"\n                   [separatorKeyCodes]=\"[32,44,58,59]\"\n                   [displayBy]=\"'display'\"\n                   [identifyBy]=\"'value'\"                       \n                   [placeholder]=\"'+ Email'\">\n            <tag-input-dropdown [autocompleteItems]=\"autocompleteItemsAsync | async\">\n                <ng-template let-item=\"item\" let-index=\"index\">\n                    {{ item.display }}\n                </ng-template>\n            </tag-input-dropdown>\n        </tag-input>\n    </div>\n\n    <div class=\"form-group mb-4\">\n        <label for=\"messageTitleInput\">Subject</label>\n        <input name=\"messageTitleInput\" id=\"messageTitleInput\" \n               class=\"form-control\"\n               [(ngModel)]=\"messageTitle\" #messageTitleCtrl=\"ngModel\" required>\n        <span class=\"d-block small text-danger\" *ngIf=\"!messageTitleCtrl.valid && messageTitleCtrl.touched\">\n            Subject is required.\n        </span>\n    </div>\n\n    <div class=\"form-group mb-4\">\n        <label for=\"messageBodyInput\">Message</label>        \n        <textarea name=\"messageBodyInput\" id=\"messageBodyInput\"\n                  class=\"form-control\"\n                  #emailBody\n                  autosize [minRows]=\"5\" [maxRows]=\"10\"\n                  [(ngModel)]=\"messageBody\" #messageBodyCtrl=\"ngModel\" required>\n        </textarea>\n        <span class=\"d-block small text-danger\" *ngIf=\"!messageBodyCtrl.valid && messageBodyCtrl.touched\">\n            Body message is required.\n        </span>\n    </div>\n\n    <div class=\"d-flex justify-content-end mb-4\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"submit()\" [disabled]=\"alertType == 3\"\n                *ngIf=\"!showCloseBtn; else closeBtnTmpl\">\n            Submit\n            <fa-icon class=\"ml-2\" [icon]=\"faSpinner\" [spin]=\"true\" *ngIf=\"alertType == 3\"></fa-icon>\n        </button>\n        <ng-template #closeBtnTmpl>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"close()\">\n                Close\n            </button>\n        </ng-template>\n    </div>\n</div>\n",
+            styles: [""]
+        }),
+        __metadata("design:paramtypes", [])
+    ], EmailComposerComponent);
     return EmailComposerComponent;
 }(EmailFormAbstractComponent));
-/*@__PURE__*/ (function () { ɵsetClassMetadata(EmailComposerComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-email-composer',
-                templateUrl: './email-composer.component.html',
-                styleUrls: ['./email-composer.component.css']
-            }]
-    }], function () { return []; }, { initEmails: [{
-            type: Input
-        }], onClose: [{
-            type: Output
-        }] }); })();
 
-var _c0$2 = [[["", "title", ""]], [["", "body", ""]]];
-var _c1 = ["[title]", "[body]"];
 var GlobalElementId = 1;
 var ExpandableCardComponent = /** @class */ (function () {
     function ExpandableCardComponent() {
@@ -1346,41 +530,24 @@ var ExpandableCardComponent = /** @class */ (function () {
     }
     ExpandableCardComponent.prototype.ngOnInit = function () {
     };
-    ExpandableCardComponent.ɵfac = function ExpandableCardComponent_Factory(t) { return new (t || ExpandableCardComponent)(); };
-    ExpandableCardComponent.ɵcmp = ɵɵdefineComponent({ type: ExpandableCardComponent, selectors: [["polp-bs-expandable-card"]], inputs: { isCollapsed: "isCollapsed", titleClass: "titleClass" }, ngContentSelectors: _c1, decls: 6, vars: 4, consts: [[1, "card"], ["aria-controls", "expandableCardBody", 1, "card-header", 3, "click"], [3, "icon"], ["id", "expandableCardBody", 1, "card-body", 3, "collapse", "isAnimated"]], template: function ExpandableCardComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵprojectionDef(_c0$2);
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "a", 1);
-            ɵɵlistener("click", function ExpandableCardComponent_Template_a_click_1_listener() { return ctx.isCollapsed = !ctx.isCollapsed; });
-            ɵɵprojection(2);
-            ɵɵelement(3, "fa-icon", 2);
-            ɵɵelementEnd();
-            ɵɵelementStart(4, "div", 3);
-            ɵɵprojection(5, 1);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵattribute("aria-expanded", !ctx.isCollapsed);
-            ɵɵadvance(2);
-            ɵɵproperty("icon", ctx.isCollapsed ? ctx.faChevronRight : ctx.faChevronDown);
-            ɵɵadvance(1);
-            ɵɵproperty("collapse", ctx.isCollapsed)("isAnimated", true);
-        } }, directives: [FaIconComponent, CollapseDirective], styles: [""] });
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], ExpandableCardComponent.prototype, "isCollapsed", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], ExpandableCardComponent.prototype, "titleClass", void 0);
+    ExpandableCardComponent = __decorate([
+        Component({
+            selector: 'polp-bs-expandable-card',
+            template: "<div class=\"card\">\n    <a class=\"card-header\" (click)=\"isCollapsed = !isCollapsed\"\n       [attr.aria-expanded]=\"!isCollapsed\" [attr.aria-controls]=\"elementId\">\n        <ng-content select=\"[title]\"></ng-content>        \n        <fa-icon [icon]=\"isCollapsed ? faChevronRight : faChevronDown\"></fa-icon>\n    </a>\n    <div class=\"card-body\" id=\"{{elementId}}\" [collapse]=\"isCollapsed\" [isAnimated]=\"true\">\n        <ng-content select=\"[body]\"></ng-content>\n    </div>\n</div>\n",
+            styles: [""]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ExpandableCardComponent);
     return ExpandableCardComponent;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpandableCardComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-expandable-card',
-                templateUrl: './expandable-card.component.html',
-                styleUrls: ['./expandable-card.component.css']
-            }]
-    }], function () { return []; }, { isCollapsed: [{
-            type: Input
-        }], titleClass: [{
-            type: Input
-        }] }); })();
 
 /**
  * Provides a base for most modal components.  This base is built with
@@ -1400,34 +567,13 @@ var ObservableModalAbstractComponent = /** @class */ (function () {
             this.bsModalRef.hide();
         }
     };
-    ObservableModalAbstractComponent.ɵfac = function ObservableModalAbstractComponent_Factory(t) { return new (t || ObservableModalAbstractComponent)(); };
-    ObservableModalAbstractComponent.ɵdir = ɵɵdefineDirective({ type: ObservableModalAbstractComponent, inputs: { modalId: "modalId" } });
+    __decorate([
+        Input(),
+        __metadata("design:type", Number)
+    ], ObservableModalAbstractComponent.prototype, "modalId", void 0);
     return ObservableModalAbstractComponent;
 }());
 
-var _c0$3 = ["searchControlElem"];
-function SearchBoxWidgetComponent_div_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 9);
-    ɵɵelementStart(1, "span", 10);
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r0 = ɵɵnextContext();
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(ctx_r0.prependText);
-} }
-function SearchBoxWidgetComponent_button_6_Template(rf, ctx) { if (rf & 1) {
-    var _r4 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "button", 11);
-    ɵɵlistener("click", function SearchBoxWidgetComponent_button_6_Template_button_click_0_listener() { ɵɵrestoreView(_r4); var ctx_r3 = ɵɵnextContext(); return ctx_r3.resetKeyword(true); });
-    ɵɵelement(1, "fa-icon", 8);
-    ɵɵelementEnd();
-} if (rf & 2) {
-    var ctx_r2 = ɵɵnextContext();
-    ɵɵadvance(1);
-    ɵɵproperty("icon", ctx_r2.faTimes);
-} }
 var SearchBoxWidgetComponent = /** @class */ (function () {
     function SearchBoxWidgetComponent() {
         this.faSearch = faSearch;
@@ -1502,84 +648,49 @@ var SearchBoxWidgetComponent = /** @class */ (function () {
     SearchBoxWidgetComponent.prototype.stopObserveSearchKeyword = function () {
         this._searchKeywordSubr && this._searchKeywordSubr.unsubscribe();
     };
-    SearchBoxWidgetComponent.ɵfac = function SearchBoxWidgetComponent_Factory(t) { return new (t || SearchBoxWidgetComponent)(); };
-    SearchBoxWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: SearchBoxWidgetComponent, selectors: [["polp-bs-search-box-widget"]], viewQuery: function SearchBoxWidgetComponent_Query(rf, ctx) { if (rf & 1) {
-            ɵɵviewQuery(_c0$3, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.searchControlElem = _t.first);
-        } }, inputs: { initKeyword: "initKeyword", formClass: "formClass", inputClass: "inputClass", prependText: "prependText", debounceTime: "debounceTime", minLength: "minLength" }, outputs: { onSearch: "onSearch" }, decls: 9, vars: 7, consts: [[3, "ngClass", "ngSubmit"], [1, "input-group"], ["class", "input-group-prepend", 4, "ngIf"], ["type", "text", 3, "ngClass", "formControl", "autofocus"], ["searchControlElem", ""], [1, "input-group-append"], ["class", "btn btn-secondary icon-only", "type", "button", "tooltip", "Cancel", 3, "click", 4, "ngIf"], ["type", "submit", "tooltip", "Search", 1, "btn", "btn-primary", "icon-only"], [3, "icon"], [1, "input-group-prepend"], [1, "input-group-text"], ["type", "button", "tooltip", "Cancel", 1, "btn", "btn-secondary", "icon-only", 3, "click"]], template: function SearchBoxWidgetComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "form", 0);
-            ɵɵlistener("ngSubmit", function SearchBoxWidgetComponent_Template_form_ngSubmit_0_listener() { return ctx.kickOffSearch(); });
-            ɵɵelementStart(1, "div", 1);
-            ɵɵtemplate(2, SearchBoxWidgetComponent_div_2_Template, 3, 1, "div", 2);
-            ɵɵelement(3, "input", 3, 4);
-            ɵɵelementStart(5, "div", 5);
-            ɵɵtemplate(6, SearchBoxWidgetComponent_button_6_Template, 2, 1, "button", 6);
-            ɵɵelementStart(7, "button", 7);
-            ɵɵelement(8, "fa-icon", 8);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("ngClass", ctx.formClass);
-            ɵɵadvance(2);
-            ɵɵproperty("ngIf", ctx.prependText);
-            ɵɵadvance(1);
-            ɵɵproperty("ngClass", ctx.inputClass)("formControl", ctx.searchControl)("autofocus", true);
-            ɵɵadvance(3);
-            ɵɵproperty("ngIf", ctx.anyFutureKeyword);
-            ɵɵadvance(2);
-            ɵɵproperty("icon", ctx.faSearch);
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NgClass, NgIf, DefaultValueAccessor, NgControlStatus, FormControlDirective, AutofocusDirective, FaIconComponent], styles: [""] });
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], SearchBoxWidgetComponent.prototype, "initKeyword", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SearchBoxWidgetComponent.prototype, "formClass", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SearchBoxWidgetComponent.prototype, "inputClass", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SearchBoxWidgetComponent.prototype, "prependText", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SearchBoxWidgetComponent.prototype, "debounceTime", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Number)
+    ], SearchBoxWidgetComponent.prototype, "minLength", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", EventEmitter)
+    ], SearchBoxWidgetComponent.prototype, "onSearch", void 0);
+    __decorate([
+        ViewChild('searchControlElem'),
+        __metadata("design:type", ElementRef)
+    ], SearchBoxWidgetComponent.prototype, "searchControlElem", void 0);
+    SearchBoxWidgetComponent = __decorate([
+        Component({
+            selector: 'polp-bs-search-box-widget',
+            template: "<form [ngClass]=\"formClass\" (ngSubmit)=\"kickOffSearch()\">\n    <div class=\"input-group\">\n        <div class=\"input-group-prepend\" *ngIf=\"prependText\">\n            <span class=\"input-group-text\">{{prependText}}</span>\n        </div>\n        <input [ngClass]=\"inputClass\" type=\"text\" #searchControlElem\n               [formControl]=\"searchControl\"\n               [autofocus]=\"true\" />\n        <div class=\"input-group-append\">\n            <button class=\"btn btn-secondary icon-only\" type=\"button\" *ngIf=\"anyFutureKeyword\"\n                    tooltip=\"Cancel\"\n                    (click)=\"resetKeyword(true)\">\n                <fa-icon [icon]=\"faTimes\"></fa-icon>                \n            </button>\n            <button class=\"btn btn-primary icon-only\" type=\"submit\"\n                    tooltip=\"Search\">\n                <fa-icon [icon]=\"faSearch\"></fa-icon>                \n            </button>\n        </div>\n    </div>\n</form>\n\n",
+            styles: [""]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SearchBoxWidgetComponent);
     return SearchBoxWidgetComponent;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SearchBoxWidgetComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-search-box-widget',
-                templateUrl: './search-box-widget.component.html',
-                styleUrls: ['./search-box-widget.component.css']
-            }]
-    }], function () { return []; }, { initKeyword: [{
-            type: Input
-        }], formClass: [{
-            type: Input
-        }], inputClass: [{
-            type: Input
-        }], prependText: [{
-            type: Input
-        }], debounceTime: [{
-            type: Input
-        }], minLength: [{
-            type: Input
-        }], onSearch: [{
-            type: Output
-        }], searchControlElem: [{
-            type: ViewChild,
-            args: ['searchControlElem']
-        }] }); })();
 
-var _c0$4 = function (a0) { return { "active": a0 }; };
-function PageSizeOptionsWidgetComponent_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-    var _r3 = ɵɵgetCurrentView();
-    ɵɵelementContainerStart(0);
-    ɵɵelementStart(1, "li", 3);
-    ɵɵelementStart(2, "a", 4);
-    ɵɵlistener("click", function PageSizeOptionsWidgetComponent_ng_container_2_Template_a_click_2_listener() { ɵɵrestoreView(_r3); var o_r1 = ctx.$implicit; var ctx_r2 = ɵɵnextContext(); return ctx_r2.changeSize(o_r1); });
-    ɵɵtext(3);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
-    ɵɵelementContainerEnd();
-} if (rf & 2) {
-    var o_r1 = ctx.$implicit;
-    var ctx_r0 = ɵɵnextContext();
-    ɵɵadvance(1);
-    ɵɵproperty("ngClass", ɵɵpureFunction1(2, _c0$4, ctx_r0.size == o_r1));
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(o_r1);
-} }
 var PageSizeOptionsWidgetComponent = /** @class */ (function () {
     function PageSizeOptionsWidgetComponent() {
         this.initSize = 40;
@@ -1594,39 +705,45 @@ var PageSizeOptionsWidgetComponent = /** @class */ (function () {
         this.size = s;
         this.onChange.emit(s);
     };
-    PageSizeOptionsWidgetComponent.ɵfac = function PageSizeOptionsWidgetComponent_Factory(t) { return new (t || PageSizeOptionsWidgetComponent)(); };
-    PageSizeOptionsWidgetComponent.ɵcmp = ɵɵdefineComponent({ type: PageSizeOptionsWidgetComponent, selectors: [["polp-bs-page-size-options-widget"]], inputs: { initSize: "initSize", options: "options" }, outputs: { onChange: "onChange" }, decls: 3, vars: 1, consts: [["aria-label", "page size options"], [1, "pagination"], [4, "ngFor", "ngForOf"], [1, "page-item", 3, "ngClass"], [1, "page-link", 3, "click"]], template: function PageSizeOptionsWidgetComponent_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "nav", 0);
-            ɵɵelementStart(1, "ul", 1);
-            ɵɵtemplate(2, PageSizeOptionsWidgetComponent_ng_container_2_Template, 4, 4, "ng-container", 2);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(2);
-            ɵɵproperty("ngForOf", ctx.options);
-        } }, directives: [NgForOf, NgClass], styles: [".page-link[_ngcontent-%COMP%]{cursor:pointer}"] });
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], PageSizeOptionsWidgetComponent.prototype, "initSize", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], PageSizeOptionsWidgetComponent.prototype, "options", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], PageSizeOptionsWidgetComponent.prototype, "onChange", void 0);
+    PageSizeOptionsWidgetComponent = __decorate([
+        Component({
+            selector: 'polp-bs-page-size-options-widget',
+            template: "<nav aria-label=\"page size options\">\n    <ul class=\"pagination\">\n        <ng-container *ngFor=\"let o of options\">\n            <li class=\"page-item\" [ngClass]=\"{'active': size == o}\">\n                <a class=\"page-link\" (click)=\"changeSize(o)\">{{o}}</a>\n            </li>\n        </ng-container>\n    </ul>\n</nav>\n",
+            styles: [".page-link{cursor:pointer}"]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PageSizeOptionsWidgetComponent);
     return PageSizeOptionsWidgetComponent;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PageSizeOptionsWidgetComponent, [{
-        type: Component,
-        args: [{
-                selector: 'polp-bs-page-size-options-widget',
-                templateUrl: './page-size-options-widget.component.html',
-                styleUrls: ['./page-size-options-widget.component.css']
-            }]
-    }], function () { return []; }, { initSize: [{
-            type: Input
-        }], options: [{
-            type: Input
-        }], onChange: [{
-            type: Output
-        }] }); })();
 
 var PolpBsComponentsModule = /** @class */ (function () {
     function PolpBsComponentsModule() {
     }
-    PolpBsComponentsModule.ɵmod = ɵɵdefineNgModule({ type: PolpBsComponentsModule });
-    PolpBsComponentsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpBsComponentsModule_Factory(t) { return new (t || PolpBsComponentsModule)(); }, imports: [[
+    PolpBsComponentsModule = __decorate([
+        NgModule({
+            declarations: [
+                BreadcrumbComponent,
+                AlertBoxComponent,
+                PromptFormComponent,
+                EmailComposerComponent,
+                PromptModalComponent,
+                ExpandableCardComponent,
+                SearchBoxWidgetComponent,
+                PageSizeOptionsWidgetComponent
+            ],
+            imports: [
                 CommonModule,
                 RouterModule,
                 FormsModule,
@@ -1639,75 +756,22 @@ var PolpBsComponentsModule = /** @class */ (function () {
                 AutosizeModule,
                 TagInputModule,
                 NgxMaskModule
-            ]] });
+            ],
+            exports: [
+                BreadcrumbComponent,
+                AlertBoxComponent,
+                PromptFormComponent,
+                EmailComposerComponent,
+                PromptModalComponent,
+                ExpandableCardComponent,
+                SearchBoxWidgetComponent,
+                PageSizeOptionsWidgetComponent
+            ],
+            entryComponents: []
+        })
+    ], PolpBsComponentsModule);
     return PolpBsComponentsModule;
 }());
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PolpBsComponentsModule, { declarations: [BreadcrumbComponent,
-        AlertBoxComponent,
-        PromptFormComponent,
-        EmailComposerComponent,
-        PromptModalComponent,
-        ExpandableCardComponent,
-        SearchBoxWidgetComponent,
-        PageSizeOptionsWidgetComponent], imports: [CommonModule,
-        RouterModule,
-        FormsModule,
-        ReactiveFormsModule,
-        AlertModule,
-        ModalModule,
-        CollapseModule,
-        FontAwesomeModule,
-        FtAutofocusModule,
-        AutosizeModule,
-        TagInputModule,
-        NgxMaskModule], exports: [BreadcrumbComponent,
-        AlertBoxComponent,
-        PromptFormComponent,
-        EmailComposerComponent,
-        PromptModalComponent,
-        ExpandableCardComponent,
-        SearchBoxWidgetComponent,
-        PageSizeOptionsWidgetComponent] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PolpBsComponentsModule, [{
-        type: NgModule,
-        args: [{
-                declarations: [
-                    BreadcrumbComponent,
-                    AlertBoxComponent,
-                    PromptFormComponent,
-                    EmailComposerComponent,
-                    PromptModalComponent,
-                    ExpandableCardComponent,
-                    SearchBoxWidgetComponent,
-                    PageSizeOptionsWidgetComponent
-                ],
-                imports: [
-                    CommonModule,
-                    RouterModule,
-                    FormsModule,
-                    ReactiveFormsModule,
-                    AlertModule,
-                    ModalModule,
-                    CollapseModule,
-                    FontAwesomeModule,
-                    FtAutofocusModule,
-                    AutosizeModule,
-                    TagInputModule,
-                    NgxMaskModule
-                ],
-                exports: [
-                    BreadcrumbComponent,
-                    AlertBoxComponent,
-                    PromptFormComponent,
-                    EmailComposerComponent,
-                    PromptModalComponent,
-                    ExpandableCardComponent,
-                    SearchBoxWidgetComponent,
-                    PageSizeOptionsWidgetComponent
-                ],
-                entryComponents: []
-            }]
-    }], null, null); })();
 
 var BsModalAssistantService = /** @class */ (function () {
     function BsModalAssistantService() {
@@ -1721,16 +785,15 @@ var BsModalAssistantService = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    BsModalAssistantService.ɵfac = function BsModalAssistantService_Factory(t) { return new (t || BsModalAssistantService)(); };
-    BsModalAssistantService.ɵprov = ɵɵdefineInjectable({ token: BsModalAssistantService, factory: BsModalAssistantService.ɵfac, providedIn: 'root' });
+    BsModalAssistantService.ɵprov = ɵɵdefineInjectable({ factory: function BsModalAssistantService_Factory() { return new BsModalAssistantService(); }, token: BsModalAssistantService, providedIn: "root" });
+    BsModalAssistantService = __decorate([
+        Injectable({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], BsModalAssistantService);
     return BsModalAssistantService;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BsModalAssistantService, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
 
 var CommonModalsService = /** @class */ (function () {
     function CommonModalsService(_modalService) {
@@ -1751,16 +814,18 @@ var CommonModalsService = /** @class */ (function () {
         });
         return modalRef.content.result.toPromise();
     };
-    CommonModalsService.ɵfac = function CommonModalsService_Factory(t) { return new (t || CommonModalsService)(ɵɵinject(BsModalService)); };
-    CommonModalsService.ɵprov = ɵɵdefineInjectable({ token: CommonModalsService, factory: CommonModalsService.ɵfac, providedIn: 'root' });
+    CommonModalsService.ctorParameters = function () { return [
+        { type: BsModalService }
+    ]; };
+    CommonModalsService.ɵprov = ɵɵdefineInjectable({ factory: function CommonModalsService_Factory() { return new CommonModalsService(ɵɵinject(BsModalService)); }, token: CommonModalsService, providedIn: "root" });
+    CommonModalsService = __decorate([
+        Injectable({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [BsModalService])
+    ], CommonModalsService);
     return CommonModalsService;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CommonModalsService, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: BsModalService }]; }, null); })();
 
 /*
  * Public API Surface of bs-components

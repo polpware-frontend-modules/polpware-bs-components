@@ -2,7 +2,6 @@ import { OnDestroy, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { IInputFieldSpec } from '../../utils/form-helper';
-import * as i0 from "@angular/core";
 interface IInputFieldSpecExt extends IInputFieldSpec {
     fieldId: string;
     autocompleteKey?: string;
@@ -29,7 +28,5 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     cancel(): void;
     submit(): void;
     keyEvent(event: KeyboardEvent): void;
-    static ɵfac: i0.ɵɵFactoryDef<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never>;
 }
 export {};

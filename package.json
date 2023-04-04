@@ -1,6 +1,6 @@
 {
   "name": "@polpware/bs-components",
-  "version": "9.9.6",
+  "version": "9.9.7",
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",
@@ -26,11 +26,9 @@
   "fesm5": "fesm5/polpware-bs-components.js",
   "fesm2015": "fesm2015/polpware-bs-components.js",
   "typings": "polpware-bs-components.d.ts",
+  "metadata": "polpware-bs-components.metadata.json",
   "sideEffects": false,
   "dependencies": {
     "tslib": "^1.10.0"
-  },
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
   }
 }

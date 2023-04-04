@@ -2,7 +2,6 @@ import { OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Subject } from 'rxjs';
 import { IInputFieldSpec } from '../../utils/form-helper';
-import * as i0 from "@angular/core";
 export interface IPromptFormInputs {
     autocomplete?: string;
     enableEnter?: boolean;
@@ -40,6 +39,4 @@ export declare class PromptModalComponent implements OnInit {
     confirm(value: {
         [key: string]: any;
     }): void;
-    static ɵfac: i0.ɵɵFactoryDef<PromptModalComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PromptModalComponent, "polp-bs-prompt-modal", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "hideCancelBtn": "hideCancelBtn"; "hideConfirmBtn": "hideConfirmBtn"; "hideCloseBtn": "hideCloseBtn"; "cancelBtnLabel": "cancelBtnLabel"; "confirmBtnLabel": "confirmBtnLabel"; "cancelBtnClasses": "cancelBtnClasses"; "confirmBtnClasses": "confirmBtnClasses"; "title": "title"; "innerBody": "innerBody"; "fields": "fields"; }, { "result": "result"; }, never, never>;
 }
