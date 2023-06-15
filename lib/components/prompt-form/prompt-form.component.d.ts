@@ -30,6 +30,6 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     submit(): void;
     keyEvent(event: KeyboardEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "hideCancelBtn": "hideCancelBtn"; "hideSubmitBtn": "hideSubmitBtn"; "submitBtnTxt": "submitBtnTxt"; "cancelBtnTxt": "cancelBtnTxt"; "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never>;
 }
 export {};

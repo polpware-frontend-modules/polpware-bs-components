@@ -1,6 +1,6 @@
 {
   "name": "@polpware/bs-components",
-  "version": "13.3.4",
+  "version": "13.4.0",
   "dependencies": {
     "tslib": "^2.0.0"
   },
@@ -11,7 +11,7 @@
     "uuid": "^8.0.0",
     "ngx-autosize": "^1.8.0",
     "@polpware/ngx-input-validators": "^13.0.0",
-    "@polpware/ngx-email-composer": "^13.0.0",
+    "@polpware/ngx-email-composer": "^13.0.1",
     "@polpware/ngx-form-common": "^13.0.0",
     "ngx-chips": "^3.0.0",
     "@fortawesome/angular-fontawesome": "~0.10.2",
@@ -19,6 +19,7 @@
     "@fortawesome/free-regular-svg-icons": "~6.1.1",
     "@fortawesome/free-solid-svg-icons": "~6.1.1",
     "@40three/ngx-autofocus-directive": "^13.0.0",
+    "@tinymce/tinymce-angular": "^6.0.1",
     "ngx-mask": "^13.0.0"
   },
   "module": "fesm2015/polpware-bs-components.mjs",

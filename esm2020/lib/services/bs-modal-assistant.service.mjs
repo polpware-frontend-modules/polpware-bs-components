@@ -9,9 +9,9 @@ export class BsModalAssistantService {
         return this._modalId;
     }
 }
-BsModalAssistantService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: BsModalAssistantService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
-BsModalAssistantService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: BsModalAssistantService, providedIn: 'root' });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: BsModalAssistantService, decorators: [{
+BsModalAssistantService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.12", ngImport: i0, type: BsModalAssistantService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+BsModalAssistantService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.3.12", ngImport: i0, type: BsModalAssistantService, providedIn: 'root' });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.12", ngImport: i0, type: BsModalAssistantService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'

@@ -20,9 +20,9 @@ export class ObservableModalAbstractComponent {
         }
     }
 }
-ObservableModalAbstractComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: ObservableModalAbstractComponent, deps: [], target: i0.ɵɵFactoryTarget.Directive });
-ObservableModalAbstractComponent.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "12.0.0", version: "13.3.11", type: ObservableModalAbstractComponent, inputs: { modalId: "modalId" }, ngImport: i0 });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.11", ngImport: i0, type: ObservableModalAbstractComponent, decorators: [{
+ObservableModalAbstractComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.12", ngImport: i0, type: ObservableModalAbstractComponent, deps: [], target: i0.ɵɵFactoryTarget.Directive });
+ObservableModalAbstractComponent.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "12.0.0", version: "13.3.12", type: ObservableModalAbstractComponent, inputs: { modalId: "modalId" }, ngImport: i0 });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.12", ngImport: i0, type: ObservableModalAbstractComponent, decorators: [{
             type: Directive
         }], propDecorators: { modalId: [{
                 type: Input
