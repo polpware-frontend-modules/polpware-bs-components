@@ -1,6 +1,6 @@
 {
   "name": "@polpware/bs-components",
-  "version": "13.4.2",
+  "version": "13.5.0",
   "dependencies": {
     "tslib": "^2.0.0"
   },

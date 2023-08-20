@@ -19,5 +19,10 @@ export interface IInputFieldSpec {
         value: any;
         label: string;
     }>;
+    hasReqInd?: boolean;
+    helpInfo?: {
+        title: string;
+        content: string;
+    };
 }
 export declare function makeValidations(data: IValidationsSpec): ValidatorFn;
