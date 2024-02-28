@@ -1,4 +1,4 @@
-import { OnDestroy, OnInit, AfterViewInit } from '@angular/core';
+import { AfterViewInit, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { IInputFieldSpec } from '../../utils/form-helper';
@@ -8,7 +8,7 @@ interface IInputFieldSpecExt extends IInputFieldSpec {
     autocompleteKey?: string;
     visible: boolean;
 }
-export declare class PromptFormComponent extends DefaultFormBaseComponent implements OnInit, OnDestroy, AfterViewInit {
+export declare class PromptFormComponent extends DefaultFormBaseComponent implements OnInit, OnDestroy, AfterViewInit, OnChanges {
     private readonly _builder;
     autocomplete: string;
     enableEnter: boolean;
@@ -27,9 +27,11 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     ngOnInit(): void;
     ngOnDestroy(): void;
     ngAfterViewInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
     cancel(): void;
     submit(): void;
     keyEvent(event: KeyboardEvent): void;
+    private buildForm;
     static ɵfac: i0.ɵɵFactoryDeclaration<PromptFormComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "hideCancelBtn": "hideCancelBtn"; "hideSubmitBtn": "hideSubmitBtn"; "submitBtnTxt": "submitBtnTxt"; "cancelBtnTxt": "cancelBtnTxt"; "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never>;
 }
