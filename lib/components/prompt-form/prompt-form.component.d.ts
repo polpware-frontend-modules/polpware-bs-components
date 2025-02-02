@@ -3,9 +3,20 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { IInputFieldSpec } from '../../utils/form-helper';
 import * as i0 from "@angular/core";
+export declare const tinymceDefaultInitOptions: {
+    htmlAllowedTags: string[];
+    htmlAllowedAttrs: string[];
+    extended_valid_elements: string;
+    draggable_modal: boolean;
+    browser_spellcheck: boolean;
+    menubar: string;
+    contextmenu: string;
+    setup: (editor: any) => void;
+};
+export declare const tinymceDefaultPlugins = "advlist autolink lists link image media table code fullscreen help nonbreaking  pagebreak  preview  searchreplace visualblocks visualchars anchor  autoresize charmap emoticons wordcount insertdatetime tiny_mce_wiris";
+export declare const tinymceDefaultToolbar = "preview | undo redo | blocks fontsizeinput | bold italic | align numlist bullist | link image | table media | tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry | outdent indent | strikethrough forecolor backcolor removeformat | charmap emoticons | code fullscreen | pagebreak anchor";
 interface IInputFieldSpecExt extends IInputFieldSpec {
     fieldId: string;
-    autocompleteKey?: string;
     visible: boolean;
 }
 export declare class PromptFormComponent extends DefaultFormBaseComponent implements OnInit, OnDestroy, AfterViewInit, OnChanges {
@@ -21,6 +32,18 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     faEyeSlash: import("@fortawesome/fontawesome-common-types").IconDefinition;
     faEye: import("@fortawesome/fontawesome-common-types").IconDefinition;
     faQuestionCircle: import("@fortawesome/fontawesome-common-types").IconDefinition;
+    editorOptions: {
+        htmlAllowedTags: string[];
+        htmlAllowedAttrs: string[];
+        extended_valid_elements: string;
+        draggable_modal: boolean;
+        browser_spellcheck: boolean;
+        menubar: string;
+        contextmenu: string;
+        setup: (editor: any) => void;
+    };
+    editorToolbar: string;
+    editorPlugins: string;
     private _subr;
     readonly name: string;
     constructor(_builder: FormBuilder);

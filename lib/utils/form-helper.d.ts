@@ -24,5 +24,7 @@ export interface IInputFieldSpec {
         title: string;
         content: string;
     };
+    autocompleteKey?: string;
+    spellcheck?: string;
 }
 export declare function makeValidations(data: IValidationsSpec): ValidatorFn;
