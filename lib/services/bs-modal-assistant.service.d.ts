@@ -6,3 +6,4 @@ export declare class BsModalAssistantService {
     static ɵfac: i0.ɵɵFactoryDeclaration<BsModalAssistantService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<BsModalAssistantService>;
 }
+//# sourceMappingURL=bs-modal-assistant.service.d.ts.map

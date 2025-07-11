@@ -1,5 +1,5 @@
 import { AfterViewInit, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { DefaultFormBaseComponent } from '@polpware/ngx-form-common';
 import { IInputFieldSpec } from '../../utils/form-helper';
 import * as i0 from "@angular/core";
@@ -28,7 +28,7 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     fields: Array<IInputFieldSpec>;
     emitInitValue: boolean;
     extFields: IInputFieldSpecExt[];
-    form: FormGroup;
+    form: UntypedFormGroup;
     faEyeSlash: import("@fortawesome/fontawesome-common-types").IconDefinition;
     faEye: import("@fortawesome/fontawesome-common-types").IconDefinition;
     faQuestionCircle: import("@fortawesome/fontawesome-common-types").IconDefinition;
@@ -46,7 +46,7 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     editorPlugins: string;
     private _subr;
     readonly name: string;
-    constructor(_builder: FormBuilder);
+    constructor(_builder: UntypedFormBuilder);
     ngOnInit(): void;
     ngOnDestroy(): void;
     ngAfterViewInit(): void;
@@ -56,6 +56,7 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     keyEvent(event: KeyboardEvent): void;
     private buildForm;
     static ɵfac: i0.ɵɵFactoryDeclaration<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "hideCancelBtn": "hideCancelBtn"; "hideSubmitBtn": "hideSubmitBtn"; "submitBtnTxt": "submitBtnTxt"; "cancelBtnTxt": "cancelBtnTxt"; "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "hideCancelBtn": "hideCancelBtn"; "hideSubmitBtn": "hideSubmitBtn"; "submitBtnTxt": "submitBtnTxt"; "cancelBtnTxt": "cancelBtnTxt"; "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never, false>;
 }
 export {};
+//# sourceMappingURL=prompt-form.component.d.ts.map

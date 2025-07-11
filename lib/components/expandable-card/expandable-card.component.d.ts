@@ -10,5 +10,6 @@ export declare class ExpandableCardComponent implements OnInit {
     constructor();
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ExpandableCardComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ExpandableCardComponent, "polp-bs-expandable-card", never, { "isCollapsed": "isCollapsed"; "titleClass": "titleClass"; }, {}, never, ["[title]", "[body]"]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ExpandableCardComponent, "polp-bs-expandable-card", never, { "isCollapsed": "isCollapsed"; "titleClass": "titleClass"; }, {}, never, ["[title]", "[body]"], false>;
 }
+//# sourceMappingURL=expandable-card.component.d.ts.map

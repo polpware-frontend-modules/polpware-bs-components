@@ -1,5 +1,5 @@
 import { ElementRef, EventEmitter, OnDestroy, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import * as i0 from "@angular/core";
 export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
@@ -13,7 +13,7 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     minLength: number;
     onSearch: EventEmitter<void>;
     searchControlElem: ElementRef;
-    searchControl: FormControl;
+    searchControl: UntypedFormControl;
     anyFutureKeyword: string;
     effectiveKeyword: string;
     _searchKeywordSubr: Subscription;
@@ -29,5 +29,6 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     startObserveSearchKeyword(): void;
     stopObserveSearchKeyword(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SearchBoxWidgetComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "inputClass": "inputClass"; "prependText": "prependText"; "debounceTime": "debounceTime"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "inputClass": "inputClass"; "prependText": "prependText"; "debounceTime": "debounceTime"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never, false>;
 }
+//# sourceMappingURL=search-box-widget.component.d.ts.map

@@ -14,3 +14,4 @@ export interface IBreadcrumbItem {
     action?: () => void;
     kind?: ActionKind;
 }
+//# sourceMappingURL=breadcrumb.interface.d.ts.map

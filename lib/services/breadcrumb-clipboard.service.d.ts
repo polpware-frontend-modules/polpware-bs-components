@@ -8,3 +8,4 @@ export declare class BreadcrumbClipboardService {
     static ɵfac: i0.ɵɵFactoryDeclaration<BreadcrumbClipboardService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<BreadcrumbClipboardService>;
 }
+//# sourceMappingURL=breadcrumb-clipboard.service.d.ts.map

@@ -28,3 +28,4 @@ export interface IInputFieldSpec {
     spellcheck?: string;
 }
 export declare function makeValidations(data: IValidationsSpec): ValidatorFn;
+//# sourceMappingURL=form-helper.d.ts.map
