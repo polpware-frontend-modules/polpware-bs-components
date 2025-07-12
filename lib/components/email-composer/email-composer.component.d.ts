@@ -7,12 +7,12 @@ export declare class EmailComposerComponent extends EmailFormAbstractComponent i
     isHtmlBody: boolean;
     onClose: EventEmitter<any>;
     constructor();
-    get bsAlertType(): "success" | "warning" | "info" | "danger";
+    get bsAlertType(): "info" | "danger" | "success" | "warning";
     ngOnInit(): void;
     ngAfterViewInit(): void;
     submit(): void;
     close(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<EmailComposerComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<EmailComposerComponent, "polp-email-composer", never, { "initEmails": "initEmails"; "isHtmlBody": "isHtmlBody"; }, { "onClose": "onClose"; }, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<EmailComposerComponent, "polp-email-composer", never, { "initEmails": { "alias": "initEmails"; "required": false; }; "isHtmlBody": { "alias": "isHtmlBody"; "required": false; }; }, { "onClose": "onClose"; }, never, never, false, never>;
 }
 //# sourceMappingURL=email-composer.component.d.ts.map

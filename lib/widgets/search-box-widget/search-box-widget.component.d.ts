@@ -29,6 +29,6 @@ export declare class SearchBoxWidgetComponent implements OnInit, OnDestroy {
     startObserveSearchKeyword(): void;
     stopObserveSearchKeyword(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SearchBoxWidgetComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": "initKeyword"; "formClass": "formClass"; "inputClass": "inputClass"; "prependText": "prependText"; "debounceTime": "debounceTime"; "minLength": "minLength"; }, { "onSearch": "onSearch"; }, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SearchBoxWidgetComponent, "polp-bs-search-box-widget", never, { "initKeyword": { "alias": "initKeyword"; "required": false; }; "formClass": { "alias": "formClass"; "required": false; }; "inputClass": { "alias": "inputClass"; "required": false; }; "prependText": { "alias": "prependText"; "required": false; }; "debounceTime": { "alias": "debounceTime"; "required": false; }; "minLength": { "alias": "minLength"; "required": false; }; }, { "onSearch": "onSearch"; }, never, never, false, never>;
 }
 //# sourceMappingURL=search-box-widget.component.d.ts.map

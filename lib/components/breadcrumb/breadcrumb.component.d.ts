@@ -12,6 +12,6 @@ export declare class BreadcrumbComponent implements OnInit, OnChanges {
     ngOnChanges(): void;
     private update;
     static ɵfac: i0.ɵɵFactoryDeclaration<BreadcrumbComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BreadcrumbComponent, "polp-bs-breadcrumb", never, { "items": "items"; "listClasses": "listClasses"; "inactiveItemClasses": "inactiveItemClasses"; "activeItemClasses": "activeItemClasses"; }, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BreadcrumbComponent, "polp-bs-breadcrumb", never, { "items": { "alias": "items"; "required": false; }; "listClasses": { "alias": "listClasses"; "required": false; }; "inactiveItemClasses": { "alias": "inactiveItemClasses"; "required": false; }; "activeItemClasses": { "alias": "activeItemClasses"; "required": false; }; }, {}, never, never, false, never>;
 }
 //# sourceMappingURL=breadcrumb.component.d.ts.map

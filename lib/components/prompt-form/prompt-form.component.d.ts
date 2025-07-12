@@ -56,7 +56,7 @@ export declare class PromptFormComponent extends DefaultFormBaseComponent implem
     keyEvent(event: KeyboardEvent): void;
     private buildForm;
     static ɵfac: i0.ɵɵFactoryDeclaration<PromptFormComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "hideCancelBtn": "hideCancelBtn"; "hideSubmitBtn": "hideSubmitBtn"; "submitBtnTxt": "submitBtnTxt"; "cancelBtnTxt": "cancelBtnTxt"; "autocomplete": "autocomplete"; "enableEnter": "enableEnter"; "cancelBtnClasses": "cancelBtnClasses"; "submitBtnClasses": "submitBtnClasses"; "fields": "fields"; "emitInitValue": "emitInitValue"; }, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PromptFormComponent, "polp-bs-prompt-form", never, { "hideCancelBtn": { "alias": "hideCancelBtn"; "required": false; }; "hideSubmitBtn": { "alias": "hideSubmitBtn"; "required": false; }; "submitBtnTxt": { "alias": "submitBtnTxt"; "required": false; }; "cancelBtnTxt": { "alias": "cancelBtnTxt"; "required": false; }; "autocomplete": { "alias": "autocomplete"; "required": false; }; "enableEnter": { "alias": "enableEnter"; "required": false; }; "cancelBtnClasses": { "alias": "cancelBtnClasses"; "required": false; }; "submitBtnClasses": { "alias": "submitBtnClasses"; "required": false; }; "fields": { "alias": "fields"; "required": false; }; "emitInitValue": { "alias": "emitInitValue"; "required": false; }; }, {}, never, never, false, never>;
 }
 export {};
 //# sourceMappingURL=prompt-form.component.d.ts.map
