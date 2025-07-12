@@ -20,12 +20,12 @@ import * as i4 from '@fortawesome/angular-fontawesome';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as i5 from '@40three/ngx-autofocus-directive';
 import { FtAutofocusModule } from '@40three/ngx-autofocus-directive';
-import * as i6 from 'ngx-mask';
-import { NgxMaskModule } from 'ngx-mask';
-import * as i7 from '@tinymce/tinymce-angular';
+import * as i6 from '@tinymce/tinymce-angular';
 import { EditorModule } from '@tinymce/tinymce-angular';
-import * as i8 from '@angular/cdk/text-field';
+import * as i7 from '@angular/cdk/text-field';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import * as i8 from 'ngx-mask';
+import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 import { EmailFormAbstractComponent, AlertTypeEnum } from '@polpware/ngx-email-composer';
 import * as i3$1 from 'ngx-bootstrap/alert';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -261,7 +261,7 @@ BreadcrumbComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Breadcr
             i0.ɵɵadvance(1);
             i0.ɵɵproperty("ngIf", ctx.activeItem);
         }
-    }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i2.RouterLinkWithHref] });
+    }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i2.RouterLink] });
 (function () {
     (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BreadcrumbComponent, [{
             type: Component,
@@ -1823,7 +1823,7 @@ PromptFormComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PromptF
             i0.ɵɵadvance(1);
             i0.ɵɵproperty("ngIf", !ctx.hideSubmitBtn);
         }
-    }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i1$2.ɵNgNoValidate, i1$2.NgSelectOption, i1$2.ɵNgSelectMultipleOption, i1$2.DefaultValueAccessor, i1$2.CheckboxControlValueAccessor, i1$2.RadioControlValueAccessor, i1$2.NgControlStatus, i1$2.NgControlStatusGroup, i1$2.FormGroupDirective, i1$2.FormControlName, i3.PopoverDirective, i4.FaIconComponent, i5.AutofocusDirective, i6.NgxMaskDirective, i7.EditorComponent, i8.CdkTextareaAutosize] });
+    }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i1$2.ɵNgNoValidate, i1$2.NgSelectOption, i1$2.ɵNgSelectMultipleOption, i1$2.DefaultValueAccessor, i1$2.CheckboxControlValueAccessor, i1$2.RadioControlValueAccessor, i1$2.NgControlStatus, i1$2.NgControlStatusGroup, i1$2.FormGroupDirective, i1$2.FormControlName, i3.PopoverDirective, i4.FaIconComponent, i5.AutofocusDirective, i6.EditorComponent, i7.CdkTextareaAutosize, i8.NgxMaskDirective] });
 (function () {
     (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PromptFormComponent, [{
             type: Component,
@@ -2155,7 +2155,7 @@ EmailComposerComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Emai
             i0.ɵɵadvance(4);
             i0.ɵɵproperty("ngIf", !ctx.showCloseBtn)("ngIfElse", _r9);
         }
-    }, dependencies: [i1.NgIf, i1$2.DefaultValueAccessor, i1$2.NgControlStatus, i1$2.RequiredValidator, i1$2.NgModel, i3$1.AlertComponent, i4.FaIconComponent, i5$1.TagInputComponent, i5$1.TagInputDropdown, i7.EditorComponent, i8.CdkTextareaAutosize, i1.AsyncPipe] });
+    }, dependencies: [i1.NgIf, i1$2.DefaultValueAccessor, i1$2.NgControlStatus, i1$2.RequiredValidator, i1$2.NgModel, i3$1.AlertComponent, i4.FaIconComponent, i5$1.TagInputComponent, i5$1.TagInputDropdown, i6.EditorComponent, i7.CdkTextareaAutosize, i1.AsyncPipe] });
 (function () {
     (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(EmailComposerComponent, [{
             type: Component,
@@ -2475,7 +2475,6 @@ PolpBsComponentsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [C
         FontAwesomeModule,
         FtAutofocusModule,
         TagInputModule,
-        NgxMaskModule,
         EditorModule,
         TextFieldModule] });
 (function () {
@@ -2504,11 +2503,17 @@ PolpBsComponentsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [C
                         FontAwesomeModule,
                         FtAutofocusModule,
                         TagInputModule,
-                        NgxMaskModule,
                         EditorModule,
-                        TextFieldModule
+                        TextFieldModule,
+                        // Standalone components
+                        NgxMaskDirective,
+                        NgxMaskPipe
                     ],
                     exports: [
+                        // Standalone components
+                        NgxMaskDirective,
+                        NgxMaskPipe,
+                        // Library-specific components 
                         BreadcrumbComponent,
                         AlertBoxComponent,
                         PromptFormComponent,
@@ -2540,16 +2545,24 @@ PolpBsComponentsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [C
             FontAwesomeModule,
             FtAutofocusModule,
             TagInputModule,
-            NgxMaskModule,
             EditorModule,
-            TextFieldModule], exports: [BreadcrumbComponent,
+            TextFieldModule,
+            // Standalone components
+            NgxMaskDirective,
+            NgxMaskPipe], exports: [
+            // Standalone components
+            NgxMaskDirective,
+            NgxMaskPipe,
+            // Library-specific components 
+            BreadcrumbComponent,
             AlertBoxComponent,
             PromptFormComponent,
             EmailComposerComponent,
             PromptModalComponent,
             ExpandableCardComponent,
             SearchBoxWidgetComponent,
-            PageSizeOptionsWidgetComponent] });
+            PageSizeOptionsWidgetComponent
+        ] });
 })();
 
 class BsModalAssistantService {

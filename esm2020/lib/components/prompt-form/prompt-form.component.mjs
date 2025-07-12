@@ -11,9 +11,9 @@ import * as i2 from "@angular/common";
 import * as i3 from "ngx-bootstrap/popover";
 import * as i4 from "@fortawesome/angular-fontawesome";
 import * as i5 from "@40three/ngx-autofocus-directive";
-import * as i6 from "ngx-mask";
-import * as i7 from "@tinymce/tinymce-angular";
-import * as i8 from "@angular/cdk/text-field";
+import * as i6 from "@tinymce/tinymce-angular";
+import * as i7 from "@angular/cdk/text-field";
+import * as i8 from "ngx-mask";
 function PromptFormComponent_div_1_ng_container_1_ng_container_2_span_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span", 17);
     i0.ɵɵtext(1, " * ");
@@ -1177,7 +1177,7 @@ PromptFormComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PromptF
         i0.ɵɵproperty("ngIf", !ctx.hideCancelBtn);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", !ctx.hideSubmitBtn);
-    } }, dependencies: [i2.NgClass, i2.NgForOf, i2.NgIf, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i1.ɵNgNoValidate, i1.NgSelectOption, i1.ɵNgSelectMultipleOption, i1.DefaultValueAccessor, i1.CheckboxControlValueAccessor, i1.RadioControlValueAccessor, i1.NgControlStatus, i1.NgControlStatusGroup, i1.FormGroupDirective, i1.FormControlName, i3.PopoverDirective, i4.FaIconComponent, i5.AutofocusDirective, i6.NgxMaskDirective, i7.EditorComponent, i8.CdkTextareaAutosize] });
+    } }, dependencies: [i2.NgClass, i2.NgForOf, i2.NgIf, i2.NgSwitch, i2.NgSwitchCase, i2.NgSwitchDefault, i1.ɵNgNoValidate, i1.NgSelectOption, i1.ɵNgSelectMultipleOption, i1.DefaultValueAccessor, i1.CheckboxControlValueAccessor, i1.RadioControlValueAccessor, i1.NgControlStatus, i1.NgControlStatusGroup, i1.FormGroupDirective, i1.FormControlName, i3.PopoverDirective, i4.FaIconComponent, i5.AutofocusDirective, i6.EditorComponent, i7.CdkTextareaAutosize, i8.NgxMaskDirective] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PromptFormComponent, [{
         type: Component,
         args: [{ selector: 'polp-bs-prompt-form', inputs: [

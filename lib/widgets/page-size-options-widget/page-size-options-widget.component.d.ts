@@ -9,6 +9,6 @@ export declare class PageSizeOptionsWidgetComponent implements OnInit {
     ngOnInit(): void;
     changeSize(s: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PageSizeOptionsWidgetComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PageSizeOptionsWidgetComponent, "polp-bs-page-size-options-widget", never, { "initSize": "initSize"; "options": "options"; }, { "onChange": "onChange"; }, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PageSizeOptionsWidgetComponent, "polp-bs-page-size-options-widget", never, { "initSize": "initSize"; "options": "options"; }, { "onChange": "onChange"; }, never, never, false, never>;
 }
 //# sourceMappingURL=page-size-options-widget.component.d.ts.map

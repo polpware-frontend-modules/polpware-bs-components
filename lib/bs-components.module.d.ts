@@ -17,12 +17,12 @@ import * as i15 from "ngx-bootstrap/popover";
 import * as i16 from "@fortawesome/angular-fontawesome";
 import * as i17 from "@40three/ngx-autofocus-directive";
 import * as i18 from "ngx-chips";
-import * as i19 from "ngx-mask";
-import * as i20 from "@tinymce/tinymce-angular";
-import * as i21 from "@angular/cdk/text-field";
+import * as i19 from "@tinymce/tinymce-angular";
+import * as i20 from "@angular/cdk/text-field";
+import * as i21 from "ngx-mask";
 export declare class PolpBsComponentsModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<PolpBsComponentsModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent], [typeof i9.CommonModule, typeof i10.RouterModule, typeof i11.FormsModule, typeof i11.ReactiveFormsModule, typeof i12.AlertModule, typeof i13.ModalModule, typeof i14.CollapseModule, typeof i15.PopoverModule, typeof i16.FontAwesomeModule, typeof i17.FtAutofocusModule, typeof i18.TagInputModule, typeof i19.NgxMaskModule, typeof i20.EditorModule, typeof i21.TextFieldModule], [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<PolpBsComponentsModule, [typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent], [typeof i9.CommonModule, typeof i10.RouterModule, typeof i11.FormsModule, typeof i11.ReactiveFormsModule, typeof i12.AlertModule, typeof i13.ModalModule, typeof i14.CollapseModule, typeof i15.PopoverModule, typeof i16.FontAwesomeModule, typeof i17.FtAutofocusModule, typeof i18.TagInputModule, typeof i19.EditorModule, typeof i20.TextFieldModule, typeof i21.NgxMaskDirective, typeof i21.NgxMaskPipe], [typeof i21.NgxMaskDirective, typeof i21.NgxMaskPipe, typeof i1.BreadcrumbComponent, typeof i2.AlertBoxComponent, typeof i3.PromptFormComponent, typeof i4.EmailComposerComponent, typeof i5.PromptModalComponent, typeof i6.ExpandableCardComponent, typeof i7.SearchBoxWidgetComponent, typeof i8.PageSizeOptionsWidgetComponent]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<PolpBsComponentsModule>;
 }
 //# sourceMappingURL=bs-components.module.d.ts.map

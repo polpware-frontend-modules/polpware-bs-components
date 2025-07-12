@@ -1,5 +1,5 @@
 import { ValidatorFn } from '@angular/forms';
-export declare type IValidationsSpec = {
+export type IValidationsSpec = {
     [key: string]: {
         value?: any;
         options?: any;

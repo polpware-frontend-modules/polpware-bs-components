@@ -13,6 +13,6 @@ export declare class EmailComposerComponent extends EmailFormAbstractComponent i
     submit(): void;
     close(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<EmailComposerComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<EmailComposerComponent, "polp-email-composer", never, { "initEmails": "initEmails"; "isHtmlBody": "isHtmlBody"; }, { "onClose": "onClose"; }, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<EmailComposerComponent, "polp-email-composer", never, { "initEmails": "initEmails"; "isHtmlBody": "isHtmlBody"; }, { "onClose": "onClose"; }, never, never, false, never>;
 }
 //# sourceMappingURL=email-composer.component.d.ts.map

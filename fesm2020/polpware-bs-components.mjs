@@ -20,12 +20,12 @@ import * as i4 from '@fortawesome/angular-fontawesome';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as i5 from '@40three/ngx-autofocus-directive';
 import { FtAutofocusModule } from '@40three/ngx-autofocus-directive';
-import * as i6 from 'ngx-mask';
-import { NgxMaskModule } from 'ngx-mask';
-import * as i7 from '@tinymce/tinymce-angular';
+import * as i6 from '@tinymce/tinymce-angular';
 import { EditorModule } from '@tinymce/tinymce-angular';
-import * as i8 from '@angular/cdk/text-field';
+import * as i7 from '@angular/cdk/text-field';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import * as i8 from 'ngx-mask';
+import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 import { EmailFormAbstractComponent, AlertTypeEnum } from '@polpware/ngx-email-composer';
 import * as i3$1 from 'ngx-bootstrap/alert';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -228,7 +228,7 @@ BreadcrumbComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Breadcr
         i0.ɵɵproperty("ngForOf", ctx.interItems);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.activeItem);
-    } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i2.RouterLinkWithHref] });
+    } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i2.RouterLink] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BreadcrumbComponent, [{
         type: Component,
         args: [{ selector: 'polp-bs-breadcrumb', template: "    <ol [ngClass]=\"listClasses\">\n        <li [ngClass]=\"inactiveItemClasses\" *ngFor=\"let item of interItems\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" [queryParams]=\"item.queryParams || {}\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n        <li [ngClass]=\"activeItemClasses\" aria-current=\"page\" *ngIf=\"activeItem as item\">\n            <ng-container [ngSwitch]=\"item.kind\">\n                <a [href]=\"item.url\" *ngSwitchCase=\"1\">{{item.title}}</a>\n                <a [routerLink]=\"item.routerLink\" [queryParams]=\"item.queryParams || {}\" *ngSwitchCase=\"2\">{{item.title}}</a>\n                <a (click)=\"item.action()\" *ngSwitchCase=\"3\">{{item.title}}</a>\n                <a *ngSwitchDefault>{{item.title}}</a>                \n            </ng-container>\n        </li>\n    </ol>\n" }]
@@ -1548,7 +1548,7 @@ PromptFormComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PromptF
         i0.ɵɵproperty("ngIf", !ctx.hideCancelBtn);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", !ctx.hideSubmitBtn);
-    } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i1$2.ɵNgNoValidate, i1$2.NgSelectOption, i1$2.ɵNgSelectMultipleOption, i1$2.DefaultValueAccessor, i1$2.CheckboxControlValueAccessor, i1$2.RadioControlValueAccessor, i1$2.NgControlStatus, i1$2.NgControlStatusGroup, i1$2.FormGroupDirective, i1$2.FormControlName, i3.PopoverDirective, i4.FaIconComponent, i5.AutofocusDirective, i6.NgxMaskDirective, i7.EditorComponent, i8.CdkTextareaAutosize] });
+    } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i1$2.ɵNgNoValidate, i1$2.NgSelectOption, i1$2.ɵNgSelectMultipleOption, i1$2.DefaultValueAccessor, i1$2.CheckboxControlValueAccessor, i1$2.RadioControlValueAccessor, i1$2.NgControlStatus, i1$2.NgControlStatusGroup, i1$2.FormGroupDirective, i1$2.FormControlName, i3.PopoverDirective, i4.FaIconComponent, i5.AutofocusDirective, i6.EditorComponent, i7.CdkTextareaAutosize, i8.NgxMaskDirective] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PromptFormComponent, [{
         type: Component,
         args: [{ selector: 'polp-bs-prompt-form', inputs: [
@@ -1844,7 +1844,7 @@ EmailComposerComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Emai
         i0.ɵɵproperty("ngIf", ctx.isHtmlBody)("ngIfElse", _r6);
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("ngIf", !ctx.showCloseBtn)("ngIfElse", _r9);
-    } }, dependencies: [i1.NgIf, i1$2.DefaultValueAccessor, i1$2.NgControlStatus, i1$2.RequiredValidator, i1$2.NgModel, i3$1.AlertComponent, i4.FaIconComponent, i5$1.TagInputComponent, i5$1.TagInputDropdown, i7.EditorComponent, i8.CdkTextareaAutosize, i1.AsyncPipe] });
+    } }, dependencies: [i1.NgIf, i1$2.DefaultValueAccessor, i1$2.NgControlStatus, i1$2.RequiredValidator, i1$2.NgModel, i3$1.AlertComponent, i4.FaIconComponent, i5$1.TagInputComponent, i5$1.TagInputDropdown, i6.EditorComponent, i7.CdkTextareaAutosize, i1.AsyncPipe] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(EmailComposerComponent, [{
         type: Component,
         args: [{ selector: 'polp-email-composer', template: "<alert [type]=\"bsAlertType\" [dismissible]=\"alertDismissible\" *ngIf=\"alertType > 0\">\n    <p>\n        {{alertMessage}}\n    </p>\n</alert>\n\n<div>\n    <div class=\"mb-4\">\n        <label class=\"form-label\">Recipients</label>\n        <tag-input [(ngModel)]=\"emails\" #emailInputBox\n                   name=\"emailInputs\"\n                   (focusout)=\"onOutOfTagInput($event)\"\n                   (onTextChange)=\"textChanged($event)\"\n                   [addOnPaste]=\"true\"\n                   [modelAsStrings]=\"true\"\n                   [trimTags]=\"true\"\n                   [editable]=\"true\"\n                   [errorMessages]=\"errorMessages\"\n                   [validators]=\"validators\"\n                   [secondaryPlaceholder]=\"'Emails'\"\n                   [separatorKeyCodes]=\"[32,44,58,59]\"\n                   [displayBy]=\"'display'\"\n                   [identifyBy]=\"'value'\"                       \n                   [placeholder]=\"'+ Email'\">\n            <tag-input-dropdown [autocompleteItems]=\"autocompleteItemsAsync | async\">\n                <ng-template let-item=\"item\" let-index=\"index\">\n                    {{ item.display }}\n                </ng-template>\n            </tag-input-dropdown>\n        </tag-input>\n    </div>\n\n    <div class=\"mb-4\">\n        <label for=\"messageTitleInput\" class=\"form-label\">Subject</label>\n        <input name=\"messageTitleInput\" id=\"messageTitleInput\" aria-describedby=\"messageTitleHelp\"\n               class=\"form-control\"\n               [(ngModel)]=\"messageTitle\" #messageTitleCtrl=\"ngModel\" required>\n        <div id=\"messageTitleHelp\"\n             class=\"form-text text-danger\" *ngIf=\"!messageTitleCtrl.valid && messageTitleCtrl.touched\">\n            Subject is required.\n        </div>\n    </div>\n\n    <div class=\"mb-4\" *ngIf=\"isHtmlBody; else textBody\">\n        <label class=\"form-label\">Message</label>\n        <editor [(ngModel)]=\"messageBody\"\n                #emailBody\n                #messageBodyCtrl=\"ngModel\"               \n                name=\"messageBodyInput\"\n                class=\"form-control p-0 border-0\"                \n                [init]=\"{htmlAllowedTags: ['.*'], htmlAllowedAttrs: ['.*'], extended_valid_elements: '*[.*]', draggable_modal: true }\"\n                plugins =\"advlist autolink link image lists charmap preview anchor pagebreak searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking table emoticons template help autoresize\"\n                toolbar =\"undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | preview media fullpage | forecolor backcolor emoticons | help\"\n        >\n        </editor>\n        <div id=\"messageBodyHelp\" class=\"form-text\">\n            Body message is required.\n        </div>\n    </div>\n    <ng-template #textBody>\n        <div class=\"mb-4\">\n            <label for=\"messageBodyInput\" class=\"form-label\">Message</label>        \n            <textarea name=\"messageBodyInput\" id=\"messageBodyInput\" aria-describedby=\"messageBodyHelp\"\n                      class=\"form-control\"\n                      #emailBody\n                      cdkTextareaAutosize\n                      [cdkAutosizeMinRows]=\"5\"\n                      [cdkAutosizeMaxRows]=\"10\"\n                      [(ngModel)]=\"messageBody\" #messageBodyCtrl=\"ngModel\" required>\n            </textarea>\n            <div id=\"messageBodyHelp\"\n                 class=\"form-text text-danger\" *ngIf=\"!messageBodyCtrl.valid && messageBodyCtrl.touched\">\n                Body message is required.\n            </div>\n        </div>\n    </ng-template>\n\n    <div class=\"d-flex justify-content-end mb-4\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"submit()\" [disabled]=\"alertType == 3\"\n                *ngIf=\"!showCloseBtn; else closeBtnTmpl\">\n            Submit\n            <fa-icon class=\"ms-2\" [icon]=\"faSpinner\" [spin]=\"true\" *ngIf=\"alertType == 3\"></fa-icon>\n        </button>\n        <ng-template #closeBtnTmpl>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"close()\">\n                Close\n            </button>\n        </ng-template>\n    </div>\n</div>\n" }]
@@ -2133,7 +2133,6 @@ PolpBsComponentsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [C
         FontAwesomeModule,
         FtAutofocusModule,
         TagInputModule,
-        NgxMaskModule,
         EditorModule,
         TextFieldModule] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpBsComponentsModule, [{
@@ -2161,11 +2160,17 @@ PolpBsComponentsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [C
                     FontAwesomeModule,
                     FtAutofocusModule,
                     TagInputModule,
-                    NgxMaskModule,
                     EditorModule,
-                    TextFieldModule
+                    TextFieldModule,
+                    // Standalone components
+                    NgxMaskDirective,
+                    NgxMaskPipe
                 ],
                 exports: [
+                    // Standalone components
+                    NgxMaskDirective,
+                    NgxMaskPipe,
+                    // Library-specific components 
                     BreadcrumbComponent,
                     AlertBoxComponent,
                     PromptFormComponent,
@@ -2195,9 +2200,16 @@ PolpBsComponentsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [C
         FontAwesomeModule,
         FtAutofocusModule,
         TagInputModule,
-        NgxMaskModule,
         EditorModule,
-        TextFieldModule], exports: [BreadcrumbComponent,
+        TextFieldModule,
+        // Standalone components
+        NgxMaskDirective,
+        NgxMaskPipe], exports: [
+        // Standalone components
+        NgxMaskDirective,
+        NgxMaskPipe,
+        // Library-specific components 
+        BreadcrumbComponent,
         AlertBoxComponent,
         PromptFormComponent,
         EmailComposerComponent,

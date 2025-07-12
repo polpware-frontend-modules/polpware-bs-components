@@ -29,6 +29,6 @@ export declare class AlertBoxComponent implements OnInit {
     close(): void;
     confirm(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AlertBoxComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AlertBoxComponent, "polp-bs-alert-box", never, { "hideNoBtn": "hideNoBtn"; "yesBtnLabel": "yesBtnLabel"; "noBtnLabel": "noBtnLabel"; "noBtnClasses": "noBtnClasses"; "yesBtnClasses": "yesBtnClasses"; "enableEnter": "enableEnter"; "title": "title"; "innerBody": "innerBody"; }, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AlertBoxComponent, "polp-bs-alert-box", never, { "hideNoBtn": "hideNoBtn"; "yesBtnLabel": "yesBtnLabel"; "noBtnLabel": "noBtnLabel"; "noBtnClasses": "noBtnClasses"; "yesBtnClasses": "yesBtnClasses"; "enableEnter": "enableEnter"; "title": "title"; "innerBody": "innerBody"; }, {}, never, never, false, never>;
 }
 //# sourceMappingURL=alert-box.component.d.ts.map
