@@ -12,6 +12,6 @@ export declare abstract class ObservableModalAbstractComponent<TInput, TOutput> 
     protected abstract bsModalService: BsModalService;
     closeModal(value: TOutput): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ObservableModalAbstractComponent<any, any>, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<ObservableModalAbstractComponent<any, any>, never, never, { "modalId": { "alias": "modalId"; "required": false; }; }, {}, never, never, false, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<ObservableModalAbstractComponent<any, any>, never, never, { "modalId": { "alias": "modalId"; "required": false; }; }, {}, never, never, true, never>;
 }
 //# sourceMappingURL=observable-modal-abstract.component.d.ts.map
